@@ -14,7 +14,7 @@
     "learnMore": "Learn More"
   },
   "about": {
-    "title": "About Go Be Smart",
+    "title": "About Go be Smart",
     "description": "We're a startup revolutionizing the heat pump industry with cutting-edge technology that connects installers with their installations like never before.",
     "mission": "Our Mission",
     "missionText": "To empower heat pump installers with intelligent remote monitoring and control capabilities, reducing service calls, improving customer satisfaction, and accelerating the transition to sustainable heating solutions.",
@@ -43,7 +43,7 @@
     }
   },
   "benefits": {
-    "title": "Why Choose Go Be Smart?",
+    "title": "Why Choose Go be Smart?",
     "description": "Transform your heat pump installation business with measurable benefits",
     "stats": {
       "commissioning": "Faster Commissioning",
@@ -100,6 +100,6 @@
       "terms": "Terms of Service",
       "cookies": "Cookie Policy"
     },
-    "copyright": "© 2024 Go Be Smart. All rights reserved."
+    "copyright": "© 2024 Go be Smart. All rights reserved."
   }
 }

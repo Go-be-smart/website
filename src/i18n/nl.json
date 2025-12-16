@@ -1,20 +1,20 @@
 {
   "nav": {
-    "about": "Over Ons",
+    "about": "Over ons",
     "solution": "Oplossing", 
     "benefits": "Voordelen",
     "contact": "Contact",
     "getStarted": "Aan de Slag"
   },
   "hero": {
-    "title": "Slimme Warmtepomp",
+    "title": "Slim Warmtepomp",
     "titleHighlight": "Beheer",
     "description": "Het revolutionaire dashboard dat de manier waarop installateurs warmtepompen op afstand monitoren en besturen volledig transformeert. Maak inbedrijfstelling, onderhoud en klantenservice sneller en eenvoudiger dan ooit tevoren.",
     "requestDemo": "Demo Aanvragen",
     "learnMore": "Meer Weten"
   },
   "about": {
-    "title": "Over Go Be Smart",
+    "title": "Over Go be Smart",
     "description": "Wij zijn een startup die de warmtepompindustrie revolutioneert met geavanceerde technologie die installateurs verbindt met hun installaties zoals nooit tevoren.",
     "mission": "Onze Missie",
     "missionText": "Warmtepompinstallateurs ondersteunen met intelligente monitoring en besturing op afstand, waardoor servicegesprekken worden verminderd, klanttevredenheid wordt verbeterd en de overgang naar duurzame verwarmingsoplossingen wordt versneld.",
@@ -43,7 +43,7 @@
     }
   },
   "benefits": {
-    "title": "Waarom Kiezen voor Go Be Smart?",
+    "title": "Waarom Kiezen voor Go be Smart?",
     "description": "Transformeer uw warmtepompinstallatiebedrijf met meetbare voordelen",
     "stats": {
       "commissioning": "Snellere Inbedrijfstelling",
@@ -100,6 +100,6 @@
       "terms": "Servicevoorwaarden",
       "cookies": "Cookiebeleid"
     },
-    "copyright": "© 2024 Go Be Smart. Alle rechten voorbehouden."
+    "copyright": "© 2024 Go be Smart. Alle rechten voorbehouden."
   }
 }
