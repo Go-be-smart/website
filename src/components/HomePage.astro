@@ -91,8 +91,8 @@ const t = getTranslation(currentLocale);
 <!-- Team Section -->
 <section id="team" class="py-20 bg-gradient-to-b from-[var(--color-bg-primary)] to-[var(--color-bg-secondary)] border-b border-[var(--color-primary-dark)]/30">
 	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
-			<div class="text-center">
+		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16 items-start">
+			<div class="text-center flex flex-col h-full">
 				<img
 					src="/src/assets/keje.jpeg"
 					alt="Team member portrait: Keje"
@@ -100,14 +100,14 @@ const t = getTranslation(currentLocale);
 					loading="lazy"
 				/>
 				<h3 class="mt-6 text-xl font-semibold text-[var(--color-text-primary)]">Keje Sinnige</h3>
-				<p class="mt-2 text-[var(--color-text-secondary)] w-45 mx-auto text-center">
+				<p class="mt-2 text-[var(--color-text-secondary)] w-45 mx-auto text-center flex-grow">
 					{t('team.descriptions.keje')}
 				</p>
 				<a
 					href="https://www.linkedin.com/in/keje-sinnige/"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="inline-flex items-center justify-center mt-4 w-8 h-8 text-[var(--color-text-secondary)] hover:text-[var(--color-primary-dark)] transition-colors"
+					class="flex items-center justify-center mt-4 w-8 h-8 mx-auto text-[var(--color-text-secondary)] hover:text-[var(--color-primary-dark)] transition-colors"
 					aria-label="Keje Sinnige's LinkedIn profile"
 				>
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
@@ -116,7 +116,7 @@ const t = getTranslation(currentLocale);
 				</a>
 			</div>
 
-			<div class="text-center">
+			<div class="text-center flex flex-col h-full">
 				<img
 					src="/src/assets/charlie.jpeg"
 					alt="Team member portrait: Charlie"
@@ -124,14 +124,14 @@ const t = getTranslation(currentLocale);
 					loading="lazy"
 				/>
 				<h3 class="mt-6 text-xl font-semibold text-[var(--color-text-primary)]">Charlie Zinken</h3>
-				<p class="mt-2 text-[var(--color-text-secondary)] w-45 mx-auto text-center">
+				<p class="mt-2 text-[var(--color-text-secondary)] w-45 mx-auto text-center flex-grow">
 					{t('team.descriptions.charlie')}
 				</p>
 				<a
 					href="https://www.linkedin.com/in/charlie-zinken-04a3a286/"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="inline-flex items-center justify-center mt-4 w-8 h-8 text-[var(--color-text-secondary)] hover:text-[var(--color-primary-dark)] transition-colors"
+					class="flex items-center justify-center mt-4 w-8 h-8 mx-auto text-[var(--color-text-secondary)] hover:text-[var(--color-primary-dark)] transition-colors"
 					aria-label="Charlie Zinken's LinkedIn profile"
 				>
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
@@ -140,7 +140,7 @@ const t = getTranslation(currentLocale);
 				</a>
 			</div>
 
-			<div class="text-center">
+			<div class="text-center flex flex-col h-full">
 				<img
 					src="/src/assets/age.jpeg"
 					alt="Team member portrait: Age"
@@ -148,14 +148,14 @@ const t = getTranslation(currentLocale);
 					loading="lazy"
 				/>
 				<h3 class="mt-6 text-xl font-semibold text-[var(--color-text-primary)]">Age Tjalma</h3>
-				<p class="mt-2 text-[var(--color-text-secondary)] w-45 mx-auto text-center">
+				<p class="mt-2 text-[var(--color-text-secondary)] w-45 mx-auto text-center flex-grow">
 					{t('team.descriptions.age')}
 				</p>
 				<a
 					href="https://www.linkedin.com/in/agetjalma/"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="inline-flex items-center justify-center mt-4 w-8 h-8 text-[var(--color-text-secondary)] hover:text-[var(--color-primary-dark)] transition-colors"
+					class="flex items-center justify-center mt-4 w-8 h-8 mx-auto text-[var(--color-text-secondary)] hover:text-[var(--color-primary-dark)] transition-colors"
 					aria-label="Age Tjalma's LinkedIn profile"
 				>
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">

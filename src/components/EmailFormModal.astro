@@ -16,7 +16,7 @@ const { t } = Astro.props;
 <dialog id="emailModal" class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 m-0 w-[90%] max-w-[400px] max-h-[90vh] overflow-auto p-0 border-none rounded-xl bg-[rgba(2,24,32,0.8)] backdrop-blur-sm shadow-[0_20px_60px_rgba(0,0,0,0.5)]">
 	<div class="bg-[var(--color-bg-primary)] rounded-xl p-8 border border-[var(--color-primary-dark)]/20 relative">
 		<button 
-			class="absolute top-0.5 right-0.5 bg-transparent border-none text-[var(--color-text-secondary)] text-3xl leading-none cursor-pointer p-0 w-8 h-8 flex items-center justify-center rounded transition-all hover:text-[var(--color-text-primary)] hover:bg-[var(--color-primary-dark)]/10" 
+			class="modal-close absolute top-0.5 right-0.5 bg-transparent border-none text-[var(--color-text-secondary)] text-3xl leading-none cursor-pointer p-0 w-8 h-8 flex items-center justify-center rounded transition-all hover:text-[var(--color-text-primary)]" 
 			aria-label={t('form.close')}
 		>
 			&times;
@@ -82,14 +82,17 @@ const { t } = Astro.props;
 	(window as any).openEmailModal = openModal;
 	(window as any).closeEmailModal = closeModal;
 
-	// Close modal on close button
-	closeBtn?.addEventListener('click', closeModal);
-
 	// Close modal on backdrop click
 	modal?.addEventListener('click', (e) => {
 		if (e.target === modal) {
 			closeModal();
 		}
+	});
+
+	// Close modal on close button
+	closeBtn?.addEventListener('click', (e) => {
+		e.stopPropagation(); // Prevent triggering backdrop click
+		closeModal();
 	});
 
 	// Close modal on Escape key
