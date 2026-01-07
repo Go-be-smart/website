@@ -40,5 +40,12 @@
   },
   "footer": {
     "copyright": "© 2026 Go be smart. Alle rechten voorbehouden."
+  },
+  "form": {
+    "email": "E-mailadres",
+    "submit": "Verzenden",
+    "close": "Sluiten",
+    "success": "Bedankt! We nemen binnenkort contact op.",
+    "error": "Er ging iets mis. Probeer het opnieuw."
   }
 }

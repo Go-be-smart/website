@@ -1,0 +1,173 @@
+---
+interface Props {
+  t: (key: string) => string;
+}
+
+const { t } = Astro.props;
+---
+
+<!-- Hidden form for Netlify to detect during build -->
+<form name="early-access" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+  <input type="hidden" name="form-name" value="early-access" />
+  <input type="email" name="email" />
+</form>
+
+<!-- Email Modal -->
+<dialog id="emailModal" class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 m-0 w-[90%] max-w-[400px] max-h-[90vh] overflow-auto p-0 border-none rounded-xl bg-[rgba(2,24,32,0.8)] backdrop-blur-sm shadow-[0_20px_60px_rgba(0,0,0,0.5)]">
+	<div class="bg-[var(--color-bg-primary)] rounded-xl p-8 border border-[var(--color-primary-dark)]/20 relative">
+		<button 
+			class="absolute top-0.5 right-0.5 bg-transparent border-none text-[var(--color-text-secondary)] text-3xl leading-none cursor-pointer p-0 w-8 h-8 flex items-center justify-center rounded transition-all hover:text-[var(--color-text-primary)] hover:bg-[var(--color-primary-dark)]/10" 
+			aria-label={t('form.close')}
+		>
+			&times;
+		</button>
+		<form 
+			method="POST" 
+			data-netlify="true" 
+			name="early-access"
+			class="flex flex-col gap-4"
+			id="emailForm"
+		>
+			<input type="hidden" name="form-name" value="early-access" />
+			<input type="hidden" name="bot-field" />
+			
+			<input 
+				type="email" 
+				id="email" 
+				name="email" 
+				required 
+				class="bg-[var(--color-bg-secondary)] border border-[var(--color-primary-dark)]/20 rounded-lg px-4 py-3 text-[var(--color-text-primary)] text-base transition-all w-full placeholder:text-[var(--color-text-muted)] focus:outline-none focus:border-[var(--color-primary-dark)] focus:shadow-[0_0_0_3px_var(--color-primary-dark)/0.2]"
+				placeholder={t('form.email')}
+			/>
+			
+			<div id="formMessage" class="px-4 py-3 rounded-lg text-sm text-center opacity-0 animate-fade-in hidden" data-success={t('form.success')} data-error={t('form.error')}></div>
+			
+			<button 
+				type="submit" 
+				class="bg-gradient-to-r from-[var(--color-gradient-start)] to-[var(--color-gradient-end)] text-[var(--color-text-primary)] border-none px-8 py-3 rounded-lg font-semibold cursor-pointer transition-all w-full hover:-translate-y-0.5 hover:shadow-[0_4px_12px_var(--color-primary-dark)/0.3] disabled:opacity-60 disabled:cursor-not-allowed"
+			>
+				{t('form.submit')}
+			</button>
+		</form>
+	</div>
+</dialog>
+
+<script>
+	// Modal functionality
+	const modal = document.getElementById('emailModal') as HTMLDialogElement | null;
+	const form = document.getElementById('emailForm') as HTMLFormElement | null;
+	const formMessage = document.getElementById('formMessage') as HTMLDivElement | null;
+	const closeBtn = modal?.querySelector('.modal-close') as HTMLButtonElement | null;
+
+	function openModal() {
+		if (modal) {
+			modal.showModal();
+			document.body.style.overflow = 'hidden';
+		}
+	}
+
+	function closeModal() {
+		if (modal) {
+			modal.close();
+			document.body.style.overflow = '';
+			form?.reset();
+			if (formMessage) {
+				formMessage.classList.add('hidden');
+				formMessage.style.display = 'none';
+			}
+		}
+	}
+
+	// Make functions globally available
+	(window as any).openEmailModal = openModal;
+	(window as any).closeEmailModal = closeModal;
+
+	// Close modal on close button
+	closeBtn?.addEventListener('click', closeModal);
+
+	// Close modal on backdrop click
+	modal?.addEventListener('click', (e) => {
+		if (e.target === modal) {
+			closeModal();
+		}
+	});
+
+	// Close modal on Escape key
+	modal?.addEventListener('keydown', (e) => {
+		if (e.key === 'Escape') {
+			closeModal();
+		}
+	});
+
+	// Handle form submission
+	form?.addEventListener('submit', async (e) => {
+		e.preventDefault();
+		if (!form || !formMessage) return;
+		
+		const formData = new FormData(form);
+		const submitButton = form.querySelector('button[type="submit"]') as HTMLButtonElement | null;
+		const originalText = submitButton?.textContent;
+		
+		// Disable submit button
+		if (submitButton) {
+			submitButton.disabled = true;
+			submitButton.textContent = '...';
+		}
+
+		try {
+			const response = await fetch('/', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+				body: new URLSearchParams(formData as any).toString()
+			});
+
+			if (response.ok) {
+				formMessage.textContent = formMessage.getAttribute('data-success') || 'Thank you!';
+				formMessage.className = 'px-4 py-3 rounded-lg text-sm text-center opacity-0 animate-fade-in bg-[rgba(34,211,238,0.1)] text-[var(--color-primary)] border border-[var(--color-primary-dark)]/30';
+				formMessage.style.display = 'block';
+				formMessage.classList.remove('hidden');
+				form.reset();
+				setTimeout(() => {
+					closeModal();
+				}, 2000);
+			} else {
+				throw new Error('Form submission failed');
+			}
+		} catch (error) {
+			formMessage.textContent = formMessage.getAttribute('data-error') || 'Something went wrong.';
+			formMessage.className = 'px-4 py-3 rounded-lg text-sm text-center opacity-0 animate-fade-in bg-[rgba(239,68,68,0.1)] text-[#ef4444] border border-[rgba(239,68,68,0.3)]';
+			formMessage.style.display = 'block';
+			formMessage.classList.remove('hidden');
+		} finally {
+			if (submitButton) {
+				submitButton.disabled = false;
+				submitButton.textContent = originalText || 'Submit';
+			}
+		}
+	});
+</script>
+
+<style>
+	/* Backdrop styling - Tailwind doesn't support ::backdrop well */
+	#emailModal::backdrop {
+		background: rgba(2, 24, 32, 0.7);
+		backdrop-filter: blur(4px);
+	}
+
+	/* Custom fade-in animation */
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+			transform: translateY(-10px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	.animate-fade-in {
+		animation: fadeIn 0.8s ease-in-out forwards;
+	}
+</style>
+

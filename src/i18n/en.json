@@ -40,5 +40,12 @@
   },
   "footer": {
     "copyright": "© 2026 Go be smart. All rights reserved."
+  },
+  "form": {
+    "email": "Email address",
+    "submit": "Submit",
+    "close": "Close",
+    "success": "Thank you! We'll be in touch soon.",
+    "error": "Something went wrong. Please try again."
   }
 }
