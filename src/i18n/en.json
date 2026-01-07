@@ -1,105 +1,44 @@
 {
   "nav": {
     "about": "About",
-    "solution": "Solution", 
-    "benefits": "Benefits",
-    "contact": "Contact",
-    "getStarted": "Get Started"
+    "team": "Team",
+    "contact": "Contact"
   },
   "hero": {
-    "title": "Smart Heat Pump",
-    "titleHighlight": "Management",
-    "description": "The revolutionary dashboard that transforms how installers monitor and control heat pumps remotely. Make commissioning, servicing, and customer support faster and simpler than ever before.",
-    "requestDemo": "Request Demo",
-    "learnMore": "Learn More"
+    "title": "Sustainable heating",
+    "titleHighlight": "simplified",
+    "description": "Allowing your installer to monitor, diagnose, and optimise your heat pump remotely.",
+    "requestDemo": "Request demo",
+    "learnMore": "Request early access"
   },
   "about": {
-    "title": "About Go be Smart",
-    "description": "We're a startup revolutionizing the heat pump industry with cutting-edge technology that connects installers with their installations like never before.",
-    "mission": "Our Mission",
-    "missionText": "To empower heat pump installers with intelligent remote monitoring and control capabilities, reducing service calls, improving customer satisfaction, and accelerating the transition to sustainable heating solutions.",
+    "title": "About us",
+    "description": "Heat pumps are being installed without proper commissioning or monitoring. The result? Inefficiencies, wasted energy, and avoidable service visits. To unlock the full potential of heat pumps, we’re building a modern solution which enables:",
     "features": {
-      "monitoring": "Remote monitoring & diagnostics",
-      "commissioning": "Streamlined commissioning process", 
-      "support": "Enhanced customer support"
-    },
-    "dashboardPreview": "Dashboard Preview",
-    "comingSoon": "Coming Soon"
-  },
-  "solution": {
-    "title": "Our Solution",
-    "description": "A comprehensive dashboard that puts the power of remote heat pump management at your fingertips",
-    "smartCommissioning": {
-      "title": "Smart Commissioning",
-      "description": "Streamline the installation process with automated setup procedures, guided workflows, and real-time system validation."
-    },
-    "remoteMonitoring": {
-      "title": "Remote Monitoring", 
-      "description": "Monitor heat pump performance, energy efficiency, and system health in real-time from anywhere, anytime."
-    },
-    "rapidSupport": {
-      "title": "Rapid Support",
-      "description": "Diagnose issues remotely, provide instant customer support, and resolve problems before they become costly service calls."
+      "commissioning": "Streamlined commissioning process",
+      "monitoring": "Remote monitoring, diagnosis, and control",
+      "support": "Enhanced customer support",
+      "visits": "Fewer service visits",
+      "efficiency": "Improved heat pump efficiency and lifespan"
     }
   },
-  "benefits": {
-    "title": "Why Choose Go be Smart?",
-    "description": "Transform your heat pump installation business with measurable benefits",
-    "stats": {
-      "commissioning": "Faster Commissioning",
-      "commissioningDesc": "Reduce installation time with automated processes",
-      "serviceCalls": "Fewer Service Calls",
-      "serviceCallsDesc": "Prevent issues with proactive monitoring",
-      "satisfaction": "Customer Satisfaction", 
-      "satisfactionDesc": "Happier customers with reliable systems",
-      "monitoring": "System Monitoring",
-      "monitoringDesc": "Round-the-clock system health tracking"
+  "team": {
+    "title": "Team",
+    "descriptions": {
+      "keje": "Our data & ML expert. He prefers to spend his time building IoT solutions. You can wake up Keje in the middle of the night to talk about heat pumps. ",
+      "charlie": "Versed in marketing and sales, this innovation expert wants to build real solutions contributing to a more sustainable energy system.",
+      "age": "Solving abstract problems is what makes Age tick. After his PhD in theoretical biophysics, he has now immersed himself in the world of modern software."
     }
-  },
-  "cta": {
-    "title": "Ready to Transform Your Business?",
-    "description": "Join the revolution in heat pump management. Get early access to our platform and be among the first to experience the future of remote monitoring.",
-    "earlyAccess": "Request Early Access",
-    "scheduleDemo": "Schedule Demo"
   },
   "contact": {
     "title": "Get in Touch",
-    "description": "Ready to learn more? We'd love to hear from you.",
+    "description": "Want to know more? We'd love to hear from you.",
     "info": "Contact Information",
     "email": "Email",
-    "phone": "Phone", 
     "location": "Location",
-    "locationValue": "Amsterdam, Netherlands",
-    "form": {
-      "name": "Name",
-      "email": "Email",
-      "company": "Company",
-      "message": "Message",
-      "send": "Send Message"
-    }
+    "locationValue": "Utrecht, The Netherlands"
   },
   "footer": {
-    "description": "Revolutionizing heat pump management with smart technology and remote monitoring solutions.",
-    "product": {
-      "title": "Product",
-      "dashboard": "Dashboard",
-      "monitoring": "Monitoring",
-      "analytics": "Analytics",
-      "support": "Support"
-    },
-    "company": {
-      "title": "Company",
-      "about": "About",
-      "careers": "Careers", 
-      "news": "News",
-      "contact": "Contact"
-    },
-    "legal": {
-      "title": "Legal",
-      "privacy": "Privacy Policy",
-      "terms": "Terms of Service",
-      "cookies": "Cookie Policy"
-    },
-    "copyright": "© 2024 Go be Smart. All rights reserved."
+    "copyright": "© 2026 Go be smart. All rights reserved."
   }
 }

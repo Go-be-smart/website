@@ -14,7 +14,7 @@ const getLocalizedPath = (locale: Locale) => {
 <div class="relative">
   <button 
     id="language-toggle" 
-    class="flex items-center space-x-2 px-3 py-2 text-sm font-medium text-white hover:text-blue-300 transition-colors"
+    class="flex items-center space-x-2 px-3 py-2 text-sm font-medium text-white hover:text-[var(--color-primary-dark)] transition-colors"
     aria-expanded="false"
     aria-haspopup="true"
   >
@@ -32,17 +32,14 @@ const getLocalizedPath = (locale: Locale) => {
     {LOCALES.map((locale) => (
       <a 
         href={getLocalizedPath(locale)}
-        class={`block px-4 py-2 text-sm hover:bg-gray-50 transition-colors ${
+        class={`block px-4 py-2 text-sm rounded-lg ${
           locale === currentLocale ? 'bg-blue-50 text-blue-600 font-medium' : 'text-gray-700'
         }`}
       >
         <div class="flex items-center space-x-2">
-          <span class="text-lg">
-            {locale === 'en' ? '🇺🇸' : '🇳🇱'}
-          </span>
           <span>{LANGUAGE_NAMES[locale]}</span>
           {locale === currentLocale && (
-            <svg class="w-4 h-4 ml-auto" fill="currentColor" viewBox="0 0 20 20">
+            <svg class="w-4 h-4 ml-auto rounded-lg" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
             </svg>
           )}

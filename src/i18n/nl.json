@@ -1,105 +1,44 @@
 {
   "nav": {
-    "about": "Over ons",
-    "solution": "Oplossing", 
-    "benefits": "Voordelen",
-    "contact": "Contact",
-    "getStarted": "Aan de Slag"
+    "about": "Over",
+    "team": "Team",
+    "contact": "Contact"
   },
   "hero": {
-    "title": "Slim Warmtepomp",
-    "titleHighlight": "Beheer",
-    "description": "Het revolutionaire dashboard dat de manier waarop installateurs warmtepompen op afstand monitoren en besturen volledig transformeert. Maak inbedrijfstelling, onderhoud en klantenservice sneller en eenvoudiger dan ooit tevoren.",
-    "requestDemo": "Demo Aanvragen",
-    "learnMore": "Meer Weten"
+    "title": "Duurzaam verwarmen",
+    "titleHighlight": "eenvoudiger",
+    "description": "Laat jouw installateur monitoren, diagnosticeren en optimaliseren op afstand.",
+    "requestDemo": "Demo aanvragen",
+    "learnMore": "Vroege toegang"
   },
   "about": {
-    "title": "Over Go be Smart",
-    "description": "Wij zijn een startup die de warmtepompindustrie revolutioneert met geavanceerde technologie die installateurs verbindt met hun installaties zoals nooit tevoren.",
-    "mission": "Onze Missie",
-    "missionText": "Warmtepompinstallateurs ondersteunen met intelligente monitoring en besturing op afstand, waardoor servicegesprekken worden verminderd, klanttevredenheid wordt verbeterd en de overgang naar duurzame verwarmingsoplossingen wordt versneld.",
+    "title": "Over ons",
+    "description": "Warmtepompen worden zonder goede inbedrijfstelling en monitoring geïnstalleerd. Het resultaat? Inefficiëntie, energieverspilling, en overbodige huisbezoeken. Om het volledige potentiaal van warmtepompen te ontsluiten bouwen wij een oplossing die zorgt voor:",
     "features": {
-      "monitoring": "Monitoring & diagnostiek op afstand",
-      "commissioning": "Gestroomlijnde inbedrijfstelling", 
-      "support": "Verbeterde klantenondersteuning"
-    },
-    "dashboardPreview": "Dashboard Voorbeeld",
-    "comingSoon": "Binnenkort Beschikbaar"
-  },
-  "solution": {
-    "title": "Onze Oplossing",
-    "description": "Een uitgebreid dashboard dat de kracht van warmtepompbeheer op afstand binnen handbereik brengt",
-    "smartCommissioning": {
-      "title": "Slimme Inbedrijfstelling",
-      "description": "Stroomlijn het installatieproces met geautomatiseerde installatieprocedures, begeleide workflows en realtime systeemvalidatie."
-    },
-    "remoteMonitoring": {
-      "title": "Monitoring op Afstand", 
-      "description": "Monitor warmtepompprestaties, energie-efficiëntie en systeemgezondheid in realtime, overal en altijd."
-    },
-    "rapidSupport": {
-      "title": "Snelle Ondersteuning",
-      "description": "Diagnosticeer problemen op afstand, bied directe klantenondersteuning en los problemen op voordat ze kostbare servicebezoeken worden."
+      "commissioning": "Gestroomlijnde inbedrijfstelling",
+      "monitoring": "Monitoring, diagnose en controle op afstand",
+      "support": "Betere klantenservice",
+      "visits": "Minder huisbezoeken",
+      "efficiency": "Verbeterde efficiëntie en levensduur"
     }
   },
-  "benefits": {
-    "title": "Waarom Kiezen voor Go be Smart?",
-    "description": "Transformeer uw warmtepompinstallatiebedrijf met meetbare voordelen",
-    "stats": {
-      "commissioning": "Snellere Inbedrijfstelling",
-      "commissioningDesc": "Verkort installatietijd met geautomatiseerde processen",
-      "serviceCalls": "Minder Servicebezoeken",
-      "serviceCallsDesc": "Voorkom problemen met proactieve monitoring",
-      "satisfaction": "Klanttevredenheid", 
-      "satisfactionDesc": "Tevredere klanten met betrouwbare systemen",
-      "monitoring": "Systeemmonitoring",
-      "monitoringDesc": "24/7 monitoring van systeemgezondheid"
+  "team": {
+    "title": "Team",
+    "descriptions": {
+      "keje": "Onze data & ML expert. Het liefst besteed hij zijn tijd aan het bouwen van IoT oplossingen. Je kan Keje midden in de nacht wakker maken om over warmtepompen te praten.",
+      "charlie": "Met een bak aan ervaring in de marketing en sales wilt deze innovatie-expert echte oplossingen bouwen die bijdragen aan een duurzamer energiesysteem.",
+      "age": "Abstracte problemen oplossen is wat hem drijft. Na zijn PhD in theoretische biofysica heeft hij zich nu ondergedompeld in de wereld van moderne software."
     }
-  },
-  "cta": {
-    "title": "Klaar om Uw Bedrijf te Transformeren?",
-    "description": "Sluit u aan bij de revolutie in warmtepompbeheer. Krijg vroege toegang tot ons platform en behoort tot de eersten die de toekomst van monitoring op afstand ervaren.",
-    "earlyAccess": "Vroege Toegang Aanvragen",
-    "scheduleDemo": "Demo Plannen"
   },
   "contact": {
-    "title": "Neem Contact Op",
-    "description": "Klaar om meer te weten? We horen graag van u.",
-    "info": "Contactinformatie",
-    "email": "E-mail",
-    "phone": "Telefoon", 
+    "title": "Neem contact op",
+    "description": "Meer weten? We horen graag van je!",
+    "info": "Contact informatie",
+    "email": "Email",
     "location": "Locatie",
-    "locationValue": "Amsterdam, Nederland",
-    "form": {
-      "name": "Naam",
-      "email": "E-mail",
-      "company": "Bedrijf",
-      "message": "Bericht",
-      "send": "Bericht Versturen"
-    }
+    "locationValue": "Utrecht, Nederland"
   },
   "footer": {
-    "description": "Revolutioneren van warmtepompbeheer met slimme technologie en monitoring oplossingen op afstand.",
-    "product": {
-      "title": "Product",
-      "dashboard": "Dashboard",
-      "monitoring": "Monitoring",
-      "analytics": "Analytics",
-      "support": "Ondersteuning"
-    },
-    "company": {
-      "title": "Bedrijf",
-      "about": "Over Ons",
-      "careers": "Carrières", 
-      "news": "Nieuws",
-      "contact": "Contact"
-    },
-    "legal": {
-      "title": "Juridisch",
-      "privacy": "Privacybeleid",
-      "terms": "Servicevoorwaarden",
-      "cookies": "Cookiebeleid"
-    },
-    "copyright": "© 2024 Go be Smart. Alle rechten voorbehouden."
+    "copyright": "© 2026 Go be smart. Alle rechten voorbehouden."
   }
 }

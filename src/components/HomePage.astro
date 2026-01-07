@@ -19,20 +19,17 @@ const t = getTranslation(currentLocale);
 			</div>
 			<div class="hidden md:flex space-x-8 items-center">
 				<a href="#about" class="text-[var(--color-text-secondary)] hover:text-[var(--color-primary-dark)] transition-colors">{t('nav.about')}</a>
-				<a href="#solution" class="text-[var(--color-text-secondary)] hover:text-[var(--color-primary-dark)] transition-colors">{t('nav.solution')}</a>
-				<a href="#benefits" class="text-[var(--color-text-secondary)] hover:text-[var(--color-primary-dark)] transition-colors">{t('nav.benefits')}</a>
+				<!-- <a href="#solution" class="text-[var(--color-text-secondary)] hover:text-[var(--color-primary-dark)] transition-colors">{t('nav.solution')}</a> -->
+				<a href="#team" class="text-[var(--color-text-secondary)] hover:text-[var(--color-primary-dark)] transition-colors">{t('nav.team')}</a>
 				<a href="#contact" class="text-[var(--color-text-secondary)] hover:text-[var(--color-primary-dark)] transition-colors">{t('nav.contact')}</a>
-				<LanguageSwitcher />
 			</div>
-			<button class="bg-gradient-to-r from-[var(--color-gradient-start)] to-[var(--color-gradient-end)] text-[var(--color-text-primary)] px-6 py-2 rounded-lg hover:shadow-lg hover:shadow-[var(--color-primary-dark)]/20 transition-all">
-				{t('nav.getStarted')}
-			</button>
+			<LanguageSwitcher />
 		</div>
 	</div>
 </nav>
 
 <!-- Hero Section -->
-<section class="pt-20 pb-16 bg-gradient-to-br from-[var(--color-bg-primary)] via-[var(--color-bg-secondary)] to-[var(--color-bg-primary)]">
+<section class="pt-20 pb-0 bg-[var(--color-bg-secondary)] border-b border-[var(--color-primary-dark)]/30">
 	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 		<div class="text-center py-20">
 			<h1 class="text-5xl md:text-6xl font-bold text-[var(--color-text-primary)] mb-6">
@@ -46,9 +43,6 @@ const t = getTranslation(currentLocale);
 			</p>
 			<div class="flex flex-col sm:flex-row gap-4 justify-center">
 				<button class="bg-gradient-to-r from-[var(--color-gradient-start)] to-[var(--color-gradient-end)] text-[var(--color-text-primary)] px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-xl hover:shadow-[var(--color-primary-dark)]/30 transition-all transform hover:scale-105">
-					{t('hero.requestDemo')}
-				</button>
-				<button class="border-2 border-[var(--color-primary-dark)]/50 text-[var(--color-primary)] px-8 py-4 rounded-lg text-lg font-semibold hover:border-[var(--color-primary)] hover:bg-[var(--color-primary-dark)]/10 transition-all">
 					{t('hero.learnMore')}
 				</button>
 			</div>
@@ -57,260 +51,158 @@ const t = getTranslation(currentLocale);
 </section>
 
 <!-- About Section -->
-<section id="about" class="py-20 bg-[var(--color-bg-primary)]">
+<section id="about" class="py-20 bg-gradient-to-b from-[var(--color-bg-secondary)] to-[var(--color-bg-primary)] border-b border-[var(--color-primary-dark)]/20">
 	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-		<div class="text-center mb-16">
-			<h2 class="text-4xl font-bold text-[var(--color-text-primary)] mb-4">{t('about.title')}</h2>
-			<p class="text-xl text-[var(--color-text-secondary)] max-w-3xl mx-auto">
-				{t('about.description')}
-			</p>
-		</div>
 		<div class="grid md:grid-cols-2 gap-12 items-center">
 			<div>
-				<h3 class="text-2xl font-bold text-[var(--color-primary)] mb-4">{t('about.mission')}</h3>
+				<h3 class="text-2xl font-bold text-[var(--color-primary)] mb-4"><span class="bg-gradient-to-r from-[var(--color-gradient-start)] to-[var(--color-gradient-end)] bg-clip-text text-transparent">
+					{t('about.title')}
+				</span></h3>
 				<p class="text-[var(--color-text-secondary)] mb-6">
-					{t('about.missionText')}
+					{t('about.description')}
 				</p>
 				<div class="space-y-4">
-					<div class="flex items-center">
-						<div class="w-3 h-3 bg-gradient-to-r from-[var(--color-gradient-start)] to-[var(--color-gradient-end)] rounded-full mr-3"></div>
-						<span class="text-[var(--color-text-secondary)]">{t('about.features.monitoring')}</span>
-					</div>
 					<div class="flex items-center">
 						<div class="w-3 h-3 bg-gradient-to-r from-[var(--color-gradient-start)] to-[var(--color-gradient-end)] rounded-full mr-3"></div>
 						<span class="text-[var(--color-text-secondary)]">{t('about.features.commissioning')}</span>
 					</div>
 					<div class="flex items-center">
 						<div class="w-3 h-3 bg-gradient-to-r from-[var(--color-gradient-start)] to-[var(--color-gradient-end)] rounded-full mr-3"></div>
-						<span class="text-[var(--color-text-secondary)]">{t('about.features.support')}</span>
+						<span class="text-[var(--color-text-secondary)]">{t('about.features.visits')}</span>
 					</div>
+					<div class="flex items-center">
+						<div class="w-3 h-3 bg-gradient-to-r from-[var(--color-gradient-start)] to-[var(--color-gradient-end)] rounded-full mr-3"></div>
+							<span class="text-[var(--color-text-secondary)]">{t('about.features.efficiency')}</span>
+						</div>
 				</div>
 			</div>
-			<div class="bg-gradient-to-br from-[var(--color-secondary-dark)]/20 to-[var(--color-primary-darker)]/20 rounded-2xl p-8 border border-[var(--color-primary-dark)]/20">
-				<div class="h-64 bg-[var(--color-bg-secondary)] rounded-lg shadow-lg shadow-[var(--color-primary-dark)]/10 flex items-center justify-center">
-					<div class="text-center text-[var(--color-primary)]/60">
-						<div class="text-4xl mb-2">📊</div>
-						<p>{t('about.dashboardPreview')}<br/>{t('about.comingSoon')}</p>
-					</div>
-				</div>
+			<div class="h-[270px] flex justify-center items-center">
+				<img src="/src/assets/dashboard_no_border.png" alt="Dashboard Preview" class="h-full object-cover rounded-lg shadow-lg shadow-[var(--color-primary-dark)]">
 			</div>
 		</div>
 	</div>
 </section>
 
-<!-- Solution Section -->
-<section id="solution" class="py-20 bg-gradient-to-b from-[var(--color-bg-primary)] to-[var(--color-bg-secondary)]">
+
+<!-- Section Divider -->
+<!-- <div class="h-px bg-gradient-to-r from-transparent via-[var(--color-primary-dark)]/20 to-transparent"></div> -->
+
+<!-- Team Section -->
+<section id="team" class="py-20 bg-gradient-to-b from-[var(--color-bg-primary)] to-[var(--color-bg-secondary)] border-b border-[var(--color-primary-dark)]/30">
 	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-		<div class="text-center mb-16">
-			<h2 class="text-4xl font-bold text-[var(--color-text-primary)] mb-4">{t('solution.title')}</h2>
+		<!-- <div class="text-center mb-16">
+			<h2 class="text-4xl font-bold text-[var(--color-text-primary)] mb-4">{t('team.title')}</h2>
 			<p class="text-xl text-[var(--color-text-secondary)] max-w-3xl mx-auto">
-				{t('solution.description')}
+				{t('team.description')}
 			</p>
-		</div>
-		<div class="grid md:grid-cols-3 gap-8">
-			<div class="bg-[var(--color-bg-card)]/50 backdrop-blur-sm rounded-xl p-8 border border-[var(--color-primary-dark)]/20 hover:border-[var(--color-primary)]/40 hover:shadow-lg hover:shadow-[var(--color-primary-dark)]/20 transition-all">
-				<div class="w-12 h-12 bg-gradient-to-r from-[var(--color-primary-dark)] to-[var(--color-gradient-end-dark)] rounded-lg flex items-center justify-center mb-6">
-					<span class="text-[var(--color-text-primary)] text-2xl">🔧</span>
-				</div>
-				<h3 class="text-xl font-bold text-[var(--color-primary)] mb-4">{t('solution.smartCommissioning.title')}</h3>
-				<p class="text-[var(--color-text-secondary)]">
-					{t('solution.smartCommissioning.description')}
+		</div> -->
+
+		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
+			<div class="text-center">
+				<img
+					src="/src/assets/keje.jpeg"
+					alt="Team member portrait: Keje"
+					class="w-36 h-36 md:w-44 md:h-44 rounded-full object-cover mx-auto shadow-lg shadow-[var(--color-primary-dark)]/30 ring-2 ring-[var(--color-primary-dark)]/20"
+					loading="lazy"
+				/>
+				<h3 class="mt-6 text-xl font-semibold text-[var(--color-text-primary)]">Keje Sinnige</h3>
+				<p class="mt-2 text-[var(--color-text-secondary)] w-50 mx-auto text-center">
+					{t('team.descriptions.keje')}
 				</p>
+				<a
+					href="https://www.linkedin.com/in/keje-sinnige/"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="inline-flex items-center justify-center mt-4 w-8 h-8 text-[var(--color-text-secondary)] hover:text-[var(--color-primary-dark)] transition-colors"
+					aria-label="Keje Sinnige's LinkedIn profile"
+				>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+						<path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+					</svg>
+				</a>
 			</div>
-			<div class="bg-[var(--color-bg-card)]/50 backdrop-blur-sm rounded-xl p-8 border border-[var(--color-primary-dark)]/20 hover:border-[var(--color-primary)]/40 hover:shadow-lg hover:shadow-[var(--color-primary-dark)]/20 transition-all">
-				<div class="w-12 h-12 bg-gradient-to-r from-[var(--color-primary-dark)] to-[var(--color-gradient-end-dark)] rounded-lg flex items-center justify-center mb-6">
-					<span class="text-[var(--color-text-primary)] text-2xl">📱</span>
-				</div>
-				<h3 class="text-xl font-bold text-[var(--color-primary)] mb-4">{t('solution.remoteMonitoring.title')}</h3>
-				<p class="text-[var(--color-text-secondary)]">
-					{t('solution.remoteMonitoring.description')}
+
+			<div class="text-center">
+				<img
+					src="/src/assets/charlie.jpeg"
+					alt="Team member portrait: Charlie"
+					class="w-36 h-36 md:w-44 md:h-44 rounded-full object-cover mx-auto shadow-lg shadow-[var(--color-primary-dark)]/30 ring-2 ring-[var(--color-primary-dark)]/20"
+					loading="lazy"
+				/>
+				<h3 class="mt-6 text-xl font-semibold text-[var(--color-text-primary)]">Charlie Zinken</h3>
+				<p class="mt-2 text-[var(--color-text-secondary)] w-50 mx-auto text-center">
+					{t('team.descriptions.charlie')}
 				</p>
+				<a
+					href="https://www.linkedin.com/in/charlie-zinken-04a3a286/"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="inline-flex items-center justify-center mt-4 w-8 h-8 text-[var(--color-text-secondary)] hover:text-[var(--color-primary-dark)] transition-colors"
+					aria-label="Charlie Zinken's LinkedIn profile"
+				>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+						<path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+					</svg>
+				</a>
 			</div>
-			<div class="bg-[var(--color-bg-card)]/50 backdrop-blur-sm rounded-xl p-8 border border-[var(--color-primary-dark)]/20 hover:border-[var(--color-primary)]/40 hover:shadow-lg hover:shadow-[var(--color-primary-dark)]/20 transition-all">
-				<div class="w-12 h-12 bg-gradient-to-r from-[var(--color-primary-dark)] to-[var(--color-gradient-end-dark)] rounded-lg flex items-center justify-center mb-6">
-					<span class="text-[var(--color-text-primary)] text-2xl">⚡</span>
-				</div>
-				<h3 class="text-xl font-bold text-[var(--color-primary)] mb-4">{t('solution.rapidSupport.title')}</h3>
-				<p class="text-[var(--color-text-secondary)]">
-					{t('solution.rapidSupport.description')}
+
+			<div class="text-center">
+				<img
+					src="/src/assets/age.jpeg"
+					alt="Team member portrait: Age"
+					class="w-36 h-36 md:w-44 md:h-44 rounded-full object-cover mx-auto shadow-lg shadow-[var(--color-primary-dark)]/30 ring-2 ring-[var(--color-primary-dark)]/20"
+					loading="lazy"
+				/>
+				<h3 class="mt-6 text-xl font-semibold text-[var(--color-text-primary)]">Age Tjalma</h3>
+				<p class="mt-2 text-[var(--color-text-secondary)] w-50 mx-auto text-center">
+					{t('team.descriptions.age')}
 				</p>
+				<a
+					href="https://www.linkedin.com/in/agetjalma/"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="inline-flex items-center justify-center mt-4 w-8 h-8 text-[var(--color-text-secondary)] hover:text-[var(--color-primary-dark)] transition-colors"
+					aria-label="Age Tjalma's LinkedIn profile"
+				>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+						<path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+					</svg>
+				</a>
 			</div>
 		</div>
 	</div>
 </section>
 
-<!-- Benefits Section -->
-<section id="benefits" class="py-20 bg-[var(--color-bg-primary)]">
-	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-		<div class="text-center mb-16">
-			<h2 class="text-4xl font-bold text-[var(--color-text-primary)] mb-4">{t('benefits.title')}</h2>
-			<p class="text-xl text-[var(--color-text-secondary)] max-w-3xl mx-auto">
-				{t('benefits.description')}
-			</p>
-		</div>
-		<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-			<div class="text-center">
-				<div class="w-16 h-16 bg-gradient-to-r from-[var(--color-primary-dark)] to-[var(--color-gradient-end-dark)] rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg shadow-[var(--color-primary-dark)]/30">
-					<span class="text-[var(--color-text-primary)] text-2xl font-bold">50%</span>
-				</div>
-				<h3 class="text-lg font-bold text-[var(--color-primary)] mb-2">{t('benefits.stats.commissioning')}</h3>
-				<p class="text-[var(--color-text-muted)] text-sm">{t('benefits.stats.commissioningDesc')}</p>
-			</div>
-			<div class="text-center">
-				<div class="w-16 h-16 bg-gradient-to-r from-[var(--color-primary-dark)] to-[var(--color-gradient-end-dark)] rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg shadow-[var(--color-secondary)]/30">
-					<span class="text-[var(--color-text-primary)] text-2xl font-bold">75%</span>
-				</div>
-				<h3 class="text-lg font-bold text-[var(--color-primary)] mb-2">{t('benefits.stats.serviceCalls')}</h3>
-				<p class="text-[var(--color-text-muted)] text-sm">{t('benefits.stats.serviceCallsDesc')}</p>
-			</div>
-			<div class="text-center">
-				<div class="w-16 h-16 bg-gradient-to-r from-[var(--color-primary-dark)] to-[var(--color-gradient-end-dark)] rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg shadow-[var(--color-primary-dark)]/30">
-					<span class="text-[var(--color-text-primary)] text-2xl font-bold">90%</span>
-				</div>
-				<h3 class="text-lg font-bold text-[var(--color-primary)] mb-2">{t('benefits.stats.satisfaction')}</h3>
-				<p class="text-[var(--color-text-muted)] text-sm">{t('benefits.stats.satisfactionDesc')}</p>
-			</div>
-			<div class="text-center">
-				<div class="w-16 h-16 bg-gradient-to-r from-[var(--color-primary-dark)] to-[var(--color-gradient-end)] rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg shadow-[var(--color-primary-dark)]/30">
-					<span class="text-[var(--color-text-primary)] text-2xl font-bold">24/7</span>
-				</div>
-				<h3 class="text-lg font-bold text-[var(--color-primary)] mb-2">{t('benefits.stats.monitoring')}</h3>
-				<p class="text-[var(--color-text-muted)] text-sm">{t('benefits.stats.monitoringDesc')}</p>
-			</div>
-		</div>
-	</div>
-</section>
-
-<!-- CTA Section -->
-<section class="py-20 bg-gradient-to-r from-[var(--color-bg-primary)] via-[var(--color-bg-secondary)] to-[var(--color-bg-dark)]">
-	<div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-		<h2 class="text-4xl font-bold text-[var(--color-text-primary)] mb-4">{t('cta.title')}</h2>
-		<p class="text-xl text-[var(--color-primary-light)] mb-8">
-			{t('cta.description')}
-		</p>
-		<div class="flex flex-col sm:flex-row gap-4 justify-center">
-			<button class="bg-gradient-to-r from-[var(--color-primary-dark)] to-[var(--color-gradient-end-dark)] text-[var(--color-text-primary)] px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-xl hover:shadow-[var(--color-primary-dark)]/30 transition-all transform hover:scale-105">
-				{t('cta.earlyAccess')}
-			</button>
-			<button class="border-2 border-[var(--color-primary)] text-[var(--color-primary)] px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[var(--color-primary)] hover:text-[var(--color-bg-primary)] transition-all">
-				{t('cta.scheduleDemo')}
-			</button>
-		</div>
-	</div>
-</section>
+<!-- Section Divider -->
+<!-- <div class="h-px bg-gradient-to-r from-transparent via-[var(--color-primary-dark)]/20 to-transparent"></div> -->
 
 <!-- Contact Section -->
-<section id="contact" class="py-20 bg-gradient-to-b from-[var(--color-bg-primary)] to-[var(--color-bg-secondary)]">
-	<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-		<div class="text-center mb-12">
-			<h2 class="text-4xl font-bold text-[var(--color-text-primary)] mb-4">{t('contact.title')}</h2>
-			<p class="text-xl text-[var(--color-text-secondary)]">
-				{t('contact.description')}
-			</p>
-		</div>
-		<div class="grid md:grid-cols-2 gap-12">
+<section id="contact" class="py-15 bg-gradient-to-b from-[var(--color-bg-secondary)] to-[var(--color-bg-primary)]">
+	<div class="flex flex-col mx-auto w-fit">
+		<p class="text-xl text-[var(--color-text-secondary)] text-center mb-6 whitespace-nowrap">
+			{t('contact.description')}
+		</p>
+
+		<div class="flex flex-col sm:flex-row justify-between gap-6 w-full">
+			<a
+				href="mailto:info@gobesmart.nl"
+				class="group hover:opacity-80 transition-opacity"
+			>
+				<p class="font-semibold text-[var(--color-text-primary)]">{t('contact.email')}</p>
+				<p class="text-[var(--color-text-muted)] group-hover:text-[var(--color-text-secondary)] transition-colors">info@gobesmart.nl</p>
+			</a>
+
 			<div>
-				<h3 class="text-2xl font-bold text-[var(--color-primary)] mb-6">{t('contact.info')}</h3>
-				<div class="space-y-4">
-					<div class="flex items-center">
-						<div class="w-10 h-10 bg-gradient-to-r from-[var(--color-primary-dark)] to-[var(--color-gradient-end-dark)] rounded-lg flex items-center justify-center mr-4">
-							<span class="text-[var(--color-text-primary)]">📧</span>
-						</div>
-						<div>
-							<p class={`font-semibold text-[var(--color-text-primary)]`}>{t('contact.email')}</p>
-							<p class="text-[var(--color-text-muted)]">hello@gobesmart.com</p>
-						</div>
-					</div>
-					<div class="flex items-center">
-						<div class="w-10 h-10 bg-gradient-to-r from-[var(--color-primary-dark)] to-[var(--color-gradient-end-dark)] rounded-lg flex items-center justify-center mr-4">
-							<span class="text-[var(--color-text-primary)]">📱</span>
-						</div>
-						<div>
-							<p class={`font-semibold text-[var(--color-text-primary)]`}>{t('contact.phone')}</p>
-							<p class="text-[var(--color-text-muted)]">+31 (0) 20 123 4567</p>
-						</div>
-					</div>
-					<div class="flex items-center">
-						<div class="w-10 h-10 bg-gradient-to-r from-[var(--color-primary-dark)] to-[var(--color-gradient-end-dark)] rounded-lg flex items-center justify-center mr-4">
-							<span class="text-[var(--color-text-primary)]">📍</span>
-						</div>
-						<div>
-							<p class={`font-semibold text-[var(--color-text-primary)]`}>{t('contact.location')}</p>
-							<p class="text-[var(--color-text-muted)]">{t('contact.locationValue')}</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="bg-[var(--color-bg-card)]/50 backdrop-blur-sm rounded-xl p-8 border border-[var(--color-primary-dark)]/20">
-				<form class="space-y-6">
-					<div>
-						<label class={`block text-sm font-medium text-[var(--color-primary)] mb-2`}>{t('contact.form.name')}</label>
-						<input type="text" class={`w-full px-4 py-3 bg-[var(--color-bg-form)] border border-[var(--color-primary-dark)]/30 rounded-lg text-[var(--color-text-primary)] placeholder-[var(--color-text-muted)] focus:ring-2 focus:ring-[var(--color-primary-dark)] focus:border-transparent`}>
-					</div>
-					<div>
-						<label class={`block text-sm font-medium text-[var(--color-primary)] mb-2`}>{t('contact.form.email')}</label>
-						<input type="email" class={`w-full px-4 py-3 bg-[var(--color-bg-form)] border border-[var(--color-primary-dark)]/30 rounded-lg text-[var(--color-text-primary)] placeholder-[var(--color-text-muted)] focus:ring-2 focus:ring-[var(--color-primary-dark)] focus:border-transparent`}>
-					</div>
-					<div>
-						<label class={`block text-sm font-medium text-[var(--color-primary)] mb-2`}>{t('contact.form.company')}</label>
-						<input type="text" class={`w-full px-4 py-3 bg-[var(--color-bg-form)] border border-[var(--color-primary-dark)]/30 rounded-lg text-[var(--color-text-primary)] placeholder-[var(--color-text-muted)] focus:ring-2 focus:ring-[var(--color-primary-dark)] focus:border-transparent`}>
-					</div>
-					<div>
-						<label class={`block text-sm font-medium text-[var(--color-primary)] mb-2`}>{t('contact.form.message')}</label>
-						<textarea rows="4" class={`w-full px-4 py-3 bg-[var(--color-bg-form)] border border-[var(--color-primary-dark)]/30 rounded-lg text-[var(--color-text-primary)] placeholder-[var(--color-text-muted)] focus:ring-2 focus:ring-[var(--color-primary-dark)] focus:border-transparent`}></textarea>
-					</div>
-					<button type="submit" class={`w-full bg-gradient-to-r from-[var(--color-primary-dark)] to-[var(--color-gradient-end-dark)] text-[var(--color-text-primary)] py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-[var(--color-primary-dark)]/30 transition-all`}>
-						{t('contact.form.send')}
-					</button>
-				</form>
+				<p class="font-semibold text-[var(--color-text-primary)]">{t('contact.location')}</p>
+				<p class="text-[var(--color-text-muted)]">{t('contact.locationValue')}</p>
 			</div>
 		</div>
 	</div>
 </section>
 
 <!-- Footer -->
-<footer class={`bg-[var(--color-bg-dark)] text-[var(--color-text-primary)] py-12 border-t border-[var(--color-primary-dark)]/20`}>
-	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-		<div class="grid md:grid-cols-4 gap-8">
-			<div>
-				<div class={`text-2xl font-bold bg-gradient-to-r from-[var(--color-gradient-start)] to-[var(--color-gradient-end)] bg-clip-text text-transparent mb-4`}>
-					Go Be Smart
-				</div>
-				<p class={`text-[var(--color-text-muted)] text-sm`}>
-					{t('footer.description')}
-				</p>
-			</div>
-			<div>
-				<h4 class={`font-semibold text-[var(--color-primary)] mb-4`}>{t('footer.product.title')}</h4>
-				<ul class={`space-y-2 text-sm text-[var(--color-text-muted)]`}>
-					<li><a href="#" class={`hover:text-[var(--color-primary)] transition-colors`}>{t('footer.product.dashboard')}</a></li>
-					<li><a href="#" class={`hover:text-[var(--color-primary)] transition-colors`}>{t('footer.product.monitoring')}</a></li>
-					<li><a href="#" class={`hover:text-[var(--color-primary)] transition-colors`}>{t('footer.product.analytics')}</a></li>
-					<li><a href="#" class={`hover:text-[var(--color-primary)] transition-colors`}>{t('footer.product.support')}</a></li>
-				</ul>
-			</div>
-			<div>
-				<h4 class={`font-semibold text-[var(--color-primary)] mb-4`}>{t('footer.company.title')}</h4>
-				<ul class={`space-y-2 text-sm text-[var(--color-text-muted)]`}>
-					<li><a href="#about" class={`hover:text-[var(--color-primary)] transition-colors`}>{t('footer.company.about')}</a></li>
-					<li><a href="#" class={`hover:text-[var(--color-primary)] transition-colors`}>{t('footer.company.careers')}</a></li>
-					<li><a href="#" class={`hover:text-[var(--color-primary)] transition-colors`}>{t('footer.company.news')}</a></li>
-					<li><a href="#contact" class={`hover:text-[var(--color-primary)] transition-colors`}>{t('footer.company.contact')}</a></li>
-				</ul>
-			</div>
-			<div>
-				<h4 class={`font-semibold text-[var(--color-primary)] mb-4`}>{t('footer.legal.title')}</h4>
-				<ul class={`space-y-2 text-sm text-[var(--color-text-muted)]`}>
-					<li><a href="#" class={`hover:text-[var(--color-primary)] transition-colors`}>{t('footer.legal.privacy')}</a></li>
-					<li><a href="#" class={`hover:text-[var(--color-primary)] transition-colors`}>{t('footer.legal.terms')}</a></li>
-					<li><a href="#" class={`hover:text-[var(--color-primary)] transition-colors`}>{t('footer.legal.cookies')}</a></li>
-				</ul>
-			</div>
-		</div>
-		<div class={`border-t border-[var(--color-primary-dark)]/20 mt-8 pt-8 text-center`}>
+<footer class={`bg-[var(--color-bg-dark)] text-[var(--color-text-primary)] py-12 border-t border-[var(--color-primary-dark)]/20 text-center`}>
 			<p class={`text-[var(--color-text-muted)] text-sm`}>
 				{t('footer.copyright')}
 			</p>
-		</div>
-	</div>
 </footer>
