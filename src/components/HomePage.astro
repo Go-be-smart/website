@@ -166,23 +166,25 @@ const t = getTranslation(currentLocale);
 
 <!-- Contact Section -->
 <section id="contact" class="flex flex-col py-15 bg-gradient-to-b from-[var(--color-bg-secondary)] to-[var(--color-bg-primary)]">
-	<div class="flex flex-col mx-auto w-fit mx-auto">
-		<p class="text-xl text-[var(--color-text-secondary)] text-center mb-6 whitespace-nowrap">
-			{t('contact.description')}
-		</p>
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+		<div class="flex flex-col mx-auto w-full">
+			<p class="text-xl text-[var(--color-text-secondary)] text-center mb-6 whitespace-nowrap">
+				{t('contact.description')}
+			</p>
 
-		<div class="flex flex-col sm:flex-row justify-between gap-6 w-full">
-			<a
-				href="mailto:info@gobesmart.nl"
-				class="group hover:opacity-80 transition-opacity"
-			>
-				<p class="font-semibold text-[var(--color-text-primary)]">{t('contact.email')}</p>
-				<p class="text-[var(--color-text-muted)] group-hover:text-[var(--color-text-secondary)] transition-colors">info@gobesmart.nl</p>
-			</a>
+			<div class="flex flex-col sm:flex-row justify-between gap-6 w-full">
+				<a
+					href="mailto:info@gobesmart.nl"
+					class="group hover:opacity-80 transition-opacity"
+				>
+					<p class="font-semibold text-[var(--color-text-primary)]">{t('contact.email')}</p>
+					<p class="text-[var(--color-text-muted)] group-hover:text-[var(--color-text-secondary)] transition-colors">info@gobesmart.nl</p>
+				</a>
 
-			<div>
-				<p class="font-semibold text-[var(--color-text-primary)]">{t('contact.location')}</p>
-				<p class="text-[var(--color-text-muted)]">{t('contact.locationValue')}</p>
+				<div>
+					<p class="font-semibold text-[var(--color-text-primary)]">{t('contact.location')}</p>
+					<p class="text-[var(--color-text-muted)]">{t('contact.locationValue')}</p>
+				</div>
 			</div>
 		</div>
 	</div>
