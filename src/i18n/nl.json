@@ -1,4 +1,8 @@
 {
+  "meta": {
+    "title": "Go be smart - Duurzaam verwarmen eenvoudiger",
+    "description": "Dashboard voor installateurs om warmtepompen op afstand te monitoren en besturen. Maakt inbedrijfstelling, onderhoud en klantenservice sneller en eenvoudiger."
+  },
   "nav": {
     "about": "Over",
     "team": "Team",

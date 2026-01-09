@@ -1,9 +1,27 @@
----                      
-import '../styles/global.css' 
----   
+---
+import '../styles/global.css';
+import { getTranslation } from '../utils/i18n';
+
+interface Props {
+	locale: string;
+	site?: string;
+}
+
+const { locale = 'en', site = 'https://www.gobesmart.io' } = Astro.props;
+const t = getTranslation(locale);
+
+// Generate URLs for hreflang and canonical
+const currentPath = Astro.url.pathname;
+const baseUrl = site.replace(/\/$/, ''); // Remove trailing slash
+const canonicalUrl = `${baseUrl}${currentPath}`;
+
+// Generate alternate URLs
+const enUrl = currentPath.startsWith('/nl') ? baseUrl + currentPath.replace(/^\/nl/, '') : baseUrl + currentPath;
+const nlUrl = currentPath.startsWith('/nl') ? baseUrl + currentPath : baseUrl + '/nl' + currentPath;
+---
 
 <!doctype html>
-<html lang="en">
+<html lang={locale}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,8 +29,39 @@ import '../styles/global.css'
 		<meta name="generator" content={Astro.generator} />
 
 		<!-- SEO Meta Tags -->
-		<title>Go be smart - Sustainable heating simplified</title>
-		<meta name="description" content="Revolutionary dashboard for installers to monitor and control heat pumps remotely. Making commissioning, servicing, and customer support faster and simpler." />
+		<title>{t('meta.title')}</title>
+		<meta name="description" content={t('meta.description')} />
+
+		<!-- Canonical URL -->
+		<link rel="canonical" href={canonicalUrl} />
+
+		<!-- Hreflang Tags -->
+		<link rel="alternate" hreflang="en" href={enUrl} />
+		<link rel="alternate" hreflang="nl" href={nlUrl} />
+		<link rel="alternate" hreflang="x-default" href={enUrl} />
+
+		<!-- Organization Structured Data -->
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "Organization",
+				"name": "Go be smart",
+				"alternateName": "gobesmart",
+				"url": baseUrl,
+				"description": "Revolutionary dashboard for installers to monitor and control heat pumps remotely",
+				"address": {
+					"@type": "PostalAddress",
+					"addressLocality": "Utrecht",
+					"addressCountry": "NL"
+				},
+				"email": "info@gobesmart.nl",
+				"sameAs": [
+					"https://www.linkedin.com/in/keje-sinnige/",
+					"https://www.linkedin.com/in/charlie-zinken-04a3a286/",
+					"https://www.linkedin.com/in/agetjalma/"
+				]
+			}
+		</script>
 
 		<!-- Security Meta Tags -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />

@@ -1,4 +1,8 @@
 {
+  "meta": {
+    "title": "Go be smart - Sustainable heating simplified",
+    "description": "Dashboard for installers to monitor and control heat pumps remotely. Making commissioning, servicing, and customer support faster and simpler."
+  },
   "nav": {
     "about": "About",
     "team": "Team",
