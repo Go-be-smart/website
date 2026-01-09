@@ -38,9 +38,8 @@
     "title": "Get in Touch",
     "description": "Want to know more? We'd love to hear from you.",
     "info": "Contact Information",
-    "email": "Email",
-    "location": "Location",
-    "locationValue": "Utrecht, The Netherlands"
+    "locationValue": "Utrecht, The Netherlands",
+    "linkedin": "Follow us on LinkedIn"
   },
   "footer": {
     "copyright": "© 2026 Go be smart. All rights reserved."

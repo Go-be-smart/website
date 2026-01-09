@@ -38,9 +38,8 @@
     "title": "Neem contact op",
     "description": "Meer weten? We horen graag van je!",
     "info": "Contact informatie",
-    "email": "Email",
-    "location": "Locatie",
-    "locationValue": "Utrecht, Nederland"
+    "locationValue": "Utrecht, Nederland",
+    "linkedin": "Volg ons op LinkedIn"
   },
   "footer": {
     "copyright": "© 2026 Go be smart. Alle rechten voorbehouden."
