@@ -1,0 +1,6 @@
+# Redirect all .nl domain traffic to .io domain
+https://gobesmart.nl/*  https://www.gobesmart.io/:splat  301!
+https://www.gobesmart.nl/*  https://www.gobesmart.io/:splat  301!
+
+# Redirect non-www .io to www.gobesmart.io
+https://gobesmart.io/*  https://www.gobesmart.io/:splat  301!
