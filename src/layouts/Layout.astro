@@ -41,27 +41,25 @@ const nlUrl = currentPath.startsWith('/nl') ? baseUrl + currentPath : baseUrl + 
 		<link rel="alternate" hreflang="x-default" href={enUrl} />
 
 		<!-- Organization Structured Data -->
-		<script type="application/ld+json">
-			{
-				"@context": "https://schema.org",
-				"@type": "Organization",
-				"name": "Go be smart",
-				"alternateName": "gobesmart",
-				"url": baseUrl,
-				"description": "Revolutionary dashboard for installers to monitor and control heat pumps remotely",
-				"address": {
-					"@type": "PostalAddress",
-					"addressLocality": "Utrecht",
-					"addressCountry": "NL"
-				},
-				"email": "info@gobesmart.nl",
-				"sameAs": [
-					"https://www.linkedin.com/in/keje-sinnige/",
-					"https://www.linkedin.com/in/charlie-zinken-04a3a286/",
-					"https://www.linkedin.com/in/agetjalma/"
-				]
-			}
-		</script>
+		<script type="application/ld+json" set:html={JSON.stringify({
+			"@context": "https://schema.org",
+			"@type": "Organization",
+			"name": "Go be smart",
+			"alternateName": "gobesmart",
+			"url": baseUrl,
+			"description": "Revolutionary dashboard for installers to monitor and control heat pumps remotely",
+			"address": {
+				"@type": "PostalAddress",
+				"addressLocality": "Utrecht",
+				"addressCountry": "NL"
+			},
+			"email": "info@gobesmart.nl",
+			"sameAs": [
+				"https://www.linkedin.com/in/keje-sinnige/",
+				"https://www.linkedin.com/in/charlie-zinken-04a3a286/",
+				"https://www.linkedin.com/in/agetjalma/"
+			]
+		})} />
 
 		<!-- Security Meta Tags -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
