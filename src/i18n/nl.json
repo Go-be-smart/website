@@ -9,15 +9,15 @@
     "contact": "Contact"
   },
   "hero": {
-    "title": "Duurzaam verwarmen",
-    "titleHighlight": "eenvoudiger",
+    "title": "Eenvoudiger duurzaam",
+    "titleHighlight": "verwarmen",
     "description": "Laat jouw installateur monitoren, diagnosticeren en optimaliseren op afstand.",
     "requestDemo": "Demo aanvragen",
     "learnMore": "Vroege toegang"
   },
   "about": {
     "title": "Over ons",
-    "description": "Warmtepompen worden zonder goede inbedrijfstelling en monitoring geïnstalleerd. Het resultaat? Inefficiëntie, energieverspilling, en overbodige huisbezoeken. Om het volledige potentiaal van warmtepompen te ontsluiten bouwen wij een oplossing die zorgt voor:",
+    "description": "Warmtepompen worden zonder goede inbedrijfstelling en monitoring geïnstalleerd. Het resultaat? Inefficiëntie, energieverspilling, en overbodige huisbezoeken. Om het volledige potentieel van warmtepompen te ontsluiten bouwen wij een oplossing die zorgt voor:",
     "features": {
       "commissioning": "Gestroomlijnde inbedrijfstelling",
       "monitoring": "Monitoring, diagnose en controle op afstand",
@@ -30,7 +30,7 @@
     "title": "Team",
     "descriptions": {
       "keje": "Onze data & ML expert. Het liefst besteed hij zijn tijd aan het bouwen van IoT oplossingen. Je kan Keje midden in de nacht wakker maken om over warmtepompen te praten.",
-      "charlie": "Met een bak aan ervaring in de marketing en sales wilt deze innovatie-expert nu vooral echte oplossingen bouwen die bijdragen aan een duurzamer energiesysteem.",
+      "charlie": "Met ervaring in zowel marketing als sales wilt deze innovatie-expert nu vooral echte oplossingen bouwen die bijdragen aan een duurzamer energiesysteem.",
       "age": "Abstracte problemen oplossen is wat hem drijft. Na zijn PhD in theoretische biofysica heeft hij zich nu ondergedompeld in de wereld van moderne software."
     }
   },
