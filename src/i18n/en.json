@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Go be smart - Sustainable heating simplified",
-    "description": "Dashboard for installers to monitor and control heat pumps remotely. Making commissioning, servicing, and customer support faster and simpler."
+    "description": "Dashboard to monitor and control heat pumps remotely. Making commissioning, servicing, and customer support faster and simpler."
   },
   "nav": {
     "about": "About",
@@ -11,13 +11,13 @@
   "hero": {
     "title": "Sustainable heating",
     "titleHighlight": "simplified",
-    "description": "Allowing your installer to monitor, diagnose, and optimise your heat pump remotely.",
+    "description": "Monitor, diagnose, and optimise heat pumps remotely.",
     "requestDemo": "Request demo",
     "learnMore": "Request early access"
   },
   "about": {
     "title": "About us",
-    "description": "Heat pumps are being installed without proper commissioning or monitoring. The result? Inefficiencies, wasted energy, and avoidable service visits. To unlock the full potential of heat pumps, we’re building a modern solution which enables:",
+    "description": "Heat pumps are often installed without proper commissioning or monitoring. The result? Inefficiencies, wasted energy, and avoidable service visits. To unlock the full potential of heat pumps, we’re building a modern solution which enables:",
     "features": {
       "commissioning": "Streamlined commissioning process",
       "monitoring": "Remote monitoring, diagnosis, and control",

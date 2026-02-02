@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Go be smart - Duurzaam verwarmen eenvoudiger",
-    "description": "Dashboard voor installateurs om warmtepompen op afstand te monitoren en besturen. Maakt inbedrijfstelling, onderhoud en klantenservice sneller en eenvoudiger."
+    "title": "Go be smart - Eenvoudiger duurzaam verwarmen",
+    "description": "Dashboard om warmtepompen op afstand te monitoren en besturen. Maakt inbedrijfstelling, onderhoud en klantenservice sneller en eenvoudiger."
   },
   "nav": {
     "about": "Over",
@@ -11,13 +11,13 @@
   "hero": {
     "title": "Eenvoudiger duurzaam",
     "titleHighlight": "verwarmen",
-    "description": "Laat jouw installateur monitoren, diagnosticeren en optimaliseren op afstand.",
+    "description": "Warmtepompen monitoren, diagnosticeren en optimaliseren op afstand.",
     "requestDemo": "Demo aanvragen",
     "learnMore": "Vroege toegang"
   },
   "about": {
     "title": "Over ons",
-    "description": "Warmtepompen worden zonder goede inbedrijfstelling en monitoring geïnstalleerd. Het resultaat? Inefficiëntie, energieverspilling, en overbodige huisbezoeken. Om het volledige potentieel van warmtepompen te ontsluiten bouwen wij een oplossing die zorgt voor:",
+    "description": "Veel warmtepompen worden zonder goede inbedrijfstelling en monitoring geïnstalleerd. Het resultaat? Inefficiëntie, energieverspilling, en overbodige huisbezoeken. Om het volledige potentieel van warmtepompen te ontsluiten bouwen wij een oplossing die zorgt voor:",
     "features": {
       "commissioning": "Gestroomlijnde inbedrijfstelling",
       "monitoring": "Monitoring, diagnose en controle op afstand",
