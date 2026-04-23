@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Go be smart - Sustainable heating simplified",
+    "title": "Go be Smart - Smart heating simplified",
     "description": "Dashboard to monitor and control heat pumps remotely. Making commissioning, servicing, and customer support faster and simpler."
   },
   "nav": {
@@ -9,11 +9,11 @@
     "contact": "Contact"
   },
   "hero": {
-    "title": "Sustainable heating",
+    "title": "Smart heating",
     "titleHighlight": "simplified",
-    "description": "Monitor, diagnose, and optimise heat pumps remotely.",
-    "requestDemo": "Request demo",
-    "learnMore": "Request early access"
+    "description": "Bringing intelligence to heat pumps",
+    "requestDemo": "Go to dashboard",
+    "learnMore": "Stay up to date"
   },
   "about": {
     "title": "About us",
@@ -42,7 +42,8 @@
     "linkedin": "Follow us on LinkedIn"
   },
   "footer": {
-    "copyright": "© 2026 Go be smart. All rights reserved."
+    "copyright": "© 2026 Go be smart. All rights reserved.",
+    "privacy": "Privacy policy"
   },
   "form": {
     "email": "Email address",

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Go be smart - Eenvoudiger duurzaam verwarmen",
+    "title": "Go be Smart - Slimmer verwarmen",
     "description": "Dashboard om warmtepompen op afstand te monitoren en besturen. Maakt inbedrijfstelling, onderhoud en klantenservice sneller en eenvoudiger."
   },
   "nav": {
@@ -9,11 +9,11 @@
     "contact": "Contact"
   },
   "hero": {
-    "title": "Eenvoudiger duurzaam",
+    "title": "Slimmer",
     "titleHighlight": "verwarmen",
-    "description": "Warmtepompen monitoren, diagnosticeren en optimaliseren op afstand.",
-    "requestDemo": "Demo aanvragen",
-    "learnMore": "Vroege toegang"
+    "description": "Intelligentie voor warmtepompen",
+    "requestDemo": "Ga naar dashboard",
+    "learnMore": "Blijf op de hoogte"
   },
   "about": {
     "title": "Over ons",
@@ -42,7 +42,8 @@
     "linkedin": "Volg ons op LinkedIn"
   },
   "footer": {
-    "copyright": "© 2026 Go be smart. Alle rechten voorbehouden."
+    "copyright": "© 2026 Go be smart. Alle rechten voorbehouden.",
+    "privacy": "Privacybeleid"
   },
   "form": {
     "email": "E-mailadres",

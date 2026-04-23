@@ -16,6 +16,10 @@ export default defineConfig({
       prefixDefaultLocale: false
     }
   },
+  redirects: {
+    '/privacy': '/privacy-policy-en.pdf',
+    '/nl/privacy': '/privacy-policy-nl.pdf'
+  },
   integrations: [react(), sitemap()],
 
   vite: {
