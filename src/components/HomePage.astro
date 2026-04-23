@@ -26,19 +26,22 @@ const t = getTranslation(currentLocale);
 </nav>
 
 <!-- Hero Section -->
-<section class="flex flex-col pt-20 pb-0 bg-[var(--color-bg-secondary)] border-b border-[var(--color-primary-dark)]/30">
-	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section class="relative overflow-hidden flex flex-col pt-20 pb-0 bg-[var(--color-bg-secondary)] border-b border-[var(--color-primary-dark)]/30">
+	<div class="ambient-blob ambient-blob--cyan" style="width: 480px; height: 480px; top: -120px; left: -140px;"></div>
+	<div class="ambient-blob ambient-blob--blue" style="width: 520px; height: 520px; bottom: -180px; right: -160px;"></div>
+	<div class="ambient-blob ambient-blob--accent" style="width: 360px; height: 360px; top: 30%; left: 55%;"></div>
+	<div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 		<div class="text-center py-20">
-			<h1 class="text-5xl md:text-6xl font-bold text-[var(--color-text-primary)] mb-6">
+			<h1 data-reveal="up" class="text-5xl md:text-6xl font-bold text-[var(--color-text-primary)] mb-6">
 				{t('hero.title')}
 				<span class="bg-gradient-to-r from-[var(--color-gradient-start)] to-[var(--color-gradient-end)] bg-clip-text text-transparent">
 					{t('hero.titleHighlight')}
 				</span>
 			</h1>
-			<p class="text-xl text-[var(--color-text-secondary)] mb-8 max-w-3xl mx-auto">
+			<p data-reveal="up" style="--reveal-delay: 120ms;" class="text-xl text-[var(--color-text-secondary)] mb-8 max-w-3xl mx-auto">
 				{t('hero.description')}
 			</p>
-			<div class="flex gap-4 justify-center">
+			<div data-reveal="up" style="--reveal-delay: 240ms;" class="flex gap-4 justify-center">
 				<button
 					id="openModalBtn"
 					class="bg-gradient-to-r from-[var(--color-gradient-start)] to-[var(--color-gradient-end)] text-[var(--color-text-primary)] px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-xl hover:shadow-[var(--color-primary-dark)]/30 transition-all transform hover:scale-105"
@@ -62,7 +65,7 @@ const t = getTranslation(currentLocale);
 <section id="about" class="flex flex-col py-20 bg-gradient-to-b from-[var(--color-bg-secondary)] to-[var(--color-bg-primary)] border-b border-[var(--color-primary-dark)]/20">
 	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 		<div class="grid md:grid-cols-2 gap-12 items-center">
-			<div>
+			<div data-reveal="left">
 				<h3 class="text-2xl font-bold text-[var(--color-primary)] mb-4"><span class="bg-gradient-to-r from-[var(--color-gradient-start)] to-[var(--color-gradient-end)] bg-clip-text text-transparent">
 					{t('about.title')}
 				</span></h3>
@@ -84,7 +87,7 @@ const t = getTranslation(currentLocale);
 						</div>
 				</div>
 			</div>
-			<div class="h-[270px] flex justify-center items-center">
+			<div data-reveal="right" style="--reveal-delay: 100ms;" class="h-[270px] flex justify-center items-center">
 				<img src="/dashboard_no_border.png" alt="Dashboard Preview" class="h-full object-cover rounded-lg shadow-lg shadow-[var(--color-primary-dark)]">
 			</div>
 		</div>
@@ -96,7 +99,7 @@ const t = getTranslation(currentLocale);
 <section id="team" class="flex flex-col py-20 bg-gradient-to-b from-[var(--color-bg-primary)] to-[var(--color-bg-secondary)] border-b border-[var(--color-primary-dark)]/30">
 	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-36 lg:gap-48 items-start">
-			<div class="text-center flex flex-col h-full">
+			<div data-reveal="up" class="text-center flex flex-col h-full transition-transform duration-300 hover:-translate-y-1">
 				<img
 					src="/keje.jpeg"
 					alt="Team member portrait: Keje"
@@ -120,7 +123,7 @@ const t = getTranslation(currentLocale);
 				</a>
 			</div>
 
-			<div class="text-center flex flex-col h-full">
+			<div data-reveal="up" style="--reveal-delay: 120ms;" class="text-center flex flex-col h-full transition-transform duration-300 hover:-translate-y-1">
 				<img
 					src="/charlie.jpeg"
 					alt="Team member portrait: Charlie"
@@ -144,7 +147,7 @@ const t = getTranslation(currentLocale);
 				</a>
 			</div>
 
-			<div class="text-center flex flex-col h-full">
+			<div data-reveal="up" style="--reveal-delay: 240ms;" class="text-center flex flex-col h-full transition-transform duration-300 hover:-translate-y-1">
 				<img
 					src="/age.jpeg"
 					alt="Team member portrait: Age"
@@ -176,13 +179,14 @@ const t = getTranslation(currentLocale);
 <section id="contact" class="flex flex-col pb-12 pt-16 bg-gradient-to-b from-[var(--color-bg-secondary)] to-[var(--color-bg-primary)]">
 	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 		<div class="flex flex-col mx-auto w-full">
-			<p class="text-xl text-[var(--color-text-secondary)] text-center mb-4">
+			<p data-reveal="fade" class="text-xl text-[var(--color-text-secondary)] text-center mb-4">
 				{t('contact.description')}
 			</p>
 
 			<div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 lg:gap-16 max-w-5xl mx-auto w-full">
 				<!-- LinkedIn -->
 				<a
+					data-reveal="up"
 					href="https://www.linkedin.com/company/go-be-smart/"
 					target="_blank"
 					rel="noopener noreferrer"
@@ -199,6 +203,8 @@ const t = getTranslation(currentLocale);
 
 				<!-- Email -->
 				<a
+					data-reveal="up"
+					style="--reveal-delay: 100ms;"
 					href="mailto:info@gobesmart.nl"
 					class="group flex flex-col items-center text-center p-6 rounded-lg hover:bg-[var(--color-bg-secondary)]/50 transition-all duration-300"
 				>
@@ -212,7 +218,7 @@ const t = getTranslation(currentLocale);
 				</a>
 
 				<!-- Location -->
-				<div class="flex flex-col items-center text-center p-6 rounded-lg">
+				<div data-reveal="up" style="--reveal-delay: 200ms;" class="flex flex-col items-center text-center p-6 rounded-lg">
 					<div class="w-12 h-12 flex items-center justify-center mb-2 text-[var(--color-text-secondary)]">
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8">
 							<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>

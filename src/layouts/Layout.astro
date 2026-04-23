@@ -67,6 +67,18 @@ const nlUrl = currentPath.startsWith('/nl') ? baseUrl + currentPath : baseUrl + 
 	</head>
 	<body>
 		<slot />
+		<script>
+			const revealObserver = new IntersectionObserver((entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add('in-view');
+						revealObserver.unobserve(entry.target);
+					}
+				});
+			}, { threshold: 0.15, rootMargin: '0px 0px -10% 0px' });
+
+			document.querySelectorAll('[data-reveal]').forEach((el) => revealObserver.observe(el));
+		</script>
 	</body>
 </html>
 
