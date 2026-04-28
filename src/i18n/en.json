@@ -9,21 +9,22 @@
     "contact": "Contact"
   },
   "hero": {
-    "title": "Smart heating",
-    "titleHighlight": "simplified",
+    "title": "Smart heating simplified",
+    "titleHighlight": "",
     "description": "Bringing intelligence to heat pumps",
     "requestDemo": "Go to dashboard",
     "learnMore": "Stay up to date"
   },
   "about": {
     "title": "About us",
-    "description": "Heat pumps are often installed without proper commissioning or monitoring. The result? Inefficiencies, wasted energy, and avoidable service visits. To unlock the full potential of heat pumps, we’re building a modern solution which enables:",
+    "description": "To transition towards a sustainable and autonomous energy system, tens of millions of heat pumps have to be installed in Europe. At the same time there is an enormous shortage of heat pump installers, and the electricity grid is under severe pressure. We build the intelligence that provides ease of installation and makes heat pumps more efficient and more flexible using:",
     "features": {
-      "commissioning": "Streamlined commissioning process",
+      "commissioning": "Automated commissioning",
       "monitoring": "Remote monitoring, diagnosis, and control",
-      "support": "Enhanced customer support",
+      "support": "AI-support based on real-time heat pump data",
       "visits": "Fewer service visits",
-      "efficiency": "Improved heat pump efficiency and lifespan"
+      "efficiency": "Improved heat pump efficiency and lifespan",
+      "control":"Smart control based on solar, price, and grid signals"
     }
   },
   "team": {
@@ -42,7 +43,7 @@
     "linkedin": "Follow us on LinkedIn"
   },
   "footer": {
-    "copyright": "© 2026 Go be smart. All rights reserved.",
+    "copyright": "© 2026 Go be Smart. All rights reserved.",
     "privacy": "Privacy policy"
   },
   "form": {

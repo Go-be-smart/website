@@ -44,6 +44,19 @@
 [data-reveal="fade"]  { transform: none; }
 [data-reveal].in-view { opacity: 1; transform: none; }
 
+/* Per-section blob clip: clips horizontally at section edges but extends vertically
+   past the section so blobs can still leak into adjacent sections. */
+.blob-clip {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: -300px;
+	bottom: -300px;
+	overflow: hidden;
+	pointer-events: none;
+	z-index: 0;
+}
+
 /* Ambient decorative blobs (hero background) */
 .ambient-blob {
 	position: absolute;
@@ -55,17 +68,17 @@
 .ambient-blob--cyan {
 	background: radial-gradient(circle, var(--color-primary) 0%, transparent 70%);
 	opacity: 0.28;
-	animation: drift-a 28s ease-in-out infinite;
+	animation: drift-a 14s ease-in-out infinite;
 }
 .ambient-blob--blue {
-	background: radial-gradient(circle, var(--color-secondary) 0%, transparent 70%);
+	background: radial-gradient(circle, var(--color-primary-dark) 0%, transparent 70%);
 	opacity: 0.22;
-	animation: drift-b 36s ease-in-out infinite;
+	animation: drift-b 18s ease-in-out infinite;
 }
 .ambient-blob--accent {
 	background: radial-gradient(circle, var(--color-gradient-start) 0%, transparent 70%);
 	opacity: 0.18;
-	animation: drift-c 44s ease-in-out infinite;
+	animation: drift-c 22s ease-in-out infinite;
 }
 @keyframes drift-a {
 	0%, 100% { transform: translate(0, 0) scale(1); }
