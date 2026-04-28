@@ -12,14 +12,14 @@
     "title": "Slimmer verwarmen",
     "titleHighlight": "",
     "description": "Intelligentie voor warmtepompen",
-    "requestDemo": "Ga naar dashboard",
+    "requestDemo": "Naar het platform",
     "learnMore": "Blijf op de hoogte"
   },
   "about": {
     "title": "Over ons",
-    "description": "Om de transitie naar een duurzaam en autonoom energiesysteem te maken moeten er in Europa tientallen miljoenen warmtepompen geïnstalleerd worden. Tegelijkertijd is er een enorm tekort aan installateurs, en staat het elektriciteitsnet onder grote druk. Wij bieden de intelligentie die warmtepompen makkelijker te installeren en zowel efficiënter als flexibeler maakt dankzij:",
+    "description": "Veel warmtepompen worden zonder goede inbedrijfstelling en monitoring geïnstalleerd. Het resultaat? Inefficiëntie, energieverspilling, en overbodige huisbezoeken. Om het volledige potentieel van warmtepompen te ontsluiten bouwen wij de benodigde intelligentie met:",
     "features": {
-      "commissioning": "Automatische inbedrijfstelling",
+      "commissioning": "Automatische inbedrijfstelling op afstand",
       "monitoring": "Monitoring, diagnose en controle op afstand",
       "support": "AI-ondersteuning op basis van live warmtepompdata",
       "visits": "Minder huisbezoeken",
