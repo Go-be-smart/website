@@ -1,0 +1,117 @@
+---
+import LanguageSwitcher from './LanguageSwitcher.astro';
+import Button from './ui/Button.astro';
+import { getTranslation, localePath, type Locale } from '../utils/i18n';
+import { BOOK_DEMO_URL, NAV_ITEMS } from '../utils/site';
+
+interface Props {
+	locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = getTranslation(locale);
+
+const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
+const isActive = (path: string) => currentPath === localePath(locale, path).replace(/\/$/, '');
+---
+
+<header class="glass-header fixed top-0 left-0 right-0 z-50">
+	<div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+		<div class="flex items-center justify-between py-3.5">
+			<a href={localePath(locale, '/')} aria-label="Go be Smart — home">
+				<img src="/gbs_logo_stamp.svg" alt="Go be Smart" class="h-9 w-auto" />
+			</a>
+
+			<nav class="hidden md:flex items-center gap-8" aria-label="Main">
+				{NAV_ITEMS.map(({ key, path }) => (
+					<a
+						href={localePath(locale, path)}
+						aria-current={isActive(path) ? 'page' : undefined}
+						class={`text-sm transition-colors ${
+							isActive(path)
+								? 'font-bold text-foreground hover:text-highlight'
+								: 'font-medium text-muted-foreground hover:text-highlight'
+						}`}
+					>
+						{t(`common.nav.${key}`)}
+					</a>
+				))}
+			</nav>
+
+			<div class="hidden md:flex items-center gap-3">
+				<LanguageSwitcher />
+				<Button href={BOOK_DEMO_URL} size="sm">{t('common.cta.bookDemo')}</Button>
+			</div>
+
+			<button
+				id="mobile-menu-toggle"
+				class="md:hidden flex items-center justify-center w-10 h-10 text-foreground"
+				aria-expanded="false"
+				aria-controls="mobile-menu"
+				aria-label="Open menu"
+			>
+				<svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+					<path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16" />
+				</svg>
+				<svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+					<path stroke-linecap="round" d="M6 6l12 12M18 6L6 18" />
+				</svg>
+			</button>
+		</div>
+	</div>
+
+	<div id="mobile-menu" class="hidden md:hidden border-t border-border/60 px-4 pb-5 pt-2 sm:px-6">
+		<nav class="flex flex-col gap-1" aria-label="Main mobile">
+			{NAV_ITEMS.map(({ key, path }) => (
+				<a
+					href={localePath(locale, path)}
+					aria-current={isActive(path) ? 'page' : undefined}
+					class={`rounded-lg px-3 py-2.5 text-base transition-colors ${
+						isActive(path)
+							? 'font-bold text-foreground bg-accent/60'
+							: 'font-medium text-muted-foreground hover:text-highlight hover:bg-muted'
+					}`}
+				>
+					{t(`common.nav.${key}`)}
+				</a>
+			))}
+		</nav>
+		<div class="mt-3 flex items-center justify-between gap-3 px-1">
+			<LanguageSwitcher />
+			<Button href={BOOK_DEMO_URL} size="sm">{t('common.cta.bookDemo')}</Button>
+		</div>
+	</div>
+</header>
+
+<!-- Spacer so content clears the fixed header -->
+<div class="h-[68px]" aria-hidden="true"></div>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const toggle = document.getElementById('mobile-menu-toggle');
+		const menu = document.getElementById('mobile-menu');
+		const iconOpen = document.getElementById('menu-icon-open');
+		const iconClose = document.getElementById('menu-icon-close');
+		if (!toggle || !menu || !iconOpen || !iconClose) return;
+
+		const setOpen = (open: boolean) => {
+			toggle.setAttribute('aria-expanded', String(open));
+			toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+			menu.classList.toggle('hidden', !open);
+			iconOpen.classList.toggle('hidden', open);
+			iconClose.classList.toggle('hidden', !open);
+		};
+
+		toggle.addEventListener('click', () => {
+			setOpen(toggle.getAttribute('aria-expanded') !== 'true');
+		});
+
+		menu.querySelectorAll('a').forEach((link) => {
+			link.addEventListener('click', () => setOpen(false));
+		});
+
+		document.addEventListener('keydown', (e) => {
+			if (e.key === 'Escape') setOpen(false);
+		});
+	});
+</script>

@@ -1,0 +1,25 @@
+---
+import Button from '../../ui/Button.astro';
+import Section from '../../ui/Section.astro';
+import { getTranslation, type Locale } from '../../../utils/i18n';
+import { BOOK_DEMO_URL } from '../../../utils/site';
+
+interface Props {
+	locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = getTranslation(locale);
+---
+
+<Section>
+	<div class="hero-gradient bg-grid rounded-3xl px-6 py-16 text-center md:py-20" data-reveal="up">
+		<h2 class="text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+			{t('common.closing.title')}
+		</h2>
+		<p class="mx-auto mt-5 max-w-xl text-lg text-foreground/75">{t('common.closing.description')}</p>
+		<div class="mt-9">
+			<Button href={BOOK_DEMO_URL}>{t('common.cta.bookDemo')}</Button>
+		</div>
+	</div>
+</Section>

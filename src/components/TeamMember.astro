@@ -1,0 +1,41 @@
+---
+import { Image } from 'astro:assets';
+import LinkedInIcon from './icons/LinkedInIcon.astro';
+
+interface Props {
+	name: string;
+	image: ImageMetadata;
+	description: string;
+	linkedinUrl: string;
+	revealDelay?: number;
+}
+
+const { name, image, description, linkedinUrl, revealDelay = 0 } = Astro.props;
+---
+
+<div
+	data-reveal="up"
+	style={`--reveal-delay: ${revealDelay}ms;`}
+	class="flex h-full flex-col items-center text-center transition-transform duration-300 hover:-translate-y-1"
+>
+	<Image
+		src={image}
+		alt={`Portrait of ${name}`}
+		width={352}
+		densities={[1, 2]}
+		format="webp"
+		class="h-36 w-36 rounded-full object-cover shadow-md ring-2 ring-brand-coral/25 md:h-44 md:w-44"
+		loading="lazy"
+	/>
+	<h3 class="mt-6 text-xl font-bold text-foreground">{name}</h3>
+	<p class="mt-2 max-w-56 flex-grow text-sm leading-relaxed text-muted-foreground">{description}</p>
+	<a
+		href={linkedinUrl}
+		target="_blank"
+		rel="noopener noreferrer"
+		class="mt-4 flex h-8 w-8 items-center justify-center text-muted-foreground transition-colors hover:text-brand-sky"
+		aria-label={`${name}'s LinkedIn profile`}
+	>
+		<LinkedInIcon class="w-5 h-5" />
+	</a>
+</div>

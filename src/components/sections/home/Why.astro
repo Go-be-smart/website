@@ -1,0 +1,32 @@
+---
+import Section from '../../ui/Section.astro';
+import { getTranslation, type Locale } from '../../../utils/i18n';
+
+interface Props {
+	locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = getTranslation(locale);
+
+const benefits = ['visits', 'efficiency', 'control'];
+---
+
+<Section>
+	<div class="rounded-3xl bg-brand-navy px-6 py-14 text-primary-foreground sm:px-10 md:px-16 md:py-16" data-reveal="up">
+		<div class="max-w-3xl">
+			<h2 class="text-3xl font-bold tracking-tight md:text-4xl">{t('home.why.title')}</h2>
+			<p class="mt-5 text-lg text-primary-foreground/75">{t('home.why.description')}</p>
+		</div>
+		<ul class="mt-10 grid gap-4 sm:grid-cols-3">
+			{benefits.map((key) => (
+				<li class="flex items-start gap-3">
+					<svg class="mt-0.5 h-5 w-5 shrink-0 text-brand-coral" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+					</svg>
+					<span class="text-base font-medium text-primary-foreground/90">{t(`home.why.benefits.${key}`)}</span>
+				</li>
+			))}
+		</ul>
+	</div>
+</Section>

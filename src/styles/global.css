@@ -1,32 +1,113 @@
 @import "tailwindcss";
 
+/* Self-hosted variable font (latin subset), copied from the webapp. Served from
+   /public/fonts — never from a CDN (GDPR + the Netlify CSP is 'self'-only). */
+@font-face {
+	font-family: 'Manrope';
+	font-style: normal;
+	font-weight: 200 800;
+	font-display: swap;
+	src: url('/fonts/manrope-latin-var.woff2') format('woff2');
+}
+
 :root {
-	/* Background colors */
-	--color-bg-primary: #042a44;
-	--color-bg-secondary: #053d5f;
-	--color-bg-dark: #021820;
-	--color-bg-card: #053d5f;
-	--color-bg-form: #042a44;
+	/* GBS brand anchors (identical to the webapp): navy ink, coral + sky from the leaf mark */
+	--brand-navy: #062a44;
+	--brand-coral: #f15c5b;
+	--brand-sky: #3e8fcb;
 
-	/* Primary accent color (cyan) */
-	--color-primary: #22d3ee;      /* cyan-400 */
-	--color-primary-dark: #06b6d4; /* cyan-500 */
-	--color-primary-light: #a5f3fc; /* cyan-200 */
-	--color-primary-darker: #164e63; /* cyan-900 */
+	/* Warm "glow" scheme: the webapp's cool tonal ladder rotated to a warm hue.
+	   Same lightness ladder, hue ~55 instead of 240. Navy carries text and
+	   buttons; coral is energy (accents, hovers); sky is the cool counterweight. */
+	--background: oklch(0.985 0.008 55);
+	--foreground: var(--brand-navy);
+	--card: oklch(0.9955 0.003 55);
+	--muted: oklch(0.958 0.011 55);
+	--muted-foreground: oklch(0.45 0.03 250);
+	--primary: var(--brand-navy);
+	--primary-foreground: oklch(0.985 0.005 55);
+	--accent: oklch(0.936 0.02 45);
+	--border: oklch(0.906 0.013 55);
+	--ring: var(--brand-sky);
+	--highlight: var(--brand-coral);
+	--radius: 0.75rem;
+}
 
-	/* Secondary color (blue) */
-	--color-secondary: #3b82f6;    /* blue-500 */
-	--color-secondary-dark: #2563eb; /* blue-600 */
+@theme inline {
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--color-card: var(--card);
+	--color-muted: var(--muted);
+	--color-muted-foreground: var(--muted-foreground);
+	--color-primary: var(--primary);
+	--color-primary-foreground: var(--primary-foreground);
+	--color-accent: var(--accent);
+	--color-border: var(--border);
+	--color-ring: var(--ring);
+	--color-highlight: var(--highlight);
+	--color-brand-navy: var(--brand-navy);
+	--color-brand-coral: var(--brand-coral);
+	--color-brand-sky: var(--brand-sky);
+	--font-sans: 'Manrope', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+	--radius-sm: calc(var(--radius) - 4px);
+	--radius-md: calc(var(--radius) - 2px);
+	--radius-lg: var(--radius);
+	--radius-xl: calc(var(--radius) + 4px);
+	/* Navy-tinted shadows so cards lift off the warm shell without hard edges */
+	--shadow-xs: 0 1px 2px 0 oklch(0.32 0.05 250 / 0.05);
+	--shadow-sm:
+		0 1px 2px 0 oklch(0.32 0.05 250 / 0.06),
+		0 2px 8px -2px oklch(0.32 0.05 250 / 0.06);
+	--shadow-md:
+		0 2px 4px -1px oklch(0.32 0.05 250 / 0.06),
+		0 4px 12px -2px oklch(0.32 0.05 250 / 0.08);
+}
 
-	/* Text colors */
-	--color-text-primary: #ffffff;
-	--color-text-secondary: #d1d5db; /* gray-300 */
-	--color-text-muted: #9ca3af;     /* gray-400 */
+@layer base {
+	* {
+		border-color: var(--border);
+	}
+	body {
+		background-color: var(--background);
+		color: var(--foreground);
+		font-family: var(--font-sans);
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+}
 
-	/* Gradient colors */
-	--color-gradient-start: #22d3ee;  /* cyan-400 */
-	--color-gradient-end: #3b82f6;   /* blue-500 */
-	--color-gradient-end-dark: #2563eb; /* blue-600 */
+/* Glass header: the webapp's glass-overlay recipe, darker and more transparent
+   than the shell, with a whisper of the brand coral→sky gradient in the fill so
+   the header carries the same atmosphere as the hero panels. Chroma stays very
+   low — at nav size a stronger gradient competes with the content. */
+.glass-header {
+	background-image: linear-gradient(
+		100deg,
+		oklch(0.93 0.014 35 / 0.42) 0%,
+		oklch(0.95 0.007 55 / 0.34) 45%,
+		oklch(0.93 0.012 250 / 0.42) 100%
+	);
+	backdrop-filter: blur(20px);
+	border-bottom: 1px solid oklch(1 0 0 / 0.5);
+	box-shadow:
+		inset 0 1px 0 0 oklch(1 0 0 / 0.4),
+		0 8px 32px -4px oklch(0.32 0.05 250 / 0.08);
+}
+
+/* Hero atmosphere: subtle 1px grid over a soft coral→sky wash (the logo's own
+   gradient, at whisper volume). Grid cells ~44px. */
+.bg-grid {
+	background-image:
+		linear-gradient(to right, oklch(0.3 0.04 250 / 0.05) 1px, transparent 1px),
+		linear-gradient(to bottom, oklch(0.3 0.04 250 / 0.05) 1px, transparent 1px);
+	background-size: 44px 44px;
+}
+.hero-gradient {
+	background:
+		radial-gradient(115% 90% at 12% 95%, oklch(0.87 0.07 35 / 0.55) 0%, transparent 55%),
+		radial-gradient(120% 100% at 90% 90%, oklch(0.87 0.05 250 / 0.5) 0%, transparent 55%),
+		radial-gradient(90% 70% at 55% 100%, oklch(0.9 0.055 5 / 0.4) 0%, transparent 60%),
+		linear-gradient(180deg, oklch(0.985 0.008 55) 0%, oklch(0.975 0.012 50) 100%);
 }
 
 /* Scroll-reveal animations */
@@ -57,7 +138,8 @@
 	z-index: 0;
 }
 
-/* Ambient decorative blobs (hero background) */
+/* Ambient decorative blobs. On the light shell they read much stronger than on
+   the old dark theme, so opacities stay low. */
 .ambient-blob {
 	position: absolute;
 	border-radius: 9999px;
@@ -65,19 +147,19 @@
 	pointer-events: none;
 	z-index: 0;
 }
-.ambient-blob--cyan {
-	background: radial-gradient(circle, var(--color-primary) 0%, transparent 70%);
-	opacity: 0.28;
+.ambient-blob--coral {
+	background: radial-gradient(circle, var(--brand-coral) 0%, transparent 70%);
+	opacity: 0.14;
 	animation: drift-a 14s ease-in-out infinite;
 }
-.ambient-blob--blue {
-	background: radial-gradient(circle, var(--color-primary-dark) 0%, transparent 70%);
-	opacity: 0.22;
+.ambient-blob--sky {
+	background: radial-gradient(circle, var(--brand-sky) 0%, transparent 70%);
+	opacity: 0.12;
 	animation: drift-b 18s ease-in-out infinite;
 }
-.ambient-blob--accent {
-	background: radial-gradient(circle, var(--color-gradient-start) 0%, transparent 70%);
-	opacity: 0.18;
+.ambient-blob--warm {
+	background: radial-gradient(circle, oklch(0.8 0.1 60) 0%, transparent 70%);
+	opacity: 0.16;
 	animation: drift-c 22s ease-in-out infinite;
 }
 @keyframes drift-a {

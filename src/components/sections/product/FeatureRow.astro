@@ -1,0 +1,36 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+	title: string;
+	description: string;
+	bullets: string[];
+	image: ImageMetadata;
+	imageAlt: string;
+	flip?: boolean;
+}
+
+const { title, description, bullets, image, imageAlt, flip = false } = Astro.props;
+---
+
+<div class="grid items-center gap-10 md:grid-cols-2 md:gap-14">
+	<div data-reveal={flip ? 'right' : 'left'} class={flip ? 'md:order-2' : ''}>
+		<h3 class="text-2xl font-bold tracking-tight text-foreground md:text-3xl">{title}</h3>
+		<p class="mt-4 text-lg text-muted-foreground">{description}</p>
+		<ul class="mt-6 space-y-3">
+			{bullets.map((bullet) => (
+				<li class="flex items-start gap-3">
+					<svg class="mt-1 h-4 w-4 shrink-0 text-brand-sky" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+					</svg>
+					<span class="text-base text-foreground/85">{bullet}</span>
+				</li>
+			))}
+		</ul>
+	</div>
+	<div data-reveal={flip ? 'left' : 'right'} class={flip ? 'md:order-1' : ''}>
+		<div class="overflow-hidden rounded-xl border border-border bg-card shadow-md">
+			<Image src={image} alt={imageAlt} widths={[640, 1280]} sizes="(max-width: 768px) 100vw, 560px" format="webp" class="w-full" loading="lazy" />
+		</div>
+	</div>
+</div>

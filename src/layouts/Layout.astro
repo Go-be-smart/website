@@ -1,14 +1,22 @@
 ---
 import '../styles/global.css';
-import { getTranslation, type Locale } from '../utils/i18n';
+import { type Locale } from '../utils/i18n';
 
 interface Props {
 	locale: Locale;
+	title: string;
+	description: string;
+	ogImage?: string;
 	site?: string;
 }
 
-const { locale = 'en', site = 'https://www.gobesmart.io' } = Astro.props;
-const t = getTranslation(locale);
+const {
+	locale = 'en',
+	title,
+	description,
+	ogImage = '/og-image.png',
+	site = 'https://www.gobesmart.io',
+} = Astro.props;
 
 // Generate URLs for hreflang and canonical
 const currentPath = Astro.url.pathname;
@@ -18,6 +26,10 @@ const canonicalUrl = `${baseUrl}${currentPath}`;
 // Generate alternate URLs
 const enUrl = currentPath.startsWith('/nl') ? baseUrl + currentPath.replace(/^\/nl/, '') : baseUrl + currentPath;
 const nlUrl = currentPath.startsWith('/nl') ? baseUrl + currentPath : baseUrl + '/nl' + currentPath;
+
+const ogLocale = locale === 'nl' ? 'nl_NL' : 'en_US';
+const ogLocaleAlternate = locale === 'nl' ? 'en_US' : 'nl_NL';
+const ogImageUrl = `${baseUrl}${ogImage}`;
 ---
 
 <!doctype html>
@@ -25,12 +37,20 @@ const nlUrl = currentPath.startsWith('/nl') ? baseUrl + currentPath : baseUrl + 
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" type="image/svg+xml" href="/gbs_logo.svg" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 
+		<link
+			rel="preload"
+			href="/fonts/manrope-latin-var.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin
+		/>
+
 		<!-- SEO Meta Tags -->
-		<title>{t('meta.title')}</title>
-		<meta name="description" content={t('meta.description')} />
+		<title>{title}</title>
+		<meta name="description" content={description} />
 
 		<!-- Canonical URL -->
 		<link rel="canonical" href={canonicalUrl} />
@@ -40,6 +60,20 @@ const nlUrl = currentPath.startsWith('/nl') ? baseUrl + currentPath : baseUrl + 
 		<link rel="alternate" hreflang="nl" href={nlUrl} />
 		<link rel="alternate" hreflang="x-default" href={enUrl} />
 
+		<!-- Open Graph / Twitter -->
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="Go be Smart" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content={canonicalUrl} />
+		<meta property="og:image" content={ogImageUrl} />
+		<meta property="og:locale" content={ogLocale} />
+		<meta property="og:locale:alternate" content={ogLocaleAlternate} />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={ogImageUrl} />
+
 		<!-- Organization Structured Data -->
 		<script type="application/ld+json" set:html={JSON.stringify({
 			"@context": "https://schema.org",
@@ -47,7 +81,7 @@ const nlUrl = currentPath.startsWith('/nl') ? baseUrl + currentPath : baseUrl + 
 			"name": "Go be smart",
 			"alternateName": "gobesmart",
 			"url": baseUrl,
-			"description": "Revolutionary dashboard for installers to monitor and control heat pumps remotely",
+			"description": "Heat pump intelligence at scale: problem detection, maintenance management, automated commissioning, and smart control.",
 			"address": {
 				"@type": "PostalAddress",
 				"addressLocality": "Utrecht",
@@ -81,13 +115,3 @@ const nlUrl = currentPath.startsWith('/nl') ? baseUrl + currentPath : baseUrl + 
 		</script>
 	</body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-		background-color: var(--color-bg-secondary);
-	}
-</style>

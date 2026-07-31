@@ -1,0 +1,65 @@
+---
+import Header from '../Header.astro';
+import Footer from '../Footer.astro';
+import Section from '../ui/Section.astro';
+import FeatureRow from '../sections/product/FeatureRow.astro';
+import ClosingCta from '../sections/shared/ClosingCta.astro';
+import { getTranslation, getListTranslation, type Locale } from '../../utils/i18n';
+// TODO: replace with dedicated webapp screenshots (fleet view, device detail, alerts)
+import dashboard from '../../assets/dashboard.png';
+
+interface Props {
+	locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = getTranslation(locale);
+const tList = getListTranslation(locale);
+
+const features = ['commissioning', 'monitoring', 'control', 'ai'];
+---
+
+<Header locale={locale} />
+<main>
+	<Section class="!py-16 md:!py-20">
+		<div class="max-w-3xl" data-reveal="up">
+			<h1 class="text-4xl font-bold tracking-tight text-foreground md:text-5xl">
+				{t('product.hero.title')}
+			</h1>
+			<p class="mt-6 text-lg text-muted-foreground md:text-xl">{t('product.hero.description')}</p>
+		</div>
+	</Section>
+
+	<Section divider>
+		<div class="space-y-20 md:space-y-28">
+			{features.map((key, i) => (
+				<FeatureRow
+					title={t(`product.features.${key}.title`)}
+					description={t(`product.features.${key}.description`)}
+					bullets={tList(`product.features.${key}.bullets`)}
+					image={dashboard}
+					imageAlt={t(`product.features.${key}.title`)}
+					flip={i % 2 === 1}
+				/>
+			))}
+		</div>
+	</Section>
+
+	<Section divider>
+		<h2 class="text-3xl font-bold tracking-tight text-foreground md:text-4xl" data-reveal="up">
+			{t('product.how.title')}
+		</h2>
+		<div class="mt-12 grid gap-10 md:grid-cols-3">
+			{['connect', 'commission', 'monitor'].map((step, i) => (
+				<div data-reveal="up" style={`--reveal-delay: ${i * 120}ms;`}>
+					<span class="text-4xl font-bold text-brand-coral/80">{i + 1}</span>
+					<h3 class="mt-3 text-xl font-bold text-foreground">{t(`product.how.steps.${step}.title`)}</h3>
+					<p class="mt-2 text-base text-muted-foreground">{t(`product.how.steps.${step}.description`)}</p>
+				</div>
+			))}
+		</div>
+	</Section>
+
+	<ClosingCta locale={locale} />
+</main>
+<Footer locale={locale} />

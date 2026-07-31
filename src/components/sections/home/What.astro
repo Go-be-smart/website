@@ -1,0 +1,31 @@
+---
+import Card from '../../ui/Card.astro';
+import Section from '../../ui/Section.astro';
+import { getTranslation, type Locale } from '../../../utils/i18n';
+
+interface Props {
+	locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = getTranslation(locale);
+
+const features = ['commissioning', 'maintenance', 'control', 'support'];
+---
+
+<Section>
+	<div class="max-w-3xl" data-reveal="up">
+		<h2 class="text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+			{t('home.what.title')}
+		</h2>
+		<p class="mt-5 text-lg text-muted-foreground">{t('home.what.description')}</p>
+	</div>
+
+	<div class="mt-12 grid gap-5 sm:grid-cols-2">
+		{features.map((key, i) => (
+			<Card class="p-7" data-reveal="up" style={`--reveal-delay: ${i * 120}ms;`}>
+				<p class="text-base font-semibold text-foreground">{t(`home.what.features.${key}`)}</p>
+			</Card>
+		))}
+	</div>
+</Section>

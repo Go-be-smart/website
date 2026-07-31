@@ -1,45 +1,38 @@
 ---
-import { getLocaleFromUrl, LANGUAGE_NAMES, LOCALES, type Locale } from '../utils/i18n';
-import { getRelativeLocaleUrl } from 'astro:i18n';
+import { getLocaleFromUrl, switchLocalePath, LANGUAGE_NAMES, LOCALES } from '../utils/i18n';
 
 const { url } = Astro;
 const currentLocale = getLocaleFromUrl(url);
-
-// Generate localized URLs for each locale
-const getLocalizedPath = (locale: Locale) => {
-  return getRelativeLocaleUrl(locale, '/');
-};
 ---
 
-<div class="relative">
-  <button 
-    id="language-toggle" 
-    class="flex items-center space-x-2 px-3 py-2 text-sm font-medium text-white hover:text-[var(--color-primary-dark)] transition-colors"
+<div class="language-switcher relative">
+  <button
+    class="language-toggle flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-foreground hover:text-highlight transition-colors"
     aria-expanded="false"
     aria-haspopup="true"
   >
-    <span class="text-lg"></span>
     <span>{LANGUAGE_NAMES[currentLocale]}</span>
     <svg class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
     </svg>
   </button>
 
-  <div 
-    id="language-menu" 
-    class="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible transition-all duration-200 z-50"
+  <div
+    class="language-menu absolute right-0 mt-2 w-24 bg-card border border-border rounded-lg shadow-md opacity-0 invisible transition-all duration-200 z-50 p-1"
   >
     {LOCALES.map((locale) => (
-      <a 
-        href={getLocalizedPath(locale)}
-        class={`block px-4 py-2 text-sm rounded-lg ${
-          locale === currentLocale ? 'bg-blue-50 text-blue-600 font-medium' : 'text-gray-700'
+      <a
+        href={switchLocalePath(url.pathname, locale)}
+        class={`block px-3 py-2 text-sm rounded-md transition-colors ${
+          locale === currentLocale
+            ? 'bg-accent font-semibold text-foreground'
+            : 'text-muted-foreground hover:bg-muted hover:text-foreground'
         }`}
       >
-        <div class="flex items-center space-x-2">
+        <div class="flex items-center">
           <span>{LANGUAGE_NAMES[locale]}</span>
           {locale === currentLocale && (
-            <svg class="w-4 h-4 ml-auto rounded-lg" fill="currentColor" viewBox="0 0 20 20">
+            <svg class="w-4 h-4 ml-auto" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
             </svg>
           )}
@@ -50,64 +43,34 @@ const getLocalizedPath = (locale: Locale) => {
 </div>
 
 <script>
-  // Language switcher functionality
+  // Language switcher functionality — class-based so multiple instances
+  // (desktop header + mobile menu) work independently.
   document.addEventListener('DOMContentLoaded', () => {
-    const toggle = document.getElementById('language-toggle') as HTMLButtonElement | null;
-    const menu = document.getElementById('language-menu') as HTMLDivElement | null;
-    
-    if (!toggle || !menu) return;
-    
-    function openMenu() {
-      toggle!.setAttribute('aria-expanded', 'true');
-      menu!.classList.remove('opacity-0', 'invisible');
-      menu!.classList.add('opacity-100', 'visible');
-      
-      // Rotate arrow
-      const arrow = toggle!.querySelector('svg');
-      if (arrow) {
-        arrow.style.transform = 'rotate(180deg)';
-      }
-    }
-    
-    function closeMenu() {
-      toggle!.setAttribute('aria-expanded', 'false');
-      menu!.classList.add('opacity-0', 'invisible');
-      menu!.classList.remove('opacity-100', 'visible');
-      
-      // Reset arrow
-      const arrow = toggle!.querySelector('svg');
-      if (arrow) {
-        arrow.style.transform = 'rotate(0deg)';
-      }
-    }
-    
-    // Toggle menu on button click
-    toggle.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const isOpen = toggle.getAttribute('aria-expanded') === 'true';
-      
-      if (isOpen) {
-        closeMenu();
-      } else {
-        openMenu();
-      }
-    });
-    
-    // Close menu when clicking outside
-    document.addEventListener('click', () => {
-      closeMenu();
-    });
-    
-    // Prevent menu from closing when clicking inside it
-    menu.addEventListener('click', (e) => {
-      e.stopPropagation();
-    });
-    
-    // Close menu on escape key
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        closeMenu();
-      }
+    document.querySelectorAll<HTMLElement>('.language-switcher').forEach((root) => {
+      const toggle = root.querySelector<HTMLButtonElement>('.language-toggle');
+      const menu = root.querySelector<HTMLDivElement>('.language-menu');
+      if (!toggle || !menu) return;
+
+      const setOpen = (open: boolean) => {
+        toggle.setAttribute('aria-expanded', String(open));
+        menu.classList.toggle('opacity-0', !open);
+        menu.classList.toggle('invisible', !open);
+        menu.classList.toggle('opacity-100', open);
+        menu.classList.toggle('visible', open);
+        const arrow = toggle.querySelector('svg');
+        if (arrow) arrow.style.transform = open ? 'rotate(180deg)' : 'rotate(0deg)';
+      };
+
+      toggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        setOpen(toggle.getAttribute('aria-expanded') !== 'true');
+      });
+
+      document.addEventListener('click', () => setOpen(false));
+      menu.addEventListener('click', (e) => e.stopPropagation());
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') setOpen(false);
+      });
     });
   });
 </script>

@@ -1,12 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Home from '../components/pages/Home.astro';
+import Contact from '../components/pages/Contact.astro';
 import { getLocaleFromUrl, getTranslation } from '../utils/i18n';
 
 const locale = getLocaleFromUrl(Astro.url);
 const t = getTranslation(locale);
 ---
 
-<Layout locale={locale} title={t('home.meta.title')} description={t('home.meta.description')}>
-	<Home locale={locale} />
+<Layout locale={locale} title={t('contact.meta.title')} description={t('contact.meta.description')}>
+	<Contact locale={locale} />
 </Layout>

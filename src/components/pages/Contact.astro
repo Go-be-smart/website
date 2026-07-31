@@ -1,0 +1,56 @@
+---
+import Header from '../Header.astro';
+import Footer from '../Footer.astro';
+import Section from '../ui/Section.astro';
+import Button from '../ui/Button.astro';
+import LinkedInIcon from '../icons/LinkedInIcon.astro';
+import { getTranslation, type Locale } from '../../utils/i18n';
+import { BOOK_DEMO_URL, CONTACT_EMAIL, LINKEDIN_COMPANY_URL } from '../../utils/site';
+
+interface Props {
+	locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = getTranslation(locale);
+---
+
+<Header locale={locale} />
+<main>
+	<Section class="!py-16 md:!py-20">
+		<div class="max-w-3xl" data-reveal="up">
+			<h1 class="text-4xl font-bold tracking-tight text-foreground md:text-5xl">
+				{t('contact.title')}
+			</h1>
+			<p class="mt-6 text-lg text-muted-foreground md:text-xl">{t('contact.description')}</p>
+		</div>
+	</Section>
+
+	<Section>
+		<div class="rounded-3xl bg-brand-navy px-6 py-14 text-primary-foreground sm:px-10 md:px-16" data-reveal="up">
+			<h2 class="text-3xl font-bold tracking-tight md:text-4xl">{t('contact.reach.title')}</h2>
+			<p class="mt-4 max-w-xl text-lg text-primary-foreground/75">{t('contact.reach.description')}</p>
+			<div class="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-10">
+				<a href={`mailto:${CONTACT_EMAIL}`} class="text-base font-semibold text-primary-foreground hover:text-brand-coral transition-colors">
+					{CONTACT_EMAIL}
+				</a>
+				<a
+					href={LINKEDIN_COMPANY_URL}
+					target="_blank"
+					rel="noopener noreferrer"
+					class="inline-flex items-center gap-2 text-base font-semibold text-primary-foreground hover:text-brand-coral transition-colors"
+				>
+					<LinkedInIcon class="w-5 h-5" />
+					{t('common.contact.linkedin')}
+				</a>
+				<span class="text-base text-primary-foreground/75">{t('common.contact.locationValue')}</span>
+			</div>
+			<div class="mt-10">
+				<Button href={BOOK_DEMO_URL} class="bg-card !text-foreground hover:opacity-100 hover:shadow-md">
+					{t('common.cta.bookDemo')}
+				</Button>
+			</div>
+		</div>
+	</Section>
+</main>
+<Footer locale={locale} />

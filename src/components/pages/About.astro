@@ -1,0 +1,57 @@
+---
+import Header from '../Header.astro';
+import Footer from '../Footer.astro';
+import Section from '../ui/Section.astro';
+import TeamMember from '../TeamMember.astro';
+import ClosingCta from '../sections/shared/ClosingCta.astro';
+import { getTranslation, type Locale } from '../../utils/i18n';
+import { TEAM_LINKEDIN } from '../../utils/site';
+import kejeImage from '../../assets/team/keje.png';
+import charlieImage from '../../assets/team/charlie.png';
+import ageImage from '../../assets/team/age.png';
+
+interface Props {
+	locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = getTranslation(locale);
+
+const team = [
+	{ name: 'Keje Sinnige', image: kejeImage, key: 'keje', linkedin: TEAM_LINKEDIN.keje },
+	{ name: 'Charlie Zinken', image: charlieImage, key: 'charlie', linkedin: TEAM_LINKEDIN.charlie },
+	{ name: 'Age Tjalma', image: ageImage, key: 'age', linkedin: TEAM_LINKEDIN.age },
+];
+---
+
+<Header locale={locale} />
+<main>
+	<Section class="!py-16 md:!py-20">
+		<div class="max-w-3xl" data-reveal="up">
+			<h1 class="text-4xl font-bold tracking-tight text-foreground md:text-5xl">
+				{t('about.mission.title')}
+			</h1>
+			<p class="mt-6 text-lg text-muted-foreground md:text-xl">{t('about.mission.description')}</p>
+		</div>
+	</Section>
+
+	<Section divider>
+		<h2 class="text-3xl font-bold tracking-tight text-foreground md:text-4xl" data-reveal="up">
+			{t('about.team.title')}
+		</h2>
+		<div class="mt-14 grid grid-cols-1 gap-14 sm:grid-cols-2 lg:grid-cols-3">
+			{team.map((member, i) => (
+				<TeamMember
+					name={member.name}
+					image={member.image}
+					description={t(`about.team.descriptions.${member.key}`)}
+					linkedinUrl={member.linkedin}
+					revealDelay={i * 120}
+				/>
+			))}
+		</div>
+	</Section>
+
+	<ClosingCta locale={locale} />
+</main>
+<Footer locale={locale} />

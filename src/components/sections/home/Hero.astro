@@ -1,0 +1,127 @@
+---
+import Button from '../../ui/Button.astro';
+import { getTranslation, type Locale } from '../../../utils/i18n';
+import { BOOK_DEMO_URL } from '../../../utils/site';
+
+interface Props {
+	locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = getTranslation(locale);
+---
+
+<div class="px-3 pt-3 sm:px-4">
+	<div class="hero-gradient bg-grid relative overflow-hidden rounded-3xl">
+		<div
+			class="mx-auto grid max-w-6xl items-center gap-14 px-4 py-20 sm:px-6 md:py-28 lg:grid-cols-[1.15fr_1fr] lg:gap-12 lg:px-8"
+		>
+			<div class="text-center lg:text-left">
+				<h1
+					data-reveal="up"
+					class="mx-auto max-w-4xl text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl lg:mx-0"
+				>
+					{t('home.hero.title')}
+				</h1>
+				<p
+					data-reveal="up"
+					style="--reveal-delay: 120ms;"
+					class="mx-auto mt-6 max-w-2xl text-lg text-foreground/75 md:text-xl lg:mx-0"
+				>
+					{t('home.hero.description')}
+				</p>
+				<div data-reveal="up" style="--reveal-delay: 240ms;" class="mt-9">
+					<Button href={BOOK_DEMO_URL}>{t('common.cta.bookDemo')}</Button>
+				</div>
+			</div>
+
+			<!-- Detect → act → healthy: the subline, animated. Decorative but real copy. -->
+			<div class="mx-auto w-full max-w-sm lg:mx-0 lg:justify-self-end" data-reveal="fade" style="--reveal-delay: 320ms;">
+				<div class="flow-card" style="--flow-delay: 0s;">
+					<span class="flex size-9 shrink-0 items-center justify-center rounded-full bg-brand-coral/15 text-brand-coral">
+						<svg class="size-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M12 3.5c3.2 3.9 6 7.2 6 10.3a6 6 0 1 1-12 0c0-3.1 2.8-6.4 6-10.3z" />
+							<path stroke-linecap="round" d="M12 10v4M12 17h.01" />
+						</svg>
+					</span>
+					<div class="min-w-0">
+						<p class="text-sm font-semibold text-foreground">{t('home.hero.cards.alert')}</p>
+						<p class="text-xs text-muted-foreground">{t('home.hero.cards.alertSub')}</p>
+					</div>
+				</div>
+				<div class="flow-link" aria-hidden="true"></div>
+				<div class="flow-card" style="--flow-delay: 3s;">
+					<span class="flex size-9 shrink-0 items-center justify-center rounded-full bg-brand-sky/15 text-brand-sky">
+						<svg class="size-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16c.55 0 1 .45 1 1v10c0 .55-.45 1-1 1H4c-.55 0-1-.45-1-1V7c0-.55.45-1 1-1z" />
+							<path stroke-linecap="round" stroke-linejoin="round" d="m3.5 7 8.5 6 8.5-6" />
+						</svg>
+					</span>
+					<p class="text-sm font-semibold text-foreground">{t('home.hero.cards.action')}</p>
+				</div>
+				<div class="flow-link" aria-hidden="true"></div>
+				<div class="flow-card" style="--flow-delay: 6s;">
+					<span class="flex size-9 shrink-0 items-center justify-center rounded-full bg-[#0d8a6d]/15 text-[#0d8a6d]">
+						<svg class="size-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+						</svg>
+					</span>
+					<p class="text-sm font-semibold text-foreground">{t('home.hero.cards.resolved')}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<style>
+	/* Sky-tinted glass: the cool counterweight to the warm hero panel. The panel's
+	   gradient bleeds through the translucent fill, so the cards pick up a hint of
+	   the header's coral→sky atmosphere for free. */
+	.flow-card {
+		display: flex;
+		align-items: center;
+		gap: 0.875rem;
+		padding: 1rem 1.25rem;
+		border-radius: 1rem;
+		background-color: oklch(0.96 0.018 250 / 0.55);
+		backdrop-filter: blur(14px);
+		border: 1px solid oklch(1 0 0 / 0.55);
+		box-shadow:
+			inset 0 1px 0 0 oklch(1 0 0 / 0.45),
+			0 8px 24px -6px oklch(0.32 0.05 250 / 0.14);
+		animation: flow-lift 9s ease-in-out infinite;
+		animation-delay: var(--flow-delay, 0s);
+	}
+
+	/* Connector between steps, aligned to the icon column */
+	.flow-link {
+		width: 2px;
+		height: 1.1rem;
+		margin-left: 2.35rem;
+		background: linear-gradient(oklch(0.55 0.06 250 / 0.45), oklch(0.55 0.06 250 / 0.1));
+	}
+
+	/* Each card takes a turn "lifting" — a 9s cycle offset by 3s per card, so the
+	   detect → act → healthy story replays without ever hiding content. */
+	@keyframes flow-lift {
+		0%, 26%, 100% {
+			transform: translateY(0);
+			box-shadow:
+				inset 0 1px 0 0 oklch(1 0 0 / 0.45),
+				0 8px 24px -6px oklch(0.32 0.05 250 / 0.14);
+		}
+		8%, 16% {
+			transform: translateY(-5px);
+			box-shadow:
+				inset 0 1px 0 0 oklch(1 0 0 / 0.5),
+				0 14px 32px -6px oklch(0.32 0.05 250 / 0.22),
+				0 0 0 1.5px oklch(0.65 0.08 250 / 0.35);
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.flow-card {
+			animation: none;
+		}
+	}
+</style>

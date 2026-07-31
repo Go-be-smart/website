@@ -1,5 +1,3 @@
-import { getRelativeLocaleUrl } from 'astro:i18n';
-
 // Import translation files
 import enTranslations from '../i18n/en.json';
 import nlTranslations from '../i18n/nl.json';
@@ -44,23 +42,56 @@ export function getTranslation(locale: Locale) {
   };
 }
 
+// Like getTranslation, but for keys whose value is an array of strings
+export function getListTranslation(locale: Locale) {
+  return function tList(key: string): string[] {
+    const lookup = (loc: Locale): unknown => {
+      let value: any = translations[loc];
+      for (const k of key.split('.')) {
+        if (value && typeof value === 'object' && k in value) {
+          value = value[k];
+        } else {
+          return undefined;
+        }
+      }
+      return value;
+    };
+
+    const value = lookup(locale) ?? lookup('en');
+    return Array.isArray(value) ? value : [];
+  };
+}
+
 // Get locale from URL
 export function getLocaleFromUrl(url: URL): Locale {
   const pathname = url.pathname;
-  
+
   if (pathname.startsWith('/nl')) {
     return 'nl';
   }
-  
+
   return 'en'; // Default to English
+}
+
+// Prefix a site-relative path with the locale segment ('/product' -> '/nl/product')
+export function localePath(locale: Locale, path: string): string {
+  const normalized = path.startsWith('/') ? path : `/${path}`;
+  if (locale === 'en') return normalized;
+  return normalized === '/' ? '/nl/' : `/nl${normalized}`;
+}
+
+// Same page, other locale: '/nl/product' <-> '/product'
+export function switchLocalePath(pathname: string, target: Locale): string {
+  const bare = pathname.replace(/^\/nl(?=\/|$)/, '') || '/';
+  return localePath(target, bare);
 }
 
 
 
-// Language display names
+// Language display labels (short codes — full names read oddly mixed-language)
 export const LANGUAGE_NAMES: Record<Locale, string> = {
-  en: 'English',
-  nl: 'Nederlands',
+  en: 'EN',
+  nl: 'NL',
 };
 
 // Available locales

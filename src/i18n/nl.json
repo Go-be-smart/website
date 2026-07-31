@@ -1,57 +1,197 @@
 {
-  "meta": {
-    "title": "Go be Smart - Slimmer verwarmen",
-    "description": "Dashboard om warmtepompen op afstand te monitoren en besturen. Maakt inbedrijfstelling, onderhoud en klantenservice sneller en eenvoudiger."
-  },
-  "nav": {
-    "about": "Over",
-    "team": "Team",
-    "contact": "Contact"
-  },
-  "hero": {
-    "title": "Slimmer verwarmen",
-    "titleHighlight": "",
-    "description": "Intelligentie voor warmtepompen",
-    "requestDemo": "Naar het platform",
-    "learnMore": "Blijf op de hoogte"
-  },
-  "about": {
-    "title": "Over ons",
-    "description": "Veel warmtepompen worden zonder goede inbedrijfstelling en monitoring geïnstalleerd. Het resultaat? Inefficiëntie, energieverspilling, en overbodige huisbezoeken. Om het volledige potentieel van warmtepompen te ontsluiten bouwen wij de benodigde intelligentie met:",
-    "features": {
-      "commissioning": "Automatische inbedrijfstelling op afstand",
-      "monitoring": "Monitoring, diagnose en controle op afstand",
-      "support": "AI-ondersteuning op basis van live warmtepompdata",
-      "visits": "Minder huisbezoeken",
-      "efficiency": "Verbeterde efficiëntie en levensduur",
-      "control":"Slimme sturing op zon, prijs, en netcongestie",
-      "":""
+  "common": {
+    "nav": {
+      "home": "Home",
+      "product": "Product",
+      "about": "Over ons",
+      "contact": "Contact"
+    },
+    "cta": {
+      "bookDemo": "Plan een demo",
+      "contactUs": "Neem contact op",
+      "stayUpdated": "Blijf op de hoogte"
+    },
+    "closing": {
+      "title": "Laat warmtepompen werken",
+      "description": "Benieuwd wat Go be Smart voor jouw warmtepompen kan betekenen? Plan een demo."
+    },
+    "footer": {
+      "tagline": "Warmtepompintelligentie. Gebouwd in Utrecht.",
+      "navigation": "Navigatie",
+      "contact": "Contact",
+      "copyright": "© 2026 Go be Smart. Alle rechten voorbehouden.",
+      "privacy": "Privacybeleid"
+    },
+    "contact": {
+      "linkedin": "Volg ons op LinkedIn",
+      "locationValue": "Utrecht, Nederland"
+    },
+    "form": {
+      "email": "E-mailadres",
+      "submit": "Verzenden",
+      "close": "Sluiten",
+      "success": "Bedankt! We nemen binnenkort contact op.",
+      "error": "Er ging iets mis. Probeer het opnieuw."
     }
   },
-  "team": {
-    "title": "Team",
-    "descriptions": {
-      "keje": "Onze data & ML expert. Het liefst besteed hij zijn tijd aan het bouwen van IoT oplossingen. Je kan Keje midden in de nacht wakker maken om over warmtepompen te praten.",
-      "charlie": "Met ervaring in zowel marketing als sales wilt deze innovatie-expert nu vooral echte oplossingen bouwen die bijdragen aan een duurzamer energiesysteem.",
-      "age": "Abstracte problemen oplossen is wat hem drijft. Na zijn PhD in theoretische biofysica heeft hij zich nu ondergedompeld in de wereld van moderne software."
+  "home": {
+    "meta": {
+      "title": "Warmtepompintelligentie | Go be Smart",
+      "description": "Warmtepompintelligentie op schaal: probleemdetectie, onderhoudsmanagement, automatische inbedrijfstelling en slimme sturing. Lagere onderhoudskosten, betere prestaties."
+    },
+    "hero": {
+      "title": "Gezonde warmtepompen, blije bewoners",
+      "description": "Go be Smart houdt elke warmtepomp goed afgesteld, detecteert problemen voordat iemand in de kou zit, en maakt van onderhoud een plan.",
+      "cards": {
+        "alert": "Lage waterdruk",
+        "alertSub": "1e Str. · Heattown",
+        "action": "Bewoner gemaild om bij te vullen",
+        "resolved": "Geen openstaande meldingen"
+      }
+    },
+    "what": {
+      "title": "Eén platform voor warmtepompintelligentie",
+      "description": "Go be Smart verbindt met je warmtepompen en zet live data om in actie — of je ze nu bouwt, bezit of voor anderen beheert. Gebruik het als platform, integreer het via API, of laat je warmtepompen volledig door ons beheren.",
+      "features": {
+        "commissioning": "Automatische inbedrijfstelling en herafstemming",
+        "maintenance": "Probleemdetectie en onderhoudsmanagement",
+        "control": "Slimme sturing op prijzen, capaciteitstarieven en eigen zonverbruik",
+        "support": "Agent-ondersteuning op basis van live warmtepompdata"
+      }
+    },
+    "why": {
+      "title": "Geïnstalleerd is niet hetzelfde als presterend",
+      "description": "Veel warmtepompen worden geïnstalleerd en daarna nooit meer bekeken. Het resultaat: inefficiëntie, energieverspilling en duur onderhoud — bezoeken die niet nodig waren, en bezoeken zonder de juiste onderdelen in de bus. Wij bouwen de intelligentie die het volledige potentieel van elke warmtepomp ontsluit.",
+      "benefits": {
+        "visits": "Minder huisbezoeken, vaker in één keer raak",
+        "efficiency": "Betere efficiëntie en langere levensduur",
+        "control": "Slimme sturing op prijzen, capaciteitstarieven en eigen zonverbruik"
+      }
+    },
+    "pricing": {
+      "title": "Werk met ons zoals het jou past",
+      "description": "Of je nu warmtepompen bouwt of ze op schaal beheert — elke samenwerking is maatwerk. Geen vaste pakketten; neem contact op voor een offerte.",
+      "models": {
+        "api": {
+          "name": "API-diensten",
+          "tagline": "Betaal per module",
+          "description": "Sluit onze intelligentie via API aan op je eigen systemen en producten: automatische inbedrijfstelling, probleemdiagnose, slimme sturing en productintelligentie. Je betaalt alleen voor de modules die je gebruikt."
+        },
+        "platform": {
+          "name": "Platform",
+          "tagline": "De webapp, op jouw manier",
+          "description": "Warmtepomp-assetbeheer voor je hele portefeuille: live status, onderhoudsplanning en rapportage — uitgebreid met de maatwerkfuncties die jouw werkwijze nodig heeft."
+        },
+        "fullService": {
+          "name": "Full service",
+          "tagline": "Geen omkijken",
+          "description": "Wij beheren de warmtepompen in je portefeuille voor je: inbedrijfstelling, monitoring en support, volledig verzorgd door ons team."
+        }
+      }
+    }
+  },
+  "product": {
+    "meta": {
+      "title": "Product | Go be Smart",
+      "description": "Van eerste opstart tot jaren stil draaien: automatische inbedrijfstelling, probleemdetectie en onderhoudsmanagement, slimme sturing en agent-ondersteuning in één platform."
+    },
+    "hero": {
+      "title": "Van eerste opstart tot jaren stil draaien",
+      "description": "Eén platform voor elke warmtepomp in je vloot of productlijn: stel op afstand in bedrijf, volg prestaties live, en laat elk apparaat slim reageren op het energiesysteem eromheen."
+    },
+    "features": {
+      "commissioning": {
+        "title": "Automatische inbedrijfstelling",
+        "description": "Start en stem warmtepompen op afstand af, en blijf bijsturen als seizoenen en gebruik veranderen. Geen tweede bezoek nodig om de instellingen goed te krijgen.",
+        "bullets": [
+          "Opstarten en configureren op afstand",
+          "Continue herafstemming als omstandigheden veranderen",
+          "Instellingshistorie per apparaat"
+        ]
+      },
+      "monitoring": {
+        "title": "Probleemdetectie & onderhoud",
+        "description": "Live prestatiedata van je hele vloot, problemen gedetecteerd voordat iemand iets merkt, en onderhoud omgezet in een plan: wanneer waarheen, wat mee te nemen en wat te doen.",
+        "bullets": [
+          "Vlootoverzicht met live status",
+          "Automatische probleemdetectie en diagnose",
+          "Onderhoudsplanning: juiste bezoek, juiste onderdelen, in één keer raak"
+        ]
+      },
+      "control": {
+        "title": "Slimme sturing",
+        "description": "Stuur warmtepompen op energieprijzen, capaciteitstarieven en eigen zonverbruik — lagere rekeningen voor bewoners, minder druk op het net.",
+        "bullets": [
+          "Optimalisatie op prijzen en capaciteitstarieven",
+          "Eigen verbruik van zonnestroom",
+          "Reactie op netcongestie"
+        ]
+      },
+      "ai": {
+        "title": "Agent-ondersteuning",
+        "description": "AI-agents gebaseerd op de live data van precies het apparaat waar je naar kijkt: installatie- en diagnosehulp voor serviceteams, en productintelligentie voor de teams achter het product.",
+        "bullets": [
+          "Installatie- en diagnoseagents voor serviceteams",
+          "Antwoorden op basis van realtime apparaatdata",
+          "Productintelligentie voor sales, marketing en R&D"
+        ]
+      }
+    },
+    "how": {
+      "title": "Hoe het werkt",
+      "steps": {
+        "connect": {
+          "title": "Verbinden",
+          "description": "We verbinden je warmtepompen met het platform — via je eigen cloud of rechtstreeks."
+        },
+        "commission": {
+          "title": "In bedrijf stellen",
+          "description": "Start en stem elk apparaat op afstand af."
+        },
+        "monitor": {
+          "title": "Monitoren",
+          "description": "Volg prestaties, vang problemen vroeg af en stuur slim bij."
+        }
+      }
+    }
+  },
+  "about": {
+    "meta": {
+      "title": "Over ons | Go be Smart",
+      "description": "Wij bouwen de intelligentie die het volledige potentieel van warmtepompen ontsluit. Ontmoet het team in Utrecht."
+    },
+    "mission": {
+      "title": "Het volledige potentieel van warmtepompen ontsluiten",
+      "description": "De energietransitie draait op warmtepompen — maar alleen als ze presteren. We zijn Go be Smart begonnen omdat te veel warmtepompen worden geïnstalleerd, aangezet en nooit meer bekeken. Wij bouwen de intelligentie die ze jarenlang laat presteren — en het onderhoud betaalbaar houdt."
+    },
+    "team": {
+      "title": "Het team",
+      "descriptions": {
+        "keje": "Onze data & ML expert. Het liefst besteedt hij zijn tijd aan het bouwen van IoT-oplossingen. Je kan Keje midden in de nacht wakker maken om over warmtepompen te praten.",
+        "charlie": "Met ervaring in zowel marketing als sales wil deze innovatie-expert nu vooral echte oplossingen bouwen die bijdragen aan een duurzamer energiesysteem.",
+        "age": "Abstracte problemen oplossen is wat hem drijft. Na zijn PhD in theoretische biofysica heeft hij zich nu ondergedompeld in de wereld van moderne software."
+      }
     }
   },
   "contact": {
-    "title": "Neem contact op",
-    "description": "Meer weten? We horen graag van je!",
-    "info": "Contact informatie",
-    "locationValue": "Utrecht, Nederland",
-    "linkedin": "Volg ons op LinkedIn"
+    "meta": {
+      "title": "Contact | Go be Smart",
+      "description": "Neem contact op met het Go be Smart team in Utrecht."
+    },
+    "title": "Contact",
+    "description": "Vragen over het platform, onze API, of hoe full service er voor jouw portefeuille uitziet? We horen graag van je.",
+    "reach": {
+      "title": "Neem contact op",
+      "description": "Geen bots, geen ticketwachtrij — je bereikt het team dat het product bouwt. We reageren meestal binnen een dag."
+    }
   },
-  "footer": {
-    "copyright": "© 2026 Go be Smart. Alle rechten voorbehouden.",
-    "privacy": "Privacybeleid"
-  },
-  "form": {
-    "email": "E-mailadres",
-    "submit": "Verzenden",
-    "close": "Sluiten",
-    "success": "Bedankt! We nemen binnenkort contact op.",
-    "error": "Er ging iets mis. Probeer het opnieuw."
+  "notFound": {
+    "meta": {
+      "title": "Pagina niet gevonden | Go be Smart",
+      "description": "Deze pagina bestaat niet."
+    },
+    "title": "Pagina niet gevonden",
+    "description": "De pagina die je zoekt bestaat niet of is verplaatst.",
+    "backHome": "Terug naar home"
   }
 }

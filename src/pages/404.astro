@@ -1,0 +1,26 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Section from '../components/ui/Section.astro';
+import Button from '../components/ui/Button.astro';
+import { getTranslation } from '../utils/i18n';
+
+const t = getTranslation('en');
+---
+
+<Layout locale="en" title={t('notFound.meta.title')} description={t('notFound.meta.description')}>
+	<Header locale="en" />
+	<main>
+		<Section class="min-h-[50vh]">
+			<div class="mx-auto max-w-xl text-center">
+				<h1 class="text-4xl font-bold tracking-tight text-foreground md:text-5xl">{t('notFound.title')}</h1>
+				<p class="mt-5 text-lg text-muted-foreground">{t('notFound.description')}</p>
+				<div class="mt-9">
+					<Button href="/">{t('notFound.backHome')}</Button>
+				</div>
+			</div>
+		</Section>
+	</main>
+	<Footer locale="en" />
+</Layout>

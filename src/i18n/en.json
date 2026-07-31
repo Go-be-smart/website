@@ -1,56 +1,197 @@
 {
-  "meta": {
-    "title": "Go be Smart - Smart heating simplified",
-    "description": "Dashboard to monitor and control heat pumps remotely. Making commissioning, servicing, and customer support faster and simpler."
-  },
-  "nav": {
-    "about": "About",
-    "team": "Team",
-    "contact": "Contact"
-  },
-  "hero": {
-    "title": "Smart heating simplified",
-    "titleHighlight": "",
-    "description": "Bringing intelligence to heat pumps",
-    "requestDemo": "Go to platform",
-    "learnMore": "Stay up to date"
-  },
-  "about": {
-    "title": "About us",
-    "description": "Heat pumps are often installed without proper commissioning or monitoring. The result? Inefficiencies, wasted energy, and avoidable service visits. To unlock the full potential of heat pumps, we’re building the intelligence that provides:",
-    "features": {
-      "commissioning": "Remote and continuous commissioning",
-      "monitoring": "Remote monitoring, diagnosis, and control",
-      "support": "AI-support based on real-time heat pump data",
-      "visits": "Fewer service visits",
-      "efficiency": "Improved heat pump efficiency and lifespan",
-      "control":"Smart control based on solar, price, and grid signals"
+  "common": {
+    "nav": {
+      "home": "Home",
+      "product": "Product",
+      "about": "About",
+      "contact": "Contact"
+    },
+    "cta": {
+      "bookDemo": "Book a demo",
+      "contactUs": "Contact us",
+      "stayUpdated": "Stay up to date"
+    },
+    "closing": {
+      "title": "Make heat pumps work",
+      "description": "Want to know what Go be Smart can do for your heat pumps? Schedule a demo."
+    },
+    "footer": {
+      "tagline": "Heat pump intelligence. Built in Utrecht.",
+      "navigation": "Navigation",
+      "contact": "Contact",
+      "copyright": "© 2026 Go be Smart. All rights reserved.",
+      "privacy": "Privacy policy"
+    },
+    "contact": {
+      "linkedin": "Follow us on LinkedIn",
+      "locationValue": "Utrecht, The Netherlands"
+    },
+    "form": {
+      "email": "Email address",
+      "submit": "Submit",
+      "close": "Close",
+      "success": "Thank you! We'll be in touch soon.",
+      "error": "Something went wrong. Please try again."
     }
   },
-  "team": {
-    "title": "Team",
-    "descriptions": {
-      "keje": "Our data & ML expert. He prefers to spend his time building IoT solutions. You can wake up Keje in the middle of the night to talk about heat pumps. ",
-      "charlie": "Versed in marketing and sales, this innovation expert now wants to build real solutions contributing to a more sustainable energy system.",
-      "age": "Solving abstract problems is what makes Age tick. After his PhD in theoretical biophysics, he has now immersed himself in the world of modern software."
+  "home": {
+    "meta": {
+      "title": "Heat pump management | Go be Smart",
+      "description": "Heat pump intelligence at scale: problem detection, maintenance management, automated commissioning, and smart control. Lower maintenance costs, better performance."
+    },
+    "hero": {
+      "title": "Healthy heat pumps, happy homes",
+      "description": "Go be Smart keeps every heat pump tuned, detects problems before anyone's cold, and turns maintenance into a plan.",
+      "cards": {
+        "alert": "Low water pressure",
+        "alertSub": "1 Str. · Heattown",
+        "action": "Emailed resident to refill",
+        "resolved": "No remaining alerts"
+      }
+    },
+    "what": {
+      "title": "One platform for heat pump management",
+      "description": "Go be Smart connects to your heat pumps and turns live data into action — whether you build them, own them, or manage them for others. Use it as a platform, integrate it over API, or let us handle your heat pumps entirely.",
+      "features": {
+        "commissioning": "Automated commissioning and re-commissioning",
+        "maintenance": "Problem detection and maintenance management",
+        "control": "Smart control on prices, capacity tariffs, and solar self-use",
+        "support": "Agentic support grounded in live heat pump data"
+      }
+    },
+    "why": {
+      "title": "Installed is not the same as performing",
+      "description": "Heat pumps are often installed and never looked at again. The result: inefficiency, wasted energy, and expensive maintenance — visits that weren't needed, and visits without the right parts on board. We build the intelligence that unlocks the full potential of every heat pump.",
+      "benefits": {
+        "visits": "Fewer site visits, more first-time fixes",
+        "efficiency": "Better efficiency and longer lifespan",
+        "control": "Smart control on prices, capacity tariffs, and solar self-use"
+      }
+    },
+    "pricing": {
+      "title": "Work with us the way that fits",
+      "description": "Whether you build heat pumps or manage them at scale — every engagement is tailored. No fixed tiers; talk to us for a quote.",
+      "models": {
+        "api": {
+          "name": "API services",
+          "tagline": "Pay per module",
+          "description": "Plug our intelligence into your own systems and products over API: automated commissioning, problem diagnosis, smart control, and product intelligence. You pay only for the modules you use."
+        },
+        "platform": {
+          "name": "Platform",
+          "tagline": "The webapp, your way",
+          "description": "Heat pump asset management for your whole portfolio: live status, maintenance planning, and reporting — extended with the custom features your workflow needs."
+        },
+        "fullService": {
+          "name": "Full service",
+          "tagline": "No worries",
+          "description": "We manage the heat pumps in your portfolio for you: commissioning, monitoring, and support, handled end-to-end by our team."
+        }
+      }
+    }
+  },
+  "product": {
+    "meta": {
+      "title": "Product | Go be Smart",
+      "description": "From first startup to years of quiet operation: automated commissioning, problem detection and maintenance management, smart control, and agentic support in one platform."
+    },
+    "hero": {
+      "title": "From first startup to years of quiet operation",
+      "description": "One platform for every heat pump in your fleet or product line: commission remotely, watch performance live, and let every device respond intelligently to the energy system around it."
+    },
+    "features": {
+      "commissioning": {
+        "title": "Automated commissioning",
+        "description": "Start up and tune heat pumps remotely, and keep tuning them as seasons and usage change. No second site visit to get the settings right.",
+        "bullets": [
+          "Remote startup and configuration",
+          "Continuous re-commissioning as conditions change",
+          "Settings history per device"
+        ]
+      },
+      "monitoring": {
+        "title": "Problem detection & maintenance",
+        "description": "Live performance data across your whole fleet, problems detected before anyone notices, and maintenance turned into a plan: when to go where, what to bring, and what to do.",
+        "bullets": [
+          "Fleet overview with live status",
+          "Automatic problem detection and diagnosis",
+          "Maintenance planning: right visit, right parts, first-time fix"
+        ]
+      },
+      "control": {
+        "title": "Smart control",
+        "description": "Steer heat pumps on energy prices, capacity tariffs, and solar self-use — lower bills for residents, less stress on the grid.",
+        "bullets": [
+          "Price and capacity-tariff optimisation",
+          "Solar self-consumption",
+          "Grid congestion response"
+        ]
+      },
+      "ai": {
+        "title": "Agentic support",
+        "description": "AI agents grounded in the live data of the exact device in front of you: installation and diagnosis support for service teams, and product intelligence for the teams behind the product.",
+        "bullets": [
+          "Installation and problem-diagnosis agents for service teams",
+          "Answers grounded in real-time device data",
+          "Product intelligence for sales, marketing, and R&D"
+        ]
+      }
+    },
+    "how": {
+      "title": "How it works",
+      "steps": {
+        "connect": {
+          "title": "Connect",
+          "description": "We connect your heat pumps to the platform — via your own cloud or directly."
+        },
+        "commission": {
+          "title": "Commission",
+          "description": "Start up and tune every device remotely."
+        },
+        "monitor": {
+          "title": "Monitor",
+          "description": "Watch performance, catch issues early, and steer smartly."
+        }
+      }
+    }
+  },
+  "about": {
+    "meta": {
+      "title": "About | Go be Smart",
+      "description": "We're building the intelligence that unlocks the full potential of heat pumps. Meet the team in Utrecht."
+    },
+    "mission": {
+      "title": "Unlocking the full potential of heat pumps",
+      "description": "The energy transition runs on heat pumps — but only if they perform. We started Go be Smart because too many heat pumps are installed, switched on, and never looked at again. We build the intelligence that keeps them performing for years — and keeps maintaining them affordable."
+    },
+    "team": {
+      "title": "The team",
+      "descriptions": {
+        "keje": "Our data & ML expert. He prefers to spend his time building IoT solutions. You can wake up Keje in the middle of the night to talk about heat pumps.",
+        "charlie": "Versed in marketing and sales, this innovation expert now wants to build real solutions contributing to a more sustainable energy system.",
+        "age": "Solving abstract problems is what makes Age tick. After his PhD in theoretical biophysics, he has now immersed himself in the world of modern software."
+      }
     }
   },
   "contact": {
-    "title": "Get in Touch",
-    "description": "Want to know more? We'd love to hear from you.",
-    "info": "Contact Information",
-    "locationValue": "Utrecht, The Netherlands",
-    "linkedin": "Follow us on LinkedIn"
+    "meta": {
+      "title": "Contact | Go be Smart",
+      "description": "Get in touch with the Go be Smart team in Utrecht."
+    },
+    "title": "Contact",
+    "description": "Questions about the platform, our API, or what full service would look like for your portfolio? We'd love to hear from you.",
+    "reach": {
+      "title": "Get in touch",
+      "description": "No bots, no ticket queues — you reach the team that builds the product. We usually reply within a day."
+    }
   },
-  "footer": {
-    "copyright": "© 2026 Go be Smart. All rights reserved.",
-    "privacy": "Privacy policy"
-  },
-  "form": {
-    "email": "Email address",
-    "submit": "Submit",
-    "close": "Close",
-    "success": "Thank you! We'll be in touch soon.",
-    "error": "Something went wrong. Please try again."
+  "notFound": {
+    "meta": {
+      "title": "Page not found | Go be Smart",
+      "description": "This page doesn't exist."
+    },
+    "title": "Page not found",
+    "description": "The page you're looking for doesn't exist or has moved.",
+    "backHome": "Back to home"
   }
 }
