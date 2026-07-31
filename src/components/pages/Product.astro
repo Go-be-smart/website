@@ -23,7 +23,7 @@ const features = ['commissioning', 'monitoring', 'control', 'ai'];
 <main>
 	<Section class="!py-16 md:!py-20">
 		<div class="max-w-3xl" data-reveal="up">
-			<h1 class="text-4xl font-bold tracking-tight text-foreground md:text-5xl">
+			<h1 class="text-4xl font-semibold tracking-tight text-foreground md:text-5xl">
 				{t('product.hero.title')}
 			</h1>
 			<p class="mt-6 text-lg text-muted-foreground md:text-xl">{t('product.hero.description')}</p>
@@ -46,13 +46,13 @@ const features = ['commissioning', 'monitoring', 'control', 'ai'];
 	</Section>
 
 	<Section divider>
-		<h2 class="text-3xl font-bold tracking-tight text-foreground md:text-4xl" data-reveal="up">
+		<h2 class="text-3xl font-semibold tracking-tight text-foreground md:text-4xl" data-reveal="up">
 			{t('product.how.title')}
 		</h2>
 		<div class="mt-12 grid gap-10 md:grid-cols-3">
 			{['connect', 'commission', 'monitor'].map((step, i) => (
 				<div data-reveal="up" style={`--reveal-delay: ${i * 120}ms;`}>
-					<span class="text-4xl font-bold text-brand-coral/80">{i + 1}</span>
+					<span class="text-4xl font-semibold text-brand-coral/80">{i + 1}</span>
 					<h3 class="mt-3 text-xl font-bold text-foreground">{t(`product.how.steps.${step}.title`)}</h3>
 					<p class="mt-2 text-base text-muted-foreground">{t(`product.how.steps.${step}.description`)}</p>
 				</div>

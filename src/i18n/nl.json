@@ -44,9 +44,11 @@
       "description": "Go be Smart houdt elke warmtepomp goed afgesteld, detecteert problemen voordat iemand in de kou zit, en maakt van onderhoud een plan.",
       "cards": {
         "alert": "Lage waterdruk",
-        "alertSub": "1e Str. · Heattown",
-        "action": "Bewoner gemaild om bij te vullen",
-        "resolved": "Geen openstaande meldingen"
+        "alertDetail": "Druk onder 1,0 bar aan de Dorpsstraat in Warmstad.",
+        "action": "Bewoner gemaild met vulinstructies",
+        "actionDetail": "Geen bezoek nodig.",
+        "resolved": "Geen openstaande meldingen",
+        "resolvedDetail": "Alle warmtepompen gezond."
       }
     },
     "what": {
