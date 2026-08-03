@@ -79,12 +79,10 @@
       }
     },
     "why": {
-      "title": "Installed is not the same as performing",
-      "description": "Heat pumps are often installed and never looked at again. The result: inefficiency, wasted energy, and expensive maintenance — visits that weren't needed, and visits without the right parts on board. We build the intelligence that unlocks the full potential of every heat pump.",
-      "benefits": {
-        "visits": "Fewer site visits, more first-time fixes",
-        "efficiency": "Better efficiency and longer lifespan",
-        "control": "Smart control on prices, capacity tariffs, and solar self-use"
+      "statement": {
+        "lead": "The energy transition runs on heat pumps.",
+        "middle": "But the expertise to run them well is scarce. Energy gets wasted and the cost of maintenance and ownership explodes.",
+        "punch": "We make expertise scale."
       }
     },
     "pricing": {

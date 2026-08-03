@@ -8,23 +8,26 @@ interface Props {
 
 const { locale } = Astro.props;
 const t = getTranslation(locale);
-
-const benefits = ['visits', 'efficiency', 'control'];
 ---
 
-<Section>
-	<div class="max-w-3xl" data-reveal="up">
-		<h2 class="text-3xl font-semibold tracking-tight text-foreground md:text-4xl">{t('home.why.title')}</h2>
-		<p class="mt-5 text-lg text-muted-foreground">{t('home.why.description')}</p>
-	</div>
-	<ul class="mt-10 grid gap-4 sm:grid-cols-3" data-reveal="up" style="--reveal-delay: 120ms;">
-		{benefits.map((key) => (
-			<li class="flex items-start gap-3">
-				<svg class="mt-0.5 h-5 w-5 shrink-0 text-brand-coral" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-					<path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-				</svg>
-				<span class="text-base font-medium text-foreground/85">{t(`home.why.benefits.${key}`)}</span>
-			</li>
-		))}
-	</ul>
+<!-- The problem statement: one large text block, resolved by the navy
+     What-band directly below ("One platform for heat pump management"). -->
+<Section class="!pt-32 !pb-20 md:!pt-40 md:!pb-32">
+	<p class="max-w-4xl text-2xl font-medium leading-snug tracking-tight md:text-4xl" data-reveal="up">
+		<span class="text-foreground">{t('home.why.statement.lead')}</span>
+		<span class="text-foreground/55">{t('home.why.statement.middle')}</span>
+		<span class="marker-coral text-foreground">{t('home.why.statement.punch')}</span>
+	</p>
 </Section>
+
+<style>
+	/* Soft marker wash behind the punch line; clone keeps the wash intact
+	   when the phrase wraps across lines. */
+	.marker-coral {
+		background-color: oklch(0.9 0.055 30 / 0.55);
+		border-radius: 0.25em;
+		padding: 0.05em 0.18em;
+		-webkit-box-decoration-break: clone;
+		box-decoration-break: clone;
+	}
+</style>

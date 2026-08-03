@@ -54,7 +54,7 @@
     },
     "what": {
       "title": "Eén platform voor warmtepompbeheer",
-      "description": "Go be Smart verbindt met je warmtepompen en zet live data om in actie. Verlaag de kosten van warmtepomponderhoud en -eigendom. Laat warmtepompen werken voor iedereen.",
+      "description": "Go be Smart verbindt met je warmtepompen en zet live data om in actie. Verlaag de kosten van warmtepomponderhoud en ‑eigendom. Laat warmtepompen werken voor iedereen.",
       "features": {
         "commissioning": {
           "title": "Automatische inbedrijfstelling",
@@ -79,12 +79,10 @@
       }
     },
     "why": {
-      "title": "Geïnstalleerd is niet hetzelfde als presterend",
-      "description": "Veel warmtepompen worden geïnstalleerd en daarna nooit meer bekeken. Het resultaat: inefficiëntie, energieverspilling en duur onderhoud — bezoeken die niet nodig waren, en bezoeken zonder de juiste onderdelen in de bus. Wij bouwen de intelligentie die het volledige potentieel van elke warmtepomp ontsluit.",
-      "benefits": {
-        "visits": "Minder huisbezoeken, vaker in één keer raak",
-        "efficiency": "Betere efficiëntie en langere levensduur",
-        "control": "Slimme sturing op prijzen, capaciteitstarieven en eigen zonverbruik"
+      "statement": {
+        "lead": "De energietransitie draait op warmtepompen.",
+        "middle": "Maar de expertise om ze goed te laten draaien is schaars. Energie gaat verloren en de kosten van onderhoud en eigendom exploderen.",
+        "punch": "Wij maken expertise schaalbaar."
       }
     },
     "pricing": {
