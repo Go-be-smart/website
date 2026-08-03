@@ -38,7 +38,7 @@ const privacyHref = locale === 'nl' ? '/nl/privacy' : '/privacy';
 			<div>
 				<h2 class="text-sm font-bold text-primary-foreground/90">{t('common.footer.navigation')}</h2>
 				<ul class="mt-3 space-y-1.5">
-					{NAV_ITEMS.map(({ key, path }) => (
+					{NAV_ITEMS.filter(({ key }) => key !== 'contact').map(({ key, path }) => (
 						<li>
 							<a
 								href={localePath(locale, path)}
@@ -52,7 +52,14 @@ const privacyHref = locale === 'nl' ? '/nl/privacy' : '/privacy';
 			</div>
 
 			<div>
-				<h2 class="text-sm font-bold text-primary-foreground/90">{t('common.footer.contact')}</h2>
+				<h2 class="text-sm font-bold">
+					<a
+						href={localePath(locale, '/contact')}
+						class="text-primary-foreground/90 hover:text-primary-foreground transition-colors"
+					>
+						{t('common.footer.contact')}
+					</a>
+				</h2>
 					<ul class="mt-3 space-y-1.5">
 						<li>
 							<a
