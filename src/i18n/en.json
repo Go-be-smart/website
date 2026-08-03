@@ -45,7 +45,7 @@
       "description": "Go be Smart keeps every heat pump tuned, detects problems before anyone's cold, and turns maintenance into a plan.",
       "cards": {
         "alert": "Low water pressure",
-        "alertDetail": "Low pressure alarm at 1st Str., Heattown.",
+        "alertDetail": "Low pressure alarm at 1st Str. Heattown.",
         "action": "Emailed resident with refill instructions",
         "actionDetail": "No visit needed.",
         "resolved": "No remaining alerts",
@@ -87,17 +87,17 @@
     },
     "pricing": {
       "title": "Work with us the way that fits",
-      "description": "Use it as a platform, integrate it over API, or let us handle your heat pumps entirely — every engagement is tailored. No fixed tiers; talk to us for a quote.",
+      "description": "Use it as a platform, integrate it over API, or let us handle your heat pumps entirely. Every engagement is tailored, talk to us for a quote.",
       "models": {
         "api": {
           "name": "API services",
           "tagline": "Pay per module",
-          "description": "Plug our intelligence into your own systems and products over API: automated commissioning, problem diagnosis, smart control, and product intelligence. You pay only for the modules you use."
+          "description": "Plug our intelligence into your own systems and products over API: automated commissioning, problem diagnosis, smart control, agentic support, and product intelligence. You pay only for the modules you use."
         },
         "platform": {
           "name": "Platform",
-          "tagline": "The webapp, your way",
-          "description": "Heat pump asset management for your whole portfolio: live status, maintenance planning, and reporting — extended with the custom features your workflow needs."
+          "tagline": "Ready to go",
+          "description": "Heat pump asset management for your whole portfolio: live status, maintenance planning, and reporting, extended with the custom features your workflow needs."
         },
         "fullService": {
           "name": "Full service",

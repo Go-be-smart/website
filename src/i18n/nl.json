@@ -87,17 +87,17 @@
     },
     "pricing": {
       "title": "Werk met ons zoals het jou past",
-      "description": "Gebruik het als platform, integreer het via API, of laat je warmtepompen volledig door ons beheren — elke samenwerking is maatwerk. Geen vaste pakketten; neem contact op voor een offerte.",
+      "description": "Gebruik het als platform, integreer het via API, of laat je warmtepompen volledig door ons beheren. Elke samenwerking is maatwerk, neem contact op voor een offerte.",
       "models": {
         "api": {
           "name": "API-diensten",
           "tagline": "Betaal per module",
-          "description": "Sluit onze intelligentie via API aan op je eigen systemen en producten: automatische inbedrijfstelling, probleemdiagnose, slimme sturing en productintelligentie. Je betaalt alleen voor de modules die je gebruikt."
+          "description": "Sluit onze intelligentie via API aan op je eigen systemen en producten: automatische inbedrijfstelling, probleemdiagnose, slimme sturing, AI-ondersteuning en productintelligentie. Je betaalt alleen voor de modules die je gebruikt."
         },
         "platform": {
           "name": "Platform",
-          "tagline": "De webapp, op jouw manier",
-          "description": "Warmtepomp-assetbeheer voor je hele portefeuille: live status, onderhoudsplanning en rapportage — uitgebreid met de maatwerkfuncties die jouw werkwijze nodig heeft."
+          "tagline": "Direct aan de slag",
+          "description": "Warmtepomp-assetbeheer voor je hele portefeuille: live status, onderhoudsplanning en rapportage, uitgebreid met de maatwerkfuncties die jouw werkwijze nodig heeft."
         },
         "fullService": {
           "name": "Full service",

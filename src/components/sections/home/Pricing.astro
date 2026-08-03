@@ -1,6 +1,4 @@
 ---
-import Button from '../../ui/Button.astro';
-import Card from '../../ui/Card.astro';
 import Section from '../../ui/Section.astro';
 import { getTranslation, type Locale } from '../../../utils/i18n';
 import { CONTACT_URL } from '../../../utils/site';
@@ -23,18 +21,40 @@ const models = ['api', 'platform', 'fullService'];
 		<p class="mt-5 text-lg text-muted-foreground">{t('home.pricing.description')}</p>
 	</div>
 
-	<div class="mt-12 grid gap-5 md:grid-cols-3">
+	<div class="mt-12 grid gap-6 md:grid-cols-3 md:gap-10">
 		{models.map((key, i) => (
-			<Card class="flex flex-col p-8" data-reveal="up" style={`--reveal-delay: ${i * 120}ms;`}>
-				<h3 class="text-xl font-bold text-foreground">{t(`home.pricing.models.${key}.name`)}</h3>
-				<p class="mt-1 text-sm font-semibold text-highlight">{t(`home.pricing.models.${key}.tagline`)}</p>
+			<div class="price-card flex flex-col rounded-2xl p-8" data-reveal="up" style={`--reveal-delay: ${i * 120}ms;`}>
+				<h3 class="text-xl font-semibold text-foreground">{t(`home.pricing.models.${key}.name`)}</h3>
+				<p class="mt-1 text-sm font-medium text-muted-foreground">{t(`home.pricing.models.${key}.tagline`)}</p>
 				<p class="mt-4 flex-grow text-base leading-relaxed text-muted-foreground">
 					{t(`home.pricing.models.${key}.description`)}
 				</p>
-				<Button href={CONTACT_URL} variant="secondary" class="mt-8 w-full">
+				<a
+					href={CONTACT_URL}
+					class="mt-8 self-start text-sm font-semibold text-foreground underline decoration-2 underline-offset-4 transition-colors hover:text-highlight"
+				>
 					{t('common.cta.contactUs')}
-				</Button>
-			</Card>
+				</a>
+			</div>
 		))}
 	</div>
 </Section>
+
+<style>
+	/* Trial: flat faint sky, no shadow. Previous near-flat gradient + shadow:
+	   linear-gradient(172deg, oklch(0.99 0.006 242), oklch(0.994 0.002 55) 48%,
+	   oklch(0.985 0.011 35)) with
+	   0 1px 4px -2px oklch(0.32 0.05 250 / 0.06),
+	   0 12px 28px -18px oklch(0.32 0.05 250 / 0.2). */
+	.price-card {
+		/* Single-hue warm ramp, vertical: reads as lighting, not as a color
+		   journey — the two-hue coral↔sky story stays exclusive to the hero
+		   and closing buckets. (Flat variants: coral oklch(0.955 0.025 32),
+		   sky oklch(0.955 0.022 242).) */
+		background-image: linear-gradient(
+			180deg,
+			oklch(0.972 0.013 32) 0%,
+			oklch(0.955 0.024 32) 100%
+		);
+	}
+</style>
