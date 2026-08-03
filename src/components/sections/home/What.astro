@@ -1,7 +1,5 @@
 ---
-import Card from '../../ui/Card.astro';
-import Section from '../../ui/Section.astro';
-import { getTranslation, type Locale } from '../../../utils/i18n';
+import { getTranslation, localePath, type Locale } from '../../../utils/i18n';
 
 interface Props {
 	locale: Locale;
@@ -10,22 +8,82 @@ interface Props {
 const { locale } = Astro.props;
 const t = getTranslation(locale);
 
-const features = ['commissioning', 'maintenance', 'control', 'support'];
+// Size encodes the hierarchy: the three fundamentals get the big discs,
+// the two nice-to-haves the small ones.
+const features = [
+	{ key: 'commissioning', big: true, nudge: '' },
+	{ key: 'maintenance', big: true, nudge: 'lg:translate-y-8' },
+	{ key: 'fleet', big: true, nudge: '' },
+	{ key: 'support', big: false, nudge: 'lg:-translate-y-4' },
+	{ key: 'control', big: false, nudge: 'lg:translate-y-2' },
+];
 ---
 
-<Section>
-	<div class="max-w-3xl" data-reveal="up">
-		<h2 class="text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
-			{t('home.what.title')}
-		</h2>
-		<p class="mt-5 text-lg text-muted-foreground">{t('home.what.description')}</p>
-	</div>
+<!-- Full-width navy band: circle cluster left, title right -->
+<section class="bg-brand-navy">
+	<div
+		class="mx-auto grid max-w-6xl items-center gap-10 px-4 py-14 sm:px-6 md:py-16 lg:grid-cols-[minmax(0,2.2fr)_minmax(0,1fr)] lg:gap-14 lg:px-8"
+	>
+		<div class="order-1 mx-auto flex max-w-[40rem] flex-wrap items-center justify-center gap-4 md:gap-5 lg:order-none">
+			{features.map(({ key, big, nudge }, i) => (
+				<a
+					href={`${localePath(locale, '/product')}#${key}`}
+					data-reveal="up"
+					style={`--reveal-delay: ${i * 100}ms;`}
+					class={`feature-disc group flex flex-col items-center justify-center rounded-full p-5 text-center transition-all duration-300 hover:scale-[1.05] ${
+						big ? 'size-44 md:size-52' : 'size-36 md:size-40'
+					} ${nudge}`}
+				>
+					<span class={`font-semibold leading-snug text-foreground transition-colors group-hover:text-highlight ${big ? 'text-base md:text-lg' : 'text-base md:text-[17px]'}`}>
+						{t(`home.what.features.${key}.title`)}
+					</span>
+					<span class={`mt-2 text-muted-foreground transition-colors group-hover:text-highlight ${big ? 'text-xs md:text-sm' : 'text-xs md:text-[13px]'}`}>
+						{t(`home.what.features.${key}.sub`)}
+					</span>
+				</a>
+			))}
+		</div>
 
-	<div class="mt-12 grid gap-5 sm:grid-cols-2">
-		{features.map((key, i) => (
-			<Card class="p-7" data-reveal="up" style={`--reveal-delay: ${i * 120}ms;`}>
-				<p class="text-base font-semibold text-foreground">{t(`home.what.features.${key}`)}</p>
-			</Card>
-		))}
+		<div class="max-w-3xl" data-reveal="right">
+			<h2 class="text-3xl font-semibold tracking-tight text-primary-foreground md:text-4xl">
+				{t('home.what.title')}
+			</h2>
+			<p class="mt-5 text-lg text-primary-foreground/75">{t('home.what.description')}</p>
+			<a
+				href={localePath(locale, '/product')}
+				class="mt-8 inline-flex items-center justify-center rounded-full border border-primary-foreground/40 px-6 py-3 text-base font-semibold text-primary-foreground transition-colors hover:border-primary-foreground hover:bg-primary-foreground/10"
+			>
+				{t('common.cta.exploreProduct')}
+			</a>
+		</div>
 	</div>
-</Section>
+</section>
+
+<style>
+	/* Opaque hero-family gradient — crisp pastel discs on the navy band.
+	   No blur: glass goes muddy over flat dark ground. Slightly raised chroma
+	   plus inset top-light/bottom-shade so the discs read convex (objects on
+	   the band), not like holes stamped out of it. */
+	.feature-disc {
+		/* Monochrome sky: analogous to the navy band, calm and unified. Coral is
+		   reserved for the hover accent (title), matching the webapp's
+		   coral-as-highlight rule. Previous coral→sky variant:
+		   oklch(0.87 0.105 28) / oklch(0.95 0.03 50) / oklch(0.87 0.09 246) */
+		background-image: radial-gradient(
+			120% 120% at 28% 22%,
+			oklch(0.98 0.008 240) 0%,
+			oklch(0.93 0.045 235) 42%,
+			oklch(0.85 0.09 245) 100%
+		);
+		box-shadow:
+			inset 0 1.5px 0 0 oklch(1 0 0 / 0.75),
+			inset 0 -12px 20px -14px oklch(0.45 0.05 250 / 0.45),
+			0 14px 30px -14px oklch(0.08 0.03 250 / 0.55);
+	}
+	.feature-disc:hover {
+		box-shadow:
+			inset 0 1.5px 0 0 oklch(1 0 0 / 0.8),
+			inset 0 -12px 20px -14px oklch(0.45 0.05 250 / 0.45),
+			0 20px 40px -14px oklch(0.08 0.03 250 / 0.65);
+	}
+</style>

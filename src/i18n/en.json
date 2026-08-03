@@ -9,7 +9,8 @@
     "cta": {
       "bookDemo": "Book a demo",
       "contactUs": "Contact us",
-      "stayUpdated": "Stay up to date"
+      "stayUpdated": "Stay up to date",
+      "exploreProduct": "Explore the product"
     },
     "closing": {
       "title": "Make heat pumps work",
@@ -44,21 +45,37 @@
       "description": "Go be Smart keeps every heat pump tuned, detects problems before anyone's cold, and turns maintenance into a plan.",
       "cards": {
         "alert": "Low water pressure",
-        "alertDetail": "Pressure dropped below 1.0 bar at 1 2nd Str., Heattown.",
+        "alertDetail": "Low pressure alarm at 1st Str., Heattown.",
         "action": "Emailed resident with refill instructions",
         "actionDetail": "No visit needed.",
         "resolved": "No remaining alerts",
-        "resolvedDetail": "All heat pumps are running healthy."
+        "resolvedDetail": "All heat pumps healthy."
       }
     },
     "what": {
       "title": "One platform for heat pump management",
-      "description": "Go be Smart connects to your heat pumps and turns live data into action — whether you build them, own them, or manage them for others. Use it as a platform, integrate it over API, or let us handle your heat pumps entirely.",
+      "description": "Go be Smart connects to your heat pumps and turns live data into action. Reduce the cost of heat pump maintenance and ownership. Make heat pumps work for everyone.",
       "features": {
-        "commissioning": "Automated commissioning and re-commissioning",
-        "maintenance": "Problem detection and maintenance management",
-        "control": "Smart control on prices, capacity tariffs, and solar self-use",
-        "support": "Agentic support grounded in live heat pump data"
+        "commissioning": {
+          "title": "Automated commissioning",
+          "sub": "Getting settings right"
+        },
+        "maintenance": {
+          "title": "Problem detection & maintenance",
+          "sub": "Where to do what"
+        },
+        "support": {
+          "title": "Agentic support",
+          "sub": "Answers from live device data"
+        },
+        "control": {
+          "title": "Smart control",
+          "sub": "Prices, tariffs, solar"
+        },
+        "fleet": {
+          "title": "Fleet analysis",
+          "sub": "Unlock data driven decisions"
+        }
       }
     },
     "why": {
@@ -72,7 +89,7 @@
     },
     "pricing": {
       "title": "Work with us the way that fits",
-      "description": "Whether you build heat pumps or manage them at scale — every engagement is tailored. No fixed tiers; talk to us for a quote.",
+      "description": "Use it as a platform, integrate it over API, or let us handle your heat pumps entirely — every engagement is tailored. No fixed tiers; talk to us for a quote.",
       "models": {
         "api": {
           "name": "API services",
@@ -137,6 +154,15 @@
           "Answers grounded in real-time device data",
           "Product intelligence for sales, marketing, and R&D"
         ]
+      },
+      "fleet": {
+        "title": "Fleet analysis",
+        "description": "See the forest as well as the trees: performance across your whole fleet, benchmarked and trended, with insights that guide service, investment, and product decisions.",
+        "bullets": [
+          "Portfolio-wide performance benchmarks",
+          "Trends per brand, model, and building type",
+          "Insights for service planning and R&D"
+        ]
       }
     },
     "how": {
@@ -164,7 +190,7 @@
     },
     "mission": {
       "title": "Unlocking the full potential of heat pumps",
-      "description": "The energy transition runs on heat pumps — but only if they perform. We started Go be Smart because too many heat pumps are installed, switched on, and never looked at again. We build the intelligence that keeps them performing for years — and keeps maintaining them affordable."
+      "description": "The energy transition runs on heat pumps, but only if they perform. We started Go be Smart because too many heat pumps are installed, switched on, and never looked at again. We build the intelligence that keeps them performing for years, and keeps maintaining them affordable."
     },
     "team": {
       "title": "The team",

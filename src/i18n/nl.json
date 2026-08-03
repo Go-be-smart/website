@@ -9,7 +9,8 @@
     "cta": {
       "bookDemo": "Plan een demo",
       "contactUs": "Neem contact op",
-      "stayUpdated": "Blijf op de hoogte"
+      "stayUpdated": "Blijf op de hoogte",
+      "exploreProduct": "Bekijk het product"
     },
     "closing": {
       "title": "Laat warmtepompen werken",
@@ -44,7 +45,7 @@
       "description": "Go be Smart houdt elke warmtepomp goed afgesteld, detecteert problemen voordat iemand in de kou zit, en maakt van onderhoud een plan.",
       "cards": {
         "alert": "Lage waterdruk",
-        "alertDetail": "Druk onder 1,0 bar aan de Dorpsstraat in Warmstad.",
+        "alertDetail": "Alarm voor lage druk aan de Dorpsstraat in Warmstad.",
         "action": "Bewoner gemaild met vulinstructies",
         "actionDetail": "Geen bezoek nodig.",
         "resolved": "Geen openstaande meldingen",
@@ -52,13 +53,29 @@
       }
     },
     "what": {
-      "title": "Eén platform voor warmtepompintelligentie",
-      "description": "Go be Smart verbindt met je warmtepompen en zet live data om in actie — of je ze nu bouwt, bezit of voor anderen beheert. Gebruik het als platform, integreer het via API, of laat je warmtepompen volledig door ons beheren.",
+      "title": "Eén platform voor warmtepompbeheer",
+      "description": "Go be Smart verbindt met je warmtepompen en zet live data om in actie. Verlaag de kosten van warmtepomponderhoud en -eigendom. Laat warmtepompen werken voor iedereen.",
       "features": {
-        "commissioning": "Automatische inbedrijfstelling en herafstemming",
-        "maintenance": "Probleemdetectie en onderhoudsmanagement",
-        "control": "Slimme sturing op prijzen, capaciteitstarieven en eigen zonverbruik",
-        "support": "Agent-ondersteuning op basis van live warmtepompdata"
+        "commissioning": {
+          "title": "Automatische inbedrijfstelling",
+          "sub": "Altijd de juiste instellingen"
+        },
+        "maintenance": {
+          "title": "Probleemdetectie & onderhoud",
+          "sub": "Wat waar doen"
+        },
+        "support": {
+          "title": "AI-ondersteuning",
+          "sub": "Antwoorden uit live data"
+        },
+        "control": {
+          "title": "Slimme sturing",
+          "sub": "Prijzen, tarieven, zon"
+        },
+        "fleet": {
+          "title": "Vlootanalyse",
+          "sub": "Voor data-gedreven beslissingen"
+        }
       }
     },
     "why": {
@@ -72,7 +89,7 @@
     },
     "pricing": {
       "title": "Werk met ons zoals het jou past",
-      "description": "Of je nu warmtepompen bouwt of ze op schaal beheert — elke samenwerking is maatwerk. Geen vaste pakketten; neem contact op voor een offerte.",
+      "description": "Gebruik het als platform, integreer het via API, of laat je warmtepompen volledig door ons beheren — elke samenwerking is maatwerk. Geen vaste pakketten; neem contact op voor een offerte.",
       "models": {
         "api": {
           "name": "API-diensten",
@@ -95,7 +112,7 @@
   "product": {
     "meta": {
       "title": "Product | Go be Smart",
-      "description": "Van eerste opstart tot jaren stil draaien: automatische inbedrijfstelling, probleemdetectie en onderhoudsmanagement, slimme sturing en agent-ondersteuning in één platform."
+      "description": "Van eerste opstart tot jaren stil draaien: automatische inbedrijfstelling, probleemdetectie en onderhoudsmanagement, slimme sturing en AI-ondersteuning in één platform."
     },
     "hero": {
       "title": "Van eerste opstart tot jaren stil draaien",
@@ -130,12 +147,21 @@
         ]
       },
       "ai": {
-        "title": "Agent-ondersteuning",
+        "title": "AI-ondersteuning",
         "description": "AI-agents gebaseerd op de live data van precies het apparaat waar je naar kijkt: installatie- en diagnosehulp voor serviceteams, en productintelligentie voor de teams achter het product.",
         "bullets": [
           "Installatie- en diagnoseagents voor serviceteams",
           "Antwoorden op basis van realtime apparaatdata",
           "Productintelligentie voor sales, marketing en R&D"
+        ]
+      },
+      "fleet": {
+        "title": "Vlootanalyse",
+        "description": "Zie het bos én de bomen: prestaties van je hele vloot, gebenchmarkt en getrend, met inzichten die service-, investerings- en productbeslissingen sturen.",
+        "bullets": [
+          "Prestatiebenchmarks over de hele portefeuille",
+          "Trends per merk, model en gebouwtype",
+          "Inzichten voor serviceplanning en R&D"
         ]
       }
     },
@@ -164,7 +190,7 @@
     },
     "mission": {
       "title": "Het volledige potentieel van warmtepompen ontsluiten",
-      "description": "De energietransitie draait op warmtepompen — maar alleen als ze presteren. We zijn Go be Smart begonnen omdat te veel warmtepompen worden geïnstalleerd, aangezet en nooit meer bekeken. Wij bouwen de intelligentie die ze jarenlang laat presteren — en het onderhoud betaalbaar houdt."
+      "description": "De energietransitie draait op warmtepompen, maar alleen als ze presteren. We zijn Go be Smart begonnen omdat te veel warmtepompen worden geïnstalleerd, aangezet en nooit meer naar omgekeken. Wij bouwen de intelligentie die ze jarenlang laat presteren, en het onderhoud betaalbaar houdt."
     },
     "team": {
       "title": "Het team",

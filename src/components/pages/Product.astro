@@ -16,7 +16,15 @@ const { locale } = Astro.props;
 const t = getTranslation(locale);
 const tList = getListTranslation(locale);
 
-const features = ['commissioning', 'monitoring', 'control', 'ai'];
+// anchor = the id the homepage feature circles link to.
+// Order: fundamentals (commissioning, maintenance, fleet), then nice-to-haves.
+const features = [
+	{ key: 'commissioning', anchor: 'commissioning' },
+	{ key: 'monitoring', anchor: 'maintenance' },
+	{ key: 'fleet', anchor: 'fleet' },
+	{ key: 'ai', anchor: 'support' },
+	{ key: 'control', anchor: 'control' },
+];
 ---
 
 <Header locale={locale} />
@@ -32,8 +40,9 @@ const features = ['commissioning', 'monitoring', 'control', 'ai'];
 
 	<Section divider>
 		<div class="space-y-20 md:space-y-28">
-			{features.map((key, i) => (
+			{features.map(({ key, anchor }, i) => (
 				<FeatureRow
+					id={anchor}
 					title={t(`product.features.${key}.title`)}
 					description={t(`product.features.${key}.description`)}
 					bullets={tList(`product.features.${key}.bullets`)}
