@@ -1,0 +1,159 @@
+---
+interface Props {
+	t: (key: string) => string;
+}
+
+const { t } = Astro.props;
+
+const inputClass =
+	'w-full rounded-lg border border-border bg-background px-4 py-2.5 text-base text-foreground transition-colors placeholder:text-muted-foreground focus:outline-none focus:border-ring';
+const labelClass = 'text-sm font-medium text-foreground';
+---
+
+<!-- Hidden twin so Netlify registers the form (and its fields) at deploy time -->
+<form name="book-demo" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+	<input type="hidden" name="form-name" value="book-demo" />
+	<input type="text" name="name" />
+	<input type="email" name="email" />
+	<input type="text" name="company" />
+	<textarea name="notes"></textarea>
+</form>
+
+<dialog
+	id="demo-modal"
+	class="fixed top-1/2 left-1/2 m-0 max-h-[90vh] w-[92%] max-w-[440px] -translate-x-1/2 -translate-y-1/2 overflow-auto rounded-2xl border-none p-0 shadow-lg"
+>
+	<div class="relative rounded-2xl border border-border bg-card p-8">
+		<button
+			class="modal-close absolute top-2 right-2 flex h-8 w-8 cursor-pointer items-center justify-center rounded border-none bg-transparent p-0 text-3xl leading-none text-muted-foreground transition-all hover:text-foreground"
+			aria-label={t('common.form.close')}
+		>
+			&times;
+		</button>
+
+		<h2 class="text-2xl font-semibold tracking-tight text-foreground">{t('common.demo.title')}</h2>
+		<p class="mt-2 text-sm text-muted-foreground">{t('common.demo.description')}</p>
+
+		<form method="POST" data-netlify="true" name="book-demo" id="demo-form" class="mt-6 flex flex-col gap-4">
+			<input type="hidden" name="form-name" value="book-demo" />
+			<input type="hidden" name="bot-field" />
+
+			<label class="flex flex-col gap-1.5">
+				<span class={labelClass}>{t('common.form.name')}</span>
+				<input type="text" name="name" required autocomplete="name" class={inputClass} />
+			</label>
+
+			<label class="flex flex-col gap-1.5">
+				<span class={labelClass}>{t('common.form.email')}</span>
+				<input type="email" name="email" required autocomplete="email" class={inputClass} />
+			</label>
+
+			<label class="flex flex-col gap-1.5">
+				<span class={labelClass}>{t('common.form.company')}</span>
+				<input type="text" name="company" required autocomplete="organization" class={inputClass} />
+			</label>
+
+			<label class="flex flex-col gap-1.5">
+				<span class={labelClass}>
+					{t('common.form.notes')}
+					<span class="font-normal text-muted-foreground">({t('common.form.optional')})</span>
+				</span>
+				<textarea name="notes" rows="3" placeholder={t('common.form.notesPlaceholder')} class={inputClass}
+				></textarea>
+			</label>
+
+			<div
+				id="demo-form-message"
+				class="hidden rounded-lg px-4 py-3 text-center text-sm"
+				data-success={t('common.form.success')}
+				data-error={t('common.form.error')}
+			>
+			</div>
+
+			<button
+				type="submit"
+				class="w-full cursor-pointer rounded-full border-none bg-primary px-8 py-3 font-semibold text-primary-foreground transition-all hover:opacity-90 hover:shadow-md disabled:cursor-not-allowed disabled:opacity-60"
+			>
+				{t('common.form.submit')}
+			</button>
+		</form>
+	</div>
+</dialog>
+
+<script>
+	const modal = document.getElementById('demo-modal') as HTMLDialogElement | null;
+	const form = document.getElementById('demo-form') as HTMLFormElement | null;
+	const message = document.getElementById('demo-form-message') as HTMLDivElement | null;
+
+	function openModal() {
+		if (!modal) return;
+		modal.showModal();
+		document.body.style.overflow = 'hidden';
+	}
+
+	function closeModal() {
+		if (!modal) return;
+		modal.close();
+		document.body.style.overflow = '';
+		form?.reset();
+		message?.classList.add('hidden');
+	}
+
+	(window as any).openDemoModal = openModal;
+
+	// Every "Book a demo" control carries data-demo-trigger; the mailto href
+	// stays as the no-JS fallback.
+	document.querySelectorAll('[data-demo-trigger]').forEach((el) => {
+		el.addEventListener('click', (e) => {
+			e.preventDefault();
+			openModal();
+		});
+	});
+
+	modal?.addEventListener('click', (e) => {
+		if (e.target === modal) closeModal();
+	});
+	modal?.querySelector('.modal-close')?.addEventListener('click', (e) => {
+		e.stopPropagation();
+		closeModal();
+	});
+	modal?.addEventListener('keydown', (e) => {
+		if (e.key === 'Escape') closeModal();
+	});
+
+	form?.addEventListener('submit', async (e) => {
+		e.preventDefault();
+		if (!form || !message) return;
+
+		const submitButton = form.querySelector('button[type="submit"]') as HTMLButtonElement | null;
+		if (submitButton) submitButton.disabled = true;
+
+		try {
+			const response = await fetch('/', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+				body: new URLSearchParams(new FormData(form) as any).toString(),
+				signal: AbortSignal.timeout(10000),
+			});
+			if (!response.ok) throw new Error(`Form submission failed: ${response.status}`);
+
+			message.textContent = message.getAttribute('data-success');
+			message.className = 'rounded-lg px-4 py-3 text-center text-sm bg-brand-sky/10 text-brand-sky';
+			form.reset();
+			setTimeout(closeModal, 2500);
+		} catch (error) {
+			console.error('Form submission error:', error);
+			message.textContent = message.getAttribute('data-error');
+			message.className = 'rounded-lg px-4 py-3 text-center text-sm bg-brand-coral/10 text-highlight';
+		} finally {
+			if (submitButton) submitButton.disabled = false;
+		}
+	});
+</script>
+
+<style>
+	#demo-modal::backdrop {
+		background: oklch(0.24 0.03 252 / 0.45);
+		backdrop-filter: blur(4px);
+	}
+</style>

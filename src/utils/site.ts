@@ -1,8 +1,7 @@
-// Site-wide constants. BOOK_DEMO_URL can be swapped for a scheduling link
-// (e.g. Cal.com) without touching any component.
+// Site-wide constants. BOOK_DEMO_URL is only the no-JS fallback href on
+// "Book a demo" buttons — with JS they open the DemoFormModal instead.
 export const CONTACT_EMAIL = 'info@gobesmart.nl';
 export const BOOK_DEMO_URL = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent('Demo request')}`;
-export const CONTACT_URL = `mailto:${CONTACT_EMAIL}`;
 export const LINKEDIN_COMPANY_URL = 'https://www.linkedin.com/company/go-be-smart/';
 
 export const TEAM_LINKEDIN = {

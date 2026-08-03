@@ -3,13 +3,11 @@ interface Props {
 	href?: string;
 	variant?: 'primary' | 'secondary' | 'ghost';
 	size?: 'md' | 'sm';
-	id?: string;
-	target?: string;
-	rel?: string;
 	class?: string;
+	[key: string]: unknown;
 }
 
-const { href, variant = 'primary', size = 'md', id, target, rel, class: className = '' } = Astro.props;
+const { href, variant = 'primary', size = 'md', class: className = '', ...rest } = Astro.props;
 
 const base = 'inline-flex items-center justify-center rounded-full font-semibold transition-all cursor-pointer';
 const sizes = {
@@ -26,11 +24,11 @@ const classes = `${base} ${variant === 'ghost' ? '' : sizes[size]} ${variants[va
 
 {
 	href ? (
-		<a href={href} id={id} target={target} rel={rel} class={classes}>
+		<a href={href} class={classes} {...rest}>
 			<slot />
 		</a>
 	) : (
-		<button id={id} class={classes}>
+		<button class={classes} {...rest}>
 			<slot />
 		</button>
 	)

@@ -2,10 +2,9 @@
 import Header from '../Header.astro';
 import Footer from '../Footer.astro';
 import Section from '../ui/Section.astro';
-import Button from '../ui/Button.astro';
 import LinkedInIcon from '../icons/LinkedInIcon.astro';
 import { getTranslation, type Locale } from '../../utils/i18n';
-import { BOOK_DEMO_URL, CONTACT_EMAIL, LINKEDIN_COMPANY_URL } from '../../utils/site';
+import { CONTACT_EMAIL, LINKEDIN_COMPANY_URL } from '../../utils/site';
 
 interface Props {
 	locale: Locale;
@@ -13,11 +12,15 @@ interface Props {
 
 const { locale } = Astro.props;
 const t = getTranslation(locale);
+
+const inputClass =
+	'w-full rounded-lg border border-primary-foreground/20 bg-primary-foreground/10 px-4 py-2.5 text-base text-primary-foreground transition-colors placeholder:text-primary-foreground/50 focus:outline-none focus:border-primary-foreground/60';
+const labelClass = 'text-sm font-medium text-primary-foreground/90';
 ---
 
 <Header locale={locale} />
 <main>
-	<Section class="!py-16 md:!py-20">
+	<Section class="!pt-16 !pb-6 md:!pt-20 md:!pb-8">
 		<div class="max-w-3xl" data-reveal="up">
 			<h1 class="text-4xl font-semibold tracking-tight text-foreground md:text-5xl">
 				{t('contact.title')}
@@ -26,31 +29,106 @@ const t = getTranslation(locale);
 		</div>
 	</Section>
 
-	<Section>
+	<Section class="!pt-4 !pb-6 md:!pt-18 md:!pb-20">
 		<div class="rounded-3xl bg-brand-navy px-6 py-14 text-primary-foreground sm:px-10 md:px-16" data-reveal="up">
-			<h2 class="text-3xl font-semibold tracking-tight md:text-4xl">{t('contact.reach.title')}</h2>
-			<p class="mt-4 max-w-xl text-lg text-primary-foreground/75">{t('contact.reach.description')}</p>
-			<div class="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-10">
-				<a href={`mailto:${CONTACT_EMAIL}`} class="text-base font-semibold text-primary-foreground hover:text-brand-coral transition-colors">
-					{CONTACT_EMAIL}
-				</a>
-				<a
-					href={LINKEDIN_COMPANY_URL}
-					target="_blank"
-					rel="noopener noreferrer"
-					class="inline-flex items-center gap-2 text-base font-semibold text-primary-foreground hover:text-brand-coral transition-colors"
+			<div class="grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] lg:gap-16">
+				<div>
+					<h2 class="text-3xl font-semibold tracking-tight md:text-4xl">{t('contact.reach.title')}</h2>
+					<p class="mt-4 max-w-xl text-lg text-primary-foreground/75">{t('contact.reach.description')}</p>
+					<div class="mt-8 flex flex-col items-start gap-4">
+						<a href={`mailto:${CONTACT_EMAIL}`} class="text-base font-semibold text-primary-foreground hover:text-brand-coral transition-colors">
+							{CONTACT_EMAIL}
+						</a>
+						<a
+							href={LINKEDIN_COMPANY_URL}
+							target="_blank"
+							rel="noopener noreferrer"
+							class="inline-flex items-center gap-2 text-base font-semibold text-primary-foreground hover:text-brand-coral transition-colors"
+						>
+							<LinkedInIcon class="w-5 h-5" />
+							{t('common.contact.linkedin')}
+						</a>
+						<span class="text-base text-primary-foreground/75">{t('common.contact.locationValue')}</span>
+					</div>
+				</div>
+
+				<form
+					method="POST"
+					data-netlify="true"
+					data-netlify-honeypot="bot-field"
+					name="contact"
+					id="contact-form"
+					class="flex flex-col gap-4"
 				>
-					<LinkedInIcon class="w-5 h-5" />
-					{t('common.contact.linkedin')}
-				</a>
-				<span class="text-base text-primary-foreground/75">{t('common.contact.locationValue')}</span>
-			</div>
-			<div class="mt-10">
-				<Button href={BOOK_DEMO_URL} class="bg-card !text-foreground hover:opacity-100 hover:shadow-md">
-					{t('common.cta.bookDemo')}
-				</Button>
+					<input type="hidden" name="form-name" value="contact" />
+					<input type="hidden" name="bot-field" />
+
+					<div class="grid gap-4 sm:grid-cols-2">
+						<label class="flex flex-col gap-1.5">
+							<span class={labelClass}>{t('common.form.name')}</span>
+							<input type="text" name="name" required autocomplete="name" class={inputClass} />
+						</label>
+						<label class="flex flex-col gap-1.5">
+							<span class={labelClass}>{t('common.form.email')}</span>
+							<input type="email" name="email" required autocomplete="email" class={inputClass} />
+						</label>
+					</div>
+
+					<label class="flex flex-col gap-1.5">
+						<span class={labelClass}>{t('common.form.message')}</span>
+						<textarea name="message" rows="5" required class={inputClass}></textarea>
+					</label>
+
+					<div
+						id="contact-form-message"
+						class="hidden rounded-lg px-4 py-3 text-center text-sm"
+						data-success={t('common.form.success')}
+						data-error={t('common.form.error')}
+					>
+					</div>
+
+					<button
+						type="submit"
+						class="self-start cursor-pointer rounded-full border border-primary-foreground/40 bg-transparent px-6 py-3 text-base font-semibold text-primary-foreground transition-colors hover:border-primary-foreground hover:bg-primary-foreground/10 disabled:cursor-not-allowed disabled:opacity-60"
+					>
+						{t('common.form.submit')}
+					</button>
+				</form>
 			</div>
 		</div>
 	</Section>
 </main>
 <Footer locale={locale} />
+
+<script>
+	const form = document.getElementById('contact-form') as HTMLFormElement | null;
+	const message = document.getElementById('contact-form-message') as HTMLDivElement | null;
+
+	form?.addEventListener('submit', async (e) => {
+		e.preventDefault();
+		if (!form || !message) return;
+
+		const submitButton = form.querySelector('button[type="submit"]') as HTMLButtonElement | null;
+		if (submitButton) submitButton.disabled = true;
+
+		try {
+			const response = await fetch('/', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+				body: new URLSearchParams(new FormData(form) as any).toString(),
+				signal: AbortSignal.timeout(10000),
+			});
+			if (!response.ok) throw new Error(`Form submission failed: ${response.status}`);
+
+			message.textContent = message.getAttribute('data-success');
+			message.className = 'rounded-lg px-4 py-3 text-center text-sm bg-primary-foreground/10 text-primary-foreground';
+			form.reset();
+		} catch (error) {
+			console.error('Form submission error:', error);
+			message.textContent = message.getAttribute('data-error');
+			message.className = 'rounded-lg px-4 py-3 text-center text-sm bg-brand-coral/20 text-primary-foreground';
+		} finally {
+			if (submitButton) submitButton.disabled = false;
+		}
+	});
+</script>

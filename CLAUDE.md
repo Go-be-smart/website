@@ -68,13 +68,13 @@ src/components/pages/{Home,Product,About,Contact}.astro
 src/components/sections/home/{Hero,What,Why,Pricing}.astro
 src/components/sections/product/FeatureRow.astro
 src/components/sections/shared/ClosingCta.astro
-src/components/{Header,Footer,TeamMember,LanguageSwitcher,EmailFormModal}.astro
+src/components/{Header,Footer,TeamMember,LanguageSwitcher,DemoFormModal}.astro
 src/components/ui/{Button,Section,Card}.astro
 src/components/icons/LinkedInIcon.astro
 ```
 
 - **[Layout.astro](src/layouts/Layout.astro)** takes `{ locale, title, description, ogImage? }` per page and renders canonical, hreflang, OG/Twitter tags, JSON-LD, font preload, and the reveal IntersectionObserver.
-- **Header** is fixed glass with a mobile hamburger menu; **Footer** (navy) mounts `EmailFormModal` so the hidden Netlify form (`early-access`) ships on every page — don't remove that.
+- **Header** is fixed glass with a mobile hamburger menu; **Footer** (navy) mounts `DemoFormModal` so the demo form modal + its hidden Netlify form (`book-demo`) ship on every page — don't remove that. Any element with `data-demo-trigger` opens the modal (mailto `BOOK_DEMO_URL` is the no-JS fallback href). The contact page has a second Netlify form (`contact`).
 - **Images**: source assets in `src/assets/` (team photos, dashboard screenshot), rendered via `astro:assets` `<Image>` for webp/responsive output. `public/` holds only logos, fonts, favicon, og-image, PDFs.
 
 ## Adding New Translations

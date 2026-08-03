@@ -28,11 +28,21 @@
       "locationValue": "Utrecht, Nederland"
     },
     "form": {
+      "name": "Naam",
       "email": "E-mailadres",
+      "company": "Bedrijf",
+      "notes": "Opmerkingen",
+      "notesPlaceholder": "Iets dat we moeten weten of voorbereiden?",
+      "message": "Bericht",
+      "optional": "optioneel",
       "submit": "Verzenden",
       "close": "Sluiten",
       "success": "Bedankt! We nemen binnenkort contact op.",
       "error": "Er ging iets mis. Probeer het opnieuw."
+    },
+    "demo": {
+      "title": "Plan een demo",
+      "description": "Laat je gegevens achter en we nemen contact op om een demo in te plannen."
     }
   },
   "home": {
@@ -208,7 +218,7 @@
     "description": "Vragen over het platform, onze API, of hoe full service er voor jouw portefeuille uitziet? We horen graag van je.",
     "reach": {
       "title": "Neem contact op",
-      "description": "Geen bots, geen ticketwachtrij — je bereikt het team dat het product bouwt. We reageren meestal binnen een dag."
+      "description": "Geen bots, geen ticketwachtrij. Je bereikt het team dat het product bouwt. We reageren meestal binnen een dag."
     }
   },
   "notFound": {

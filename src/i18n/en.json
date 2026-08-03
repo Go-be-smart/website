@@ -28,11 +28,21 @@
       "locationValue": "Utrecht, The Netherlands"
     },
     "form": {
+      "name": "Name",
       "email": "Email address",
-      "submit": "Submit",
+      "company": "Company",
+      "notes": "Notes",
+      "notesPlaceholder": "Anything we should know or prepare?",
+      "message": "Message",
+      "optional": "optional",
+      "submit": "Send",
       "close": "Close",
       "success": "Thank you! We'll be in touch soon.",
       "error": "Something went wrong. Please try again."
+    },
+    "demo": {
+      "title": "Book a demo",
+      "description": "Leave your details and we'll reach out to plan a demo."
     }
   },
   "home": {
@@ -208,7 +218,7 @@
     "description": "Questions about the platform, our API, or what full service would look like for your portfolio? We'd love to hear from you.",
     "reach": {
       "title": "Get in touch",
-      "description": "No bots, no ticket queues — you reach the team that builds the product. We usually reply within a day."
+      "description": "No bots, no ticket queues. You reach the team that builds the product. We usually reply within a day."
     }
   },
   "notFound": {

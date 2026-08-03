@@ -1,5 +1,5 @@
 ---
-import EmailFormModal from './EmailFormModal.astro';
+import DemoFormModal from './DemoFormModal.astro';
 import LinkedInIcon from './icons/LinkedInIcon.astro';
 import { getTranslation, localePath, type Locale } from '../utils/i18n';
 import { CONTACT_EMAIL, LINKEDIN_COMPANY_URL, NAV_ITEMS } from '../utils/site';
@@ -80,6 +80,6 @@ const privacyHref = locale === 'nl' ? '/nl/privacy' : '/privacy';
 	</div>
 </footer>
 
-<!-- Keeps the hidden Netlify form on every page; the modal currently has no
-     visible trigger but stays wired for future use. -->
-<EmailFormModal t={t} />
+<!-- Mounted in the footer so the demo modal (and its hidden Netlify form)
+     ships on every page; every [data-demo-trigger] button opens it. -->
+<DemoFormModal t={t} />
