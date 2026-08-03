@@ -1,6 +1,5 @@
 ---
 import Button from '../../ui/Button.astro';
-import Section from '../../ui/Section.astro';
 import { getTranslation, type Locale } from '../../../utils/i18n';
 import { BOOK_DEMO_URL } from '../../../utils/site';
 
@@ -12,7 +11,9 @@ const { locale } = Astro.props;
 const t = getTranslation(locale);
 ---
 
-<Section>
+<!-- Mirrors the hero panel's width: near full-bleed with the same small gutter,
+     so the page opens and closes on the same gradient "bucket". -->
+<div class="px-6 py-10 sm:px-10 md:px-14 md:py-14">
 	<div class="hero-gradient bg-grid rounded-3xl px-6 py-16 text-center md:py-20" data-reveal="up">
 		<h2 class="text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
 			{t('common.closing.title')}
@@ -22,4 +23,4 @@ const t = getTranslation(locale);
 			<Button href={BOOK_DEMO_URL}>{t('common.cta.bookDemo')}</Button>
 		</div>
 	</div>
-</Section>
+</div>
