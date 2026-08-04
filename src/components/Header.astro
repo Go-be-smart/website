@@ -15,9 +15,14 @@ const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
 const isActive = (path: string) => currentPath === localePath(locale, path).replace(/\/$/, '');
 ---
 
-<header class="glass-header fixed top-0 left-0 right-0 z-50">
-	<div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-		<div class="flex items-center justify-between py-3.5">
+<header class="fixed top-3 left-0 right-0 z-50 px-3 sm:px-5">
+	<!-- rounded-3xl below md so the expanded mobile menu doesn't turn the pill
+	     into a distorted capsule; fully rounded from md up. -->
+	<div class="glass-header mx-auto max-w-6xl rounded-3xl md:rounded-full">
+		<!-- Same container geometry as page Sections, so logo and button sit
+		     flush with the content grid while the pill runs wider. -->
+		<div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+			<div class="flex items-center justify-between py-3">
 			<a href={localePath(locale, '/')} aria-label="Go be Smart — home">
 				<img src="/gbs_logo_stamp.svg" alt="Go be Smart" class="h-9 w-auto" />
 			</a>
@@ -80,11 +85,12 @@ const isActive = (path: string) => currentPath === localePath(locale, path).repl
 			<LanguageSwitcher />
 			<Button href={BOOK_DEMO_URL} size="sm" data-demo-trigger>{t('common.cta.bookDemo')}</Button>
 		</div>
+		</div>
 	</div>
 </header>
 
-<!-- Spacer so content clears the fixed header -->
-<div class="h-[68px]" aria-hidden="true"></div>
+<!-- Spacer so content clears the floating header (top offset + bar height) -->
+<div class="h-[84px]" aria-hidden="true"></div>
 
 <script>
 	document.addEventListener('DOMContentLoaded', () => {

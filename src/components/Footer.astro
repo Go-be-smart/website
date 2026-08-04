@@ -13,27 +13,10 @@ const t = getTranslation(locale);
 const privacyHref = locale === 'nl' ? '/nl/privacy' : '/privacy';
 ---
 
-<!-- One block: stamp + copyright anchor the left edge, navigation + contact
+<!-- One block: navigation + contact anchor the left edge, stamp + copyright
      anchor the right edge; tops and bottoms align across the block. -->
 <footer class="bg-brand-navy text-primary-foreground">
 	<div class="mx-auto flex max-w-6xl flex-col justify-between gap-8 px-4 py-10 sm:px-6 md:flex-row lg:px-8">
-		<div class="flex flex-col justify-between gap-6">
-			<a href={localePath(locale, '/')} aria-label="Go be Smart — home">
-				<img src="/final_stamp_dark.svg" alt="Go be Smart" class="h-12 w-auto" />
-			</a>
-			<p class="text-xs text-primary-foreground/60">
-				{t('common.footer.copyright')}
-				<a
-					href={privacyHref}
-					target="_blank"
-					rel="noopener noreferrer"
-					class="ml-2 underline transition-colors hover:text-primary-foreground"
-				>
-					{t('common.footer.privacy')}
-				</a>
-			</p>
-		</div>
-
 		<div class="flex flex-col gap-8 sm:flex-row sm:gap-16">
 			<div>
 				<h2 class="text-sm font-bold text-primary-foreground/90">{t('common.footer.navigation')}</h2>
@@ -83,6 +66,23 @@ const privacyHref = locale === 'nl' ? '/nl/privacy' : '/privacy';
 						<li class="text-sm text-primary-foreground/70">{t('common.contact.locationValue')}</li>
 				</ul>
 			</div>
+		</div>
+
+		<div class="flex flex-col justify-between gap-6 md:items-end">
+			<a href={localePath(locale, '/')} aria-label="Go be Smart — home">
+				<img src="/final_stamp_dark.svg" alt="Go be Smart" class="h-12 w-auto" />
+			</a>
+			<p class="text-xs text-primary-foreground/60">
+				{t('common.footer.copyright')}
+				<a
+					href={privacyHref}
+					target="_blank"
+					rel="noopener noreferrer"
+					class="ml-2 underline transition-colors hover:text-primary-foreground"
+				>
+					{t('common.footer.privacy')}
+				</a>
+			</p>
 		</div>
 	</div>
 </footer>
