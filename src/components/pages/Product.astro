@@ -5,8 +5,11 @@ import Section from '../ui/Section.astro';
 import FeatureRow from '../sections/product/FeatureRow.astro';
 import ClosingCta from '../sections/shared/ClosingCta.astro';
 import { getTranslation, getListTranslation, type Locale } from '../../utils/i18n';
-// TODO: replace with dedicated webapp screenshots (fleet view, device detail, alerts)
+// TODO: dashboard.png is still the stand-in for monitoring + AI support
 import dashboard from '../../assets/dashboard.png';
+import settingsShot from '../../assets/screenshot_settings.png';
+import dataShot from '../../assets/screenshot_data.png';
+import advancedChartsShot from '../../assets/screenshot_advanced_charts.png';
 
 interface Props {
 	locale: Locale;
@@ -19,11 +22,11 @@ const tList = getListTranslation(locale);
 // anchor = the id the homepage feature circles link to.
 // Order: fundamentals (commissioning, maintenance, fleet), then nice-to-haves.
 const features = [
-	{ key: 'commissioning', anchor: 'commissioning' },
-	{ key: 'monitoring', anchor: 'maintenance' },
-	{ key: 'fleet', anchor: 'fleet' },
-	{ key: 'ai', anchor: 'support' },
-	{ key: 'control', anchor: 'control' },
+	{ key: 'commissioning', anchor: 'commissioning', image: settingsShot },
+	{ key: 'monitoring', anchor: 'maintenance', image: dashboard },
+	{ key: 'fleet', anchor: 'fleet', image: advancedChartsShot },
+	{ key: 'ai', anchor: 'support', image: dashboard },
+	{ key: 'control', anchor: 'control', image: dataShot },
 ];
 ---
 
@@ -40,13 +43,13 @@ const features = [
 
 	<Section divider>
 		<div class="space-y-20 md:space-y-28">
-			{features.map(({ key, anchor }, i) => (
+			{features.map(({ key, anchor, image }, i) => (
 				<FeatureRow
 					id={anchor}
 					title={t(`product.features.${key}.title`)}
 					description={t(`product.features.${key}.description`)}
 					bullets={tList(`product.features.${key}.bullets`)}
-					image={dashboard}
+					image={image}
 					imageAlt={t(`product.features.${key}.title`)}
 					flip={i % 2 === 1}
 				/>
