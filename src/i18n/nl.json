@@ -90,29 +90,24 @@
     },
     "why": {
       "statement": {
-        "lead": "De energietransitie draait op warmtepompen.",
-        "middle": "Maar de expertise om ze goed te laten draaien is schaars. Energie gaat verloren en de kosten van onderhoud en eigendom exploderen.",
-        "punch": "Wij maken expertise schaalbaar."
+        "lead": "De energietransitie heeft warmtepompen nodig.",
+        "middle": "Maar de expertise om ze goed te laten draaien is schaars. Energie wordt verspild en onderhoudskosten raken onbeheersbaar.",
+        "punch": "Wij geven jou de regie."
       }
     },
     "pricing": {
       "title": "Werk met ons zoals het jou past",
-      "description": "Gebruik het als platform, integreer het via API, of laat je warmtepompen volledig door ons beheren. Elke samenwerking is maatwerk, neem contact op voor een offerte.",
+      "description": "We begrijpen dat elk bedrijf anders is en andere behoeften heeft. Daarom is elke samenwerking maatwerk. Laten we bespreken wat voor jou werkt.",
       "models": {
-        "api": {
-          "name": "API-diensten",
-          "tagline": "Betaal per module",
-          "description": "Sluit onze intelligentie via API aan op je eigen systemen en producten: automatische inbedrijfstelling, probleemdiagnose, slimme sturing, AI-ondersteuning en productintelligentie. Je betaalt alleen voor de modules die je gebruikt."
-        },
         "platform": {
           "name": "Platform",
           "tagline": "Direct aan de slag",
           "description": "Alle features in een enkel platform voor pijnloos warmtepomp-assetbeheer. Behoud controle over je portefeuille en zorg dat bewoners tevreden blijven. Breid uit met de maatwerkfuncties die jouw werkwijze nodig heeft."
         },
-        "fullService": {
-          "name": "Full service",
-          "tagline": "Geen omkijken",
-          "description": "Wij beheren de warmtepompen in je portefeuille voor je: inbedrijfstelling, monitoring en support, volledig verzorgd door ons team."
+        "custom": {
+          "name": "Maatwerk",
+          "tagline": "Op jouw voorwaarden",
+          "description": "Wil je dit allemaal zonder zelf naar een platform om te kijken? Of ben je juist geïnteresseerd in specifieke features? We zetten een samenwerking op die past bij jou en je organisatie."
         }
       }
     }
@@ -123,7 +118,7 @@
       "description": "Van eerste opstart tot jaren stil draaien: automatische inbedrijfstelling, probleemdetectie en onderhoudsmanagement, slimme sturing en AI-ondersteuning in één platform."
     },
     "hero": {
-      "title": "Van eerste opstart tot jaren stil draaien",
+      "title": "Benut warmtepompen ten volle",
       "description": "Eén platform voor elke warmtepomp in je vloot of productlijn: stel op afstand in bedrijf, volg prestaties live, en laat elk apparaat slim reageren op het energiesysteem eromheen."
     },
     "features": {
@@ -131,23 +126,23 @@
         "title": "Automatische inbedrijfstelling",
         "description": "Start en stem warmtepompen op afstand af, en blijf bijsturen als seizoenen en gebruik veranderen. Geen tweede bezoek nodig om de instellingen goed te krijgen.",
         "bullets": [
-          "Opstarten en configureren op afstand",
+          "Inbedrijfstelling op afstand",
           "Continue herafstemming als omstandigheden veranderen",
           "Instellingshistorie per apparaat"
         ]
       },
       "monitoring": {
         "title": "Probleemdetectie & onderhoud",
-        "description": "Live prestatiedata van je hele vloot, problemen gedetecteerd voordat iemand iets merkt, en onderhoud omgezet in een plan: wanneer waarheen, wat mee te nemen en wat te doen.",
+        "description": "Live prestatiedata van je hele vloot, problemen gedetecteerd voordat iemand iets merkt, en onderhoud omgezet in een plan: wanneer waarheen en wat te doen.",
         "bullets": [
-          "Vlootoverzicht met live status",
+          "Volledig vlootoverzicht met tickets en locaties",
           "Automatische probleemdetectie en diagnose",
           "Onderhoudsplanning: juiste bezoek, juiste onderdelen, in één keer raak"
         ]
       },
       "control": {
         "title": "Slimme sturing",
-        "description": "Stuur warmtepompen op energieprijzen, capaciteitstarieven en eigen zonverbruik — lagere rekeningen voor bewoners, minder druk op het net.",
+        "description": "Stuur warmtepompen op energieprijzen, capaciteitstarieven en eigen zonverbruik.",
         "bullets": [
           "Optimalisatie op prijzen en capaciteitstarieven",
           "Eigen verbruik van zonnestroom",
@@ -197,8 +192,12 @@
       "description": "Wij bouwen de intelligentie die het volledige potentieel van warmtepompen ontsluit. Ontmoet het team in Utrecht."
     },
     "mission": {
-      "title": "Het volledige potentieel van warmtepompen ontsluiten",
-      "description": "De energietransitie draait op warmtepompen, maar alleen als ze presteren. We zijn Go be Smart begonnen omdat te veel warmtepompen worden geïnstalleerd, aangezet en nooit meer naar omgekeken. Wij bouwen de intelligentie die ze jarenlang laat presteren, en het onderhoud betaalbaar houdt."
+      "title": "Makkelijker duurzaam verwarmen",
+      "paragraphs": [
+        "We zijn Go be Smart begonnen vanuit een eenvoudige overtuiging: warmtepompen zijn essentieel voor de energietransitie, maar ze maken pas echt impact als ze goed presteren.",
+        "Wat we om ons heen zien echter, is een groeiende kloof tussen ambitie en werkelijkheid. Te vaak worden warmtepompen geïnstalleerd en daarna vergeten, zonder goede inbedrijfstelling of echt inzicht in hoe ze presteren. Daardoor wordt energie verspild, worden problemen te laat ontdekt, wordt het oplossen ervan frustrerend en duur, en neemt het vertrouwen in warmtepompen af. Go be Smart is ontstaan vanuit de wens om daar verandering in te brengen."
+      ],
+      "statement": "Onze missie? Warmtepompen laten werken voor iedereen."
     },
     "team": {
       "title": "Het team",
@@ -214,11 +213,11 @@
       "title": "Contact | Go be Smart",
       "description": "Neem contact op met het Go be Smart team in Utrecht."
     },
-    "title": "Contact",
-    "description": "Vragen over het platform, onze API, of hoe full service er voor jouw portefeuille uitziet? We horen graag van je.",
+    "title": "Meer weten?",
+    "description": "",
     "reach": {
       "title": "Neem contact op",
-      "description": "Geen bots, geen ticketwachtrij. Je bereikt het team dat het product bouwt. We reageren meestal binnen een dag."
+      "description": "Geen bots, geen ticketwachtrij. Je bereikt het team dat het product bouwt."
     }
   },
   "notFound": {

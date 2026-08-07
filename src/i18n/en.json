@@ -90,29 +90,24 @@
     },
     "why": {
       "statement": {
-        "lead": "The energy transition runs on heat pumps.",
-        "middle": "But the expertise to run them well is scarce. Energy gets wasted and the cost of maintenance and ownership explodes.",
-        "punch": "We make expertise scale."
+        "lead": "The energy transition needs heat pumps.",
+        "middle": "But the expertise to run them well is scarce. Energy gets wasted and maintenance costs spiral.",
+        "punch": "We put you in control."
       }
     },
     "pricing": {
       "title": "Work with us the way that fits",
-      "description": "Use it as a platform, integrate it over API, or let us handle your heat pumps entirely. Every engagement is tailored, talk to us for a quote.",
+      "description": "We understand that every company is different and has different needs. That is why every engagement is tailored. Let's discuss a setup that works for you.",
       "models": {
-        "api": {
-          "name": "API services",
-          "tagline": "Pay per module",
-          "description": "Plug our intelligence into your own systems and products over API: automated commissioning, problem diagnosis, smart control, agentic support, and product intelligence. You pay only for the modules you use."
-        },
         "platform": {
           "name": "Platform",
           "tagline": "Ready to go",
           "description": "All features in a single platform to make heat pump asset management painless. Keep control over your portfolio and ensure residents remain happy. Extend with the custom features your workflow needs."
         },
-        "fullService": {
-          "name": "Full service",
-          "tagline": "No worries",
-          "description": "We manage the heat pumps in your portfolio for you: commissioning, monitoring, and support, handled end-to-end by our team."
+        "custom": {
+          "name": "Custom",
+          "tagline": "On your terms",
+          "description": "Want all of this without looking at a platform yourself? Or interested in specific features only? We'll set up an arrangement that works for you and your company."
         }
       }
     }
@@ -123,31 +118,31 @@
       "description": "From first startup to years of quiet operation: automated commissioning, problem detection and maintenance management, smart control, and agentic support in one platform."
     },
     "hero": {
-      "title": "From first startup to years of quiet operation",
-      "description": "One platform for every heat pump in your fleet or product line: commission remotely, watch performance live, and let every device respond intelligently to the energy system around it."
+      "title": "Unlock the full potential of heat pumps",
+      "description": "One platform for every heat pump: commission remotely, watch performance live, and let every device respond intelligently to the energy system around it."
     },
     "features": {
       "commissioning": {
         "title": "Automated commissioning",
         "description": "Start up and tune heat pumps remotely, and keep tuning them as seasons and usage change. No second site visit to get the settings right.",
         "bullets": [
-          "Remote startup and configuration",
+          "Remote initial commisioning",
           "Continuous re-commissioning as conditions change",
           "Settings history per device"
         ]
       },
       "monitoring": {
         "title": "Problem detection & maintenance",
-        "description": "Live performance data across your whole fleet, problems detected before anyone notices, and maintenance turned into a plan: when to go where, what to bring, and what to do.",
+        "description": "Live performance data across your whole fleet, problems detected before anyone notices, and maintenance turned into a plan: when to go where and what to do.",
         "bullets": [
-          "Fleet overview with live status",
+          "Full fleet overview with tickets and locations",
           "Automatic problem detection and diagnosis",
           "Maintenance planning: right visit, right parts, first-time fix"
         ]
       },
       "control": {
         "title": "Smart control",
-        "description": "Steer heat pumps on energy prices, capacity tariffs, and solar self-use — lower bills for residents, less stress on the grid.",
+        "description": "Steer heat pumps on energy prices, capacity tariffs, and solar self-use.",
         "bullets": [
           "Price and capacity-tariff optimisation",
           "Solar self-consumption",
@@ -197,8 +192,12 @@
       "description": "We're building the intelligence that unlocks the full potential of heat pumps. Meet the team in Utrecht."
     },
     "mission": {
-      "title": "Unlocking the full potential of heat pumps",
-      "description": "The energy transition runs on heat pumps, but only if they perform. We started Go be Smart because too many heat pumps are installed, switched on, and never looked at again. We build the intelligence that keeps them performing for years, and keeps maintaining them affordable."
+      "title": "Sustainable heating simplified",
+      "paragraphs": [
+        "We started Go be Smart from a simple belief: heat pumps are essential to the energy transition, but they only create real impact when they perform well.",
+        "What we see around us however, is a growing gap between ambition and reality. Too often, heat pumps are installed and forgotten, without proper commissioning or any real insight into how they perform. As a result, energy is wasted, problems are discovered too late, troubleshooting becomes frustrating and expensive, and confidence in heat pumps suffers. Go be Smart grew out of a desire to change that."
+      ],
+      "statement": "Our mission? To make heat pumps work for everyone."
     },
     "team": {
       "title": "The team",
@@ -214,11 +213,11 @@
       "title": "Contact | Go be Smart",
       "description": "Get in touch with the Go be Smart team in Utrecht."
     },
-    "title": "Contact",
-    "description": "Questions about the platform, our API, or what full service would look like for your portfolio? We'd love to hear from you.",
+    "title": "Want to know more?",
+    "description": "",
     "reach": {
       "title": "Get in touch",
-      "description": "No bots, no ticket queues. You reach the team that builds the product. We usually reply within a day."
+      "description": "No bots, no ticket queues. You reach the team that builds the product."
     }
   },
   "notFound": {

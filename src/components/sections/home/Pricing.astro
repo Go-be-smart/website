@@ -9,33 +9,35 @@ interface Props {
 const { locale } = Astro.props;
 const t = getTranslation(locale);
 
-const models = ['api', 'platform', 'fullService'];
+const models = ['platform', 'custom'];
 ---
 
 <Section>
-	<div class="max-w-3xl" data-reveal="up">
-		<h2 class="text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
-			{t('home.pricing.title')}
-		</h2>
-		<p class="mt-5 text-lg text-muted-foreground">{t('home.pricing.description')}</p>
-	</div>
+	<div class="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.8fr)] lg:gap-16">
+		<div class="lg:pt-8" data-reveal="up">
+			<h2 class="text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
+				{t('home.pricing.title')}
+			</h2>
+			<p class="mt-5 text-lg text-muted-foreground">{t('home.pricing.description')}</p>
+		</div>
 
-	<div class="mt-12 grid gap-6 md:grid-cols-3 md:gap-10">
-		{models.map((key, i) => (
-			<div class="price-card flex flex-col rounded-2xl p-8" data-reveal="up" style={`--reveal-delay: ${i * 120}ms;`}>
-				<h3 class="text-xl font-semibold text-foreground">{t(`home.pricing.models.${key}.name`)}</h3>
-				<p class="mt-1 text-sm font-medium text-muted-foreground">{t(`home.pricing.models.${key}.tagline`)}</p>
-				<p class="mt-4 flex-grow text-base leading-relaxed text-muted-foreground">
-					{t(`home.pricing.models.${key}.description`)}
-				</p>
-				<a
-					href={localePath(locale, '/contact')}
-					class="mt-8 self-start text-sm font-semibold text-foreground underline decoration-2 underline-offset-4 transition-colors hover:text-highlight"
-				>
-					{t('common.cta.contactUs')}
-				</a>
-			</div>
-		))}
+		<div class="grid content-start gap-6 md:grid-cols-2 md:gap-8">
+			{models.map((key, i) => (
+				<div class="price-card flex flex-col rounded-2xl p-8" data-reveal="up" style={`--reveal-delay: ${i * 120}ms;`}>
+					<h3 class="text-xl font-semibold text-foreground">{t(`home.pricing.models.${key}.name`)}</h3>
+					<p class="mt-1 text-sm font-medium text-muted-foreground">{t(`home.pricing.models.${key}.tagline`)}</p>
+					<p class="mt-4 flex-grow text-base leading-relaxed text-muted-foreground">
+						{t(`home.pricing.models.${key}.description`)}
+					</p>
+					<a
+						href={localePath(locale, '/contact')}
+						class="mt-8 self-start text-sm font-semibold text-foreground underline decoration-2 underline-offset-4 transition-colors hover:text-highlight"
+					>
+						{t('common.cta.contactUs')}
+					</a>
+				</div>
+			))}
+		</div>
 	</div>
 </Section>
 

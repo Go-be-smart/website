@@ -98,8 +98,8 @@
 		inset 0 0 24px 6px oklch(1 0 0 / 0.2),
 		0 2px 6px oklch(0.32 0.05 250 / 0.04),
 		0 10px 24px -10px oklch(0.32 0.05 250 / 0.1);
-	/* Clips the rim lights to the rounded corners. */
-	overflow: hidden;
+	/* No overflow:hidden here — the language-switcher dropdown must escape
+	   the pill. The rim lights below are inset clear of the corners instead. */
 }
 
 /* Top rim light, brightest left-of-center to match the site's lighting. */
@@ -107,8 +107,8 @@
 	content: '';
 	position: absolute;
 	top: 0;
-	left: 0;
-	right: 0;
+	left: 24px;
+	right: 24px;
 	height: 2px;
 	background: linear-gradient(
 		90deg,
@@ -121,17 +121,20 @@
 	pointer-events: none;
 }
 
-/* Left edge rim: lit at the top, fading out downward. */
-.glass-header::after {
-	content: '';
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	width: 1px;
-	background: linear-gradient(180deg, oklch(1 0 0 / 0.6), transparent 55%, oklch(1 0 0 / 0.2));
-	filter: blur(0.5px);
-	pointer-events: none;
+/* Small floating glass surface (dropdowns, popovers) — the header pill's
+   recipe at panel scale: same blur, slightly higher fill for legibility. */
+.glass-panel {
+	/* Frosted-solid: dropdowns render inside the header pill's backdrop root,
+	   so their backdrop-filter can't reach the page behind — the fill has to
+	   carry the frost on its own. */
+	background: oklch(1 0 0 / 0.5);
+	backdrop-filter: blur(13px) saturate(150%);
+	-webkit-backdrop-filter: blur(13px) saturate(150%);
+	border: 1px solid oklch(1 0 0 / 0.4);
+	box-shadow:
+		inset 0 1px 0 0 oklch(1 0 0 / 0.5),
+		0 2px 6px oklch(0.32 0.05 250 / 0.05),
+		0 10px 24px -8px oklch(0.32 0.05 250 / 0.14);
 }
 
 /* Hero atmosphere: subtle 1px grid over a soft coral→sky wash (the logo's own

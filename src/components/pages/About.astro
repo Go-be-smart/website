@@ -4,7 +4,7 @@ import Footer from '../Footer.astro';
 import Section from '../ui/Section.astro';
 import TeamMember from '../TeamMember.astro';
 import ClosingCta from '../sections/shared/ClosingCta.astro';
-import { getTranslation, type Locale } from '../../utils/i18n';
+import { getTranslation, getListTranslation, type Locale } from '../../utils/i18n';
 import { TEAM_LINKEDIN } from '../../utils/site';
 import kejeImage from '../../assets/team/keje.png';
 import charlieImage from '../../assets/team/charlie.png';
@@ -16,6 +16,9 @@ interface Props {
 
 const { locale } = Astro.props;
 const t = getTranslation(locale);
+const tList = getListTranslation(locale);
+
+const missionParagraphs = tList('about.mission.paragraphs');
 
 const team = [
 	{ name: 'Keje Sinnige', image: kejeImage, key: 'keje', linkedin: TEAM_LINKEDIN.keje },
@@ -31,7 +34,14 @@ const team = [
 			<h1 class="text-4xl font-semibold tracking-tight text-foreground md:text-5xl">
 				{t('about.mission.title')}
 			</h1>
-			<p class="mt-6 text-lg text-muted-foreground md:text-xl">{t('about.mission.description')}</p>
+			<div class="mt-8 space-y-6">
+				{missionParagraphs.map((paragraph, i) => (
+					<p class={i === 0 ? 'text-lg text-foreground md:text-xl' : 'text-base text-foreground md:text-lg'}>
+						{paragraph}
+					</p>
+				))}
+				<p class="text-lg font-medium text-foreground md:text-xl">{t('about.mission.statement')}</p>
+			</div>
 		</div>
 	</Section>
 
