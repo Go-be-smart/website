@@ -184,7 +184,7 @@
         },
         "servicing": {
           "question": "How do you know a heat pump needs servicing?",
-          "answer": "We combine fault code monitoring with expert-validated rule-based alerts and automated anomaly detection. For automated detection we compare the heat pump’s operation both to its own history and to other heat pumps in our fleet. This way we know when a heat pump changes its behaviour, or when it deviates from healthy devices in similar circumstances."
+          "answer": "We combine fault code monitoring with expert-validated rule-based alerts and automated anomaly detection. For automated detection we compare the heat pump’s operation both to its own history and to other heat pumps. This way we know when a heat pump changes its behaviour, or when it deviates from healthy devices in similar circumstances."
         },
         "settings": {
           "question": "How do you determine the optimal settings?",

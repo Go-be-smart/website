@@ -22,6 +22,10 @@ export default defineConfig({
   integrations: [sitemap()],
 
   vite: {
-    plugins: [tailwindcss()]
+    plugins: [tailwindcss()],
+    server: {
+      // Allow tunneling the dev server through any ngrok free domain
+      allowedHosts: ['.ngrok-free.dev', '.ngrok-free.app']
+    }
   }
 });

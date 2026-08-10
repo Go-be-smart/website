@@ -184,7 +184,7 @@
         },
         "servicing": {
           "question": "Hoe weten jullie dat een warmtepomp onderhoud nodig heeft?",
-          "answer": "We combineren het monitoren van storingscodes met door experts gevalideerde regels en automatische anomaliedetectie. Voor automatische detectie vergelijken we het gedrag van de warmtepomp met de eigen historie én met andere warmtepompen in onze vloot. Zo weten we wanneer een warmtepomp zich anders gaat gedragen, of afwijkt van gezonde apparaten in vergelijkbare omstandigheden."
+          "answer": "We combineren het monitoren van storingscodes met door experts gevalideerde regels en automatische anomaliedetectie. Voor automatische detectie vergelijken we het gedrag van de warmtepomp met de eigen historie én met andere warmtepompen. Zo weten we wanneer een warmtepomp zich anders gaat gedragen, of afwijkt van gezonde apparaten in vergelijkbare omstandigheden."
         },
         "settings": {
           "question": "Hoe bepalen jullie de optimale instellingen?",
