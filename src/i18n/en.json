@@ -31,7 +31,7 @@
       "email": "Email address",
       "company": "Company",
       "notes": "Notes",
-      "notesPlaceholder": "Anything we should know or prepare?",
+      "notesPlaceholder": "Any notes or planning preferences?",
       "message": "Message",
       "optional": "optional",
       "submit": "Send",
