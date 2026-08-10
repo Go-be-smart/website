@@ -17,7 +17,6 @@
       "description": "Benieuwd wat Go be Smart voor jouw warmtepompen kan betekenen? Plan een demo."
     },
     "footer": {
-      "tagline": "Warmtepompintelligentie. Gebouwd in Utrecht.",
       "navigation": "Navigatie",
       "contact": "Contact",
       "copyright": "© 2026 Go be Smart. Alle rechten voorbehouden.",
@@ -47,8 +46,8 @@
   },
   "home": {
     "meta": {
-      "title": "Warmtepompintelligentie | Go be Smart",
-      "description": "Warmtepompintelligentie op schaal: probleemdetectie, onderhoudsmanagement, automatische inbedrijfstelling en slimme sturing. Lagere onderhoudskosten, betere prestaties."
+      "title": "Warmtepompbeheer | Go be Smart",
+      "description": "Hét platform voor warmtepompbeheer, met de intelligentie ingebouwd: probleemdetectie, onderhoudsmanagement, automatische inbedrijfstelling en slimme sturing. Lagere onderhoudskosten, betere prestaties."
     },
     "hero": {
       "title": "Gezonde warmtepompen, blije bewoners",
@@ -118,8 +117,8 @@
       "description": "Van eerste opstart tot jaren stil draaien: automatische inbedrijfstelling, probleemdetectie en onderhoudsmanagement, slimme sturing en AI-ondersteuning in één platform."
     },
     "hero": {
-      "title": "Benut warmtepompen ten volle",
-      "description": "Eén platform voor elke warmtepomp in je vloot of productlijn: stel op afstand in bedrijf, volg prestaties live, en laat elk apparaat slim reageren op het energiesysteem eromheen."
+      "title": "De slimste manier om warmtepompen te beheren",
+      "description": "Eén platform voor al je warmtepompen, met de intelligentie ingebouwd. Go be Smart verbindt met je apparaten en zet live data om in actie: instellingen op afstand, problemen vroeg gedetecteerd en gediagnosticeerd, onderhoud gepland voordat iemand belt. Wij maken ze slim; jij krijgt warmtepompen die gewoon werken."
     },
     "features": {
       "commissioning": {
@@ -168,22 +167,35 @@
         ]
       }
     },
-    "how": {
-      "title": "Hoe het werkt",
-      "steps": {
+    "faq": {
+      "title": "Veelgestelde vragen",
+      "items": {
         "connect": {
-          "title": "Verbinden",
-          "description": "We verbinden je warmtepompen met het platform — via je eigen cloud of rechtstreeks."
+          "question": "Hoe verbinden jullie met mijn warmtepompen?",
+          "answer": "We verbinden apparaten via de cloud-API van de fabrikant, of rechtstreeks via onze eigen hardware-gateway. Onze gateway is compatibel met alle warmtepompen op basis van Modbus, en we werken aan bredere connectiviteit. De cloudroute vereist geen hardware en geen bezoek ter plaatse; de hardwareroute maakt volledige, fabrikant-onafhankelijke sturing mogelijk. Samen bepalen we welke route het beste past bij jouw situatie."
         },
-        "commission": {
-          "title": "In bedrijf stellen",
-          "description": "Start en stem elk apparaat op afstand af."
+        "brands": {
+          "question": "Welke merken kunnen jullie koppelen?",
+          "answer": "We hebben op dit moment live koppelingen met apparaten van Nibe, Quatt, Weheat, Daikin en Panasonic. Met onze gateway is daarnaast vrijwel elke warmtepomp op basis van Modbus eenvoudig aan te sluiten. Denk aan Remeha, Itho Daalderop, Mitsubishi Electric, Nefit Bosch, Toshiba, Stiebel Eltron, LG, Triple Solar, ACOND en Domusa Teknik. Staat jouw merk er niet tussen? Grote kans dat we toch een manier vinden. Neem contact op om de mogelijkheden te bespreken."
         },
-        "monitor": {
-          "title": "Monitoren",
-          "description": "Volg prestaties, vang problemen vroeg af en stuur slim bij."
+        "residents": {
+          "question": "Wat merken bewoners ervan?",
+          "answer": "Bijna niets. Verbinden we via de hardware-gateway, dan is er één bezoek nodig om die te installeren. Daarna merken bewoners alleen een comfortabel huis en een lagere energierekening. Ook met slimme sturing actief staat comfort altijd voorop. Wil je bewoners op de hoogte houden? We bieden gepersonaliseerde rapporten over de prestaties van hun warmtepomp."
+        },
+        "servicing": {
+          "question": "Hoe weten jullie dat een warmtepomp onderhoud nodig heeft?",
+          "answer": "We combineren het monitoren van storingscodes met door experts gevalideerde regels en automatische anomaliedetectie. Voor automatische detectie vergelijken we het gedrag van de warmtepomp met de eigen historie én met andere warmtepompen in onze vloot. Zo weten we wanneer een warmtepomp zich anders gaat gedragen, of afwijkt van gezonde apparaten in vergelijkbare omstandigheden."
+        },
+        "settings": {
+          "question": "Hoe bepalen jullie de optimale instellingen?",
+          "answer": "We bouwen een thermodynamisch model van elke woning. Daardoor weten we onder alle omstandigheden hoe groot het warmteverlies is, en hoe warm de aanvoer moet zijn om dat op te vangen. Gecombineerd met weers- en prijsvoorspellingen vormt dit model ook de basis van onze slimme sturing."
+        },
+        "data": {
+          "question": "Is mijn data veilig?",
+          "answer": "Ja. Alle data is versleuteld, zowel onderweg als in opslag, en wordt opgeslagen in de EU. We delen je data nooit met derden. AI-features draaien op taalmodellen binnen onze eigen omgeving, dus je data gaat nooit naar externe AI-diensten. We werken volgens de AVG en sluiten met elke klant een verwerkersovereenkomst."
         }
-      }
+      },
+      "more": "Nog vragen?"
     }
   },
   "about": {

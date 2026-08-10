@@ -17,7 +17,6 @@
       "description": "Want to know what Go be Smart can do for your heat pumps? Schedule a demo."
     },
     "footer": {
-      "tagline": "Heat pump intelligence. Built in Utrecht.",
       "navigation": "Navigation",
       "contact": "Contact",
       "copyright": "© 2026 Go be Smart. All rights reserved.",
@@ -48,7 +47,7 @@
   "home": {
     "meta": {
       "title": "Heat pump management | Go be Smart",
-      "description": "Heat pump intelligence at scale: problem detection, maintenance management, automated commissioning, and smart control. Lower maintenance costs, better performance."
+      "description": "The heat pump management platform with the intelligence built in: problem detection, maintenance management, automated commissioning, and smart control. Lower maintenance costs, better performance."
     },
     "hero": {
       "title": "Healthy heat pumps, happy homes",
@@ -118,8 +117,8 @@
       "description": "From first startup to years of quiet operation: automated commissioning, problem detection and maintenance management, smart control, and agentic support in one platform."
     },
     "hero": {
-      "title": "Unlock the full potential of heat pumps",
-      "description": "One platform for every heat pump: commission remotely, watch performance live, and let every device respond intelligently to the energy system around it."
+      "title": "The smartest way to manage heat pumps",
+      "description": "One platform for all your heat pumps, with the intelligence built in. Go be Smart connects to your devices and turns live data into action: settings tuned remotely, problems detected and diagnosed early, maintenance planned before anyone calls. We make them smart; you get heat pumps that just work."
     },
     "features": {
       "commissioning": {
@@ -168,22 +167,35 @@
         ]
       }
     },
-    "how": {
-      "title": "How it works",
-      "steps": {
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": {
         "connect": {
-          "title": "Connect",
-          "description": "We connect your heat pumps to the platform — via your own cloud or directly."
+          "question": "How do you connect to my heat pumps?",
+          "answer": "We connect devices either via the manufacturer’s cloud API, or directly via our own hardware gateway. Our gateway is currently compatible with all Modbus-based heat pumps and we are working to extend its connectivity. The cloud route requires no hardware and no site visit, while the hardware route enables full and manufacturer-independent control. We will decide together which route works best for your use case."
         },
-        "commission": {
-          "title": "Commission",
-          "description": "Start up and tune every device remotely."
+        "brands": {
+          "question": "What brands can you connect?",
+          "answer": "We currently have live connections with Nibe, Quatt, Weheat, Daikin, and Panasonic devices. Our gateway typically also allows easy setup with any other Modbus-based heat pump. This includes Remeha, Itho Daalderop, Mitsubishi Electric, Nefit Bosch, Toshiba, Stiebel Eltron, LG, Triple Solar, ACOND, Domusa Teknik. Your brand not mentioned? Chances are we can still find a way to connect. Contact us to discuss the possibilities."
         },
-        "monitor": {
-          "title": "Monitor",
-          "description": "Watch performance, catch issues early, and steer smartly."
+        "residents": {
+          "question": "What will residents notice?",
+          "answer": "Almost nothing. If we connect via the hardware gateway, one site visit is needed to install it. After that, residents only notice a comfortable home and a lower energy bill. Even with smart control activated, comfort always comes first. Want to keep residents informed? We offer personalised reports on their heat pump’s performance."
+        },
+        "servicing": {
+          "question": "How do you know a heat pump needs servicing?",
+          "answer": "We combine fault code monitoring with expert-validated rule-based alerts and automated anomaly detection. For automated detection we compare the heat pump’s operation both to its own history and to other heat pumps in our fleet. This way we know when a heat pump changes its behaviour, or when it deviates from healthy devices in similar circumstances."
+        },
+        "settings": {
+          "question": "How do you determine the optimal settings?",
+          "answer": "We build a thermodynamic model of every home. This way we know the heat loss under all circumstances, and how hot the supply needs to be to offset it. Combined with weather and price forecasts this thermodynamic model also powers our smart control feature."
+        },
+        "data": {
+          "question": "Is my data safe?",
+          "answer": "Yes. All data is encrypted both in transit and at rest, and stored in the EU. We never share your data with third parties. AI features run on language models deployed within our own environment, so your data is never sent to external AI services. We are GDPR-compliant and sign a data-processing agreement with every customer."
         }
-      }
+      },
+      "more": "Still have questions?"
     }
   },
   "about": {
