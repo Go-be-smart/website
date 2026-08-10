@@ -51,7 +51,7 @@
     },
     "hero": {
       "title": "Healthy heat pumps, happy homes",
-      "description": "Go be Smart keeps every heat pump tuned, detects problems before anyone's cold, and turns maintenance into a plan.",
+      "description": "Go be Smart keeps every heat pump tuned, detects problems before anyone notices, and turns maintenance into a plan.",
       "cards": {
         "alert": "Low water pressure",
         "alertDetail": "Low pressure alarm at 1st Str. Heattown.",
@@ -71,7 +71,7 @@
         },
         "maintenance": {
           "title": "Problem detection & maintenance",
-          "sub": "Where to do what"
+          "sub": "When to do what"
         },
         "support": {
           "title": "Agentic support",
@@ -123,9 +123,9 @@
     "features": {
       "commissioning": {
         "title": "Automated commissioning",
-        "description": "Start up and tune heat pumps remotely, and keep tuning them as seasons and usage change. No second site visit to get the settings right.",
+        "description": "Settings tuned remotely and automatically after installation, and continuously optimised as required. No second site visit to get the settings right.",
         "bullets": [
-          "Remote initial commisioning",
+          "Remote initial commissioning",
           "Continuous re-commissioning as conditions change",
           "Settings history per device"
         ]
@@ -180,7 +180,7 @@
         },
         "residents": {
           "question": "What will residents notice?",
-          "answer": "Almost nothing. If we connect via the hardware gateway, one site visit is needed to install it. After that, residents only notice a comfortable home and a lower energy bill. Even with smart control activated, comfort always comes first. Want to keep residents informed? We offer personalised reports on their heat pump’s performance."
+          "answer": "Almost nothing. If we connect via the hardware gateway, one site visit is needed to install it. After that, residents only notice a more comfortable home and a lower energy bill. Even with smart control activated, comfort always comes first. Want to keep residents informed? We offer personalised reports on their heat pump’s performance."
         },
         "servicing": {
           "question": "How do you know a heat pump needs servicing?",
@@ -188,7 +188,7 @@
         },
         "settings": {
           "question": "How do you determine the optimal settings?",
-          "answer": "We build a thermodynamic model of every home. This way we know the heat loss under all circumstances, and how hot the supply needs to be to offset it. Combined with weather and price forecasts this thermodynamic model also powers our smart control feature."
+          "answer": "We build a thermodynamic model of every home. This way we know the heat loss under all circumstances, and what temperature the supply needs to be to offset it. Combined with weather and price forecasts this thermodynamic model also powers our smart control feature."
         },
         "data": {
           "question": "Is my data safe?",
@@ -207,7 +207,7 @@
       "title": "Sustainable heating simplified",
       "paragraphs": [
         "We started Go be Smart from a simple belief: heat pumps are essential to the energy transition, but they only create real impact when they perform well.",
-        "What we see around us however, is a growing gap between ambition and reality. Too often, heat pumps are installed and forgotten, without proper commissioning or any real insight into how they perform. As a result, energy is wasted, problems are discovered too late, troubleshooting becomes frustrating and expensive, and confidence in heat pumps suffers. Go be Smart grew out of a desire to change that."
+        "What we see around us though, is a growing gap between ambition and reality. Too often, heat pumps are installed and then forgotten, without proper commissioning or any real insight into how they perform. As a result, energy is wasted, problems surface too late, and troubleshooting becomes slow and expensive. In the end, confidence in heat pumps unfairly suffers. Go be Smart grew out of a desire to change that."
       ],
       "statement": "Our mission? To make heat pumps work for everyone."
     },

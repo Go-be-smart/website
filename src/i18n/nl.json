@@ -51,7 +51,7 @@
     },
     "hero": {
       "title": "Gezonde warmtepompen, blije bewoners",
-      "description": "Go be Smart houdt elke warmtepomp goed afgesteld, detecteert problemen voordat iemand in de kou zit, en maakt van onderhoud een plan.",
+      "description": "Go be Smart houdt elke warmtepomp goed afgesteld, detecteert problemen voordat iemand iets opmerkt, en maakt van onderhoud een plan.",
       "cards": {
         "alert": "Lage waterdruk",
         "alertDetail": "Alarm voor lage druk aan de Dorpsstraat in Warmstad.",
@@ -71,7 +71,7 @@
         },
         "maintenance": {
           "title": "Probleemdetectie & onderhoud",
-          "sub": "Wat waar doen"
+          "sub": "Wat wanneer doen"
         },
         "support": {
           "title": "AI-ondersteuning",
@@ -123,7 +123,7 @@
     "features": {
       "commissioning": {
         "title": "Automatische inbedrijfstelling",
-        "description": "Start en stem warmtepompen op afstand af, en blijf bijsturen als seizoenen en gebruik veranderen. Geen tweede bezoek nodig om de instellingen goed te krijgen.",
+        "description": "Warmtepomp automatisch op afstand ingesteld bij installatie, en doorlopend geoptimaliseerd wanneer nodig. Geen tweede bezoek om de instellingen goed te krijgen.",
         "bullets": [
           "Inbedrijfstelling op afstand",
           "Continue herafstemming als omstandigheden veranderen",
@@ -180,7 +180,7 @@
         },
         "residents": {
           "question": "Wat merken bewoners ervan?",
-          "answer": "Bijna niets. Verbinden we via de hardware-gateway, dan is er één bezoek nodig om die te installeren. Daarna merken bewoners alleen een comfortabel huis en een lagere energierekening. Ook met slimme sturing actief staat comfort altijd voorop. Wil je bewoners op de hoogte houden? We bieden gepersonaliseerde rapporten over de prestaties van hun warmtepomp."
+          "answer": "Bijna niets. Verbinden we via de hardware-gateway, dan is er één bezoek nodig om die te installeren. Daarna merken bewoners alleen een comfortabeler huis en een lagere energierekening. Ook met slimme sturing actief staat comfort altijd voorop. Wil je bewoners op de hoogte houden? We bieden gepersonaliseerde rapporten over de prestaties van hun warmtepomp."
         },
         "servicing": {
           "question": "Hoe weten jullie dat een warmtepomp onderhoud nodig heeft?",
@@ -188,7 +188,7 @@
         },
         "settings": {
           "question": "Hoe bepalen jullie de optimale instellingen?",
-          "answer": "We bouwen een thermodynamisch model van elke woning. Daardoor weten we onder alle omstandigheden hoe groot het warmteverlies is, en hoe warm de aanvoer moet zijn om dat op te vangen. Gecombineerd met weers- en prijsvoorspellingen vormt dit model ook de basis van onze slimme sturing."
+          "answer": "We bouwen een thermodynamisch model van elke woning. Daardoor weten we onder alle omstandigheden hoe groot het warmteverlies is, en welke temperatuur de aanvoer moet hebben om dat op te vangen. Gecombineerd met weers- en prijsvoorspellingen vormt dit model ook de basis van onze slimme sturing."
         },
         "data": {
           "question": "Is mijn data veilig?",
@@ -207,14 +207,14 @@
       "title": "Makkelijker duurzaam verwarmen",
       "paragraphs": [
         "We zijn Go be Smart begonnen vanuit een eenvoudige overtuiging: warmtepompen zijn essentieel voor de energietransitie, maar ze maken pas echt impact als ze goed presteren.",
-        "Wat we om ons heen zien echter, is een groeiende kloof tussen ambitie en werkelijkheid. Te vaak worden warmtepompen geïnstalleerd en daarna vergeten, zonder goede inbedrijfstelling of echt inzicht in hoe ze presteren. Daardoor wordt energie verspild, worden problemen te laat ontdekt, wordt het oplossen ervan frustrerend en duur, en neemt het vertrouwen in warmtepompen af. Go be Smart is ontstaan vanuit de wens om daar verandering in te brengen."
+        "Wat we om ons heen zien echter, is een groeiende kloof tussen ambitie en werkelijkheid. Te vaak worden warmtepompen geïnstalleerd en daarna vergeten, zonder goede inbedrijfstelling of echt inzicht in hoe ze presteren. Daardoor wordt energie verspild, worden problemen te laat ontdekt, en wordt het oplossen ervan frustrerend en duur. Het uiteindelijke resultaat is dat het vertrouwen in warmtepompen onterecht afneemt. Go be Smart is ontstaan vanuit de wens om daar verandering in te brengen."
       ],
       "statement": "Onze missie? Warmtepompen laten werken voor iedereen."
     },
     "team": {
       "title": "Het team",
       "descriptions": {
-        "keje": "Onze data & ML expert. Het liefst besteedt hij zijn tijd aan het bouwen van IoT-oplossingen. Je kan Keje midden in de nacht wakker maken om over warmtepompen te praten.",
+        "keje": "Onze data- & ML-expert. Het liefst besteedt hij zijn tijd aan het bouwen van IoT-oplossingen. Je kan Keje midden in de nacht wakker maken om over warmtepompen te praten.",
         "charlie": "Met ervaring in zowel marketing als sales wil deze innovatie-expert nu vooral echte oplossingen bouwen die bijdragen aan een duurzamer energiesysteem.",
         "age": "Abstracte problemen oplossen is wat hem drijft. Na zijn PhD in theoretische biofysica heeft hij zich nu ondergedompeld in de wereld van moderne software."
       }
