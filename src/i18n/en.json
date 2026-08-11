@@ -145,7 +145,7 @@
         "bullets": [
           "Price and capacity-tariff optimisation",
           "Solar self-consumption",
-          "Grid congestion response"
+          "Prevent grid congestion and reduce peak load"
         ]
       },
       "ai": {
@@ -159,7 +159,7 @@
       },
       "fleet": {
         "title": "Fleet analysis",
-        "description": "See the forest as well as the trees: performance across your whole fleet, benchmarked and trended, with insights that guide service, investment, and product decisions.",
+        "description": "See the forest as well as the trees: performance across your whole fleet analysed, with insights that guide service, investment, and product decisions.",
         "bullets": [
           "Portfolio-wide performance benchmarks",
           "Trends per brand, model, and building type",

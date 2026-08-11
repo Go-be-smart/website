@@ -35,12 +35,10 @@ const team = [
 				{t('about.mission.title')}
 			</h1>
 			<div class="mt-8 space-y-6">
-				{missionParagraphs.map((paragraph, i) => (
-					<p class={i === 0 ? 'text-lg text-foreground md:text-xl' : 'text-base text-foreground md:text-lg'}>
-						{paragraph}
-					</p>
+				{missionParagraphs.map((paragraph) => (
+					<p class="text-lg text-foreground md:text-xl">{paragraph}</p>
 				))}
-				<p class="text-lg font-medium text-foreground md:text-xl">{t('about.mission.statement')}</p>
+				<p class="text-lg text-foreground md:text-xl">{t('about.mission.statement')}</p>
 			</div>
 		</div>
 	</Section>

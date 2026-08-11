@@ -82,7 +82,7 @@
           "sub": "Prijzen, tarieven, zon"
         },
         "fleet": {
-          "title": "Vlootanalyse",
+          "title": "Portfolio-analyse",
           "sub": "Voor data-gedreven beslissingen"
         }
       }
@@ -101,7 +101,7 @@
         "platform": {
           "name": "Platform",
           "tagline": "Direct aan de slag",
-          "description": "Alle features in een enkel platform voor pijnloos warmtepomp-assetbeheer. Behoud controle over je portefeuille en zorg dat bewoners tevreden blijven. Breid uit met de maatwerkfuncties die jouw werkwijze nodig heeft."
+          "description": "Alle features in een enkel platform voor zorgeloos warmtepomp-assetbeheer. Behoud controle over je portfolio en zorg dat bewoners tevreden blijven. Breid uit met de maatwerkfuncties die jouw werkwijze nodig heeft."
         },
         "custom": {
           "name": "Maatwerk",
@@ -132,20 +132,20 @@
       },
       "monitoring": {
         "title": "Probleemdetectie & onderhoud",
-        "description": "Live prestatiedata van je hele vloot, problemen gedetecteerd voordat iemand iets merkt, en onderhoud omgezet in een plan: wanneer waarheen en wat te doen.",
+        "description": "Live prestatiedata van je hele portfolio, problemen gedetecteerd voordat iemand iets merkt, en onderhoud omgezet in een plan: wanneer waarheen en wat te doen.",
         "bullets": [
-          "Volledig vlootoverzicht met tickets en locaties",
+          "Volledig portfolio-overzicht met tickets en locaties",
           "Automatische probleemdetectie en diagnose",
           "Onderhoudsplanning: juiste bezoek, juiste onderdelen, in één keer raak"
         ]
       },
       "control": {
         "title": "Slimme sturing",
-        "description": "Stuur warmtepompen op energieprijzen, capaciteitstarieven en eigen zonverbruik.",
+        "description": "Stuur warmtepompen op energieprijzen, capaciteitstarieven en verbruik van eigen zonnestroom.",
         "bullets": [
-          "Optimalisatie op prijzen en capaciteitstarieven",
-          "Eigen verbruik van zonnestroom",
-          "Reactie op netcongestie"
+          "Optimalisatie op dynamische prijzen en capaciteitstarieven",
+          "Verbruik van zelf opgewekte zonnestroom",
+          "Voorkom netcongestie en verlaag piekbelasting"
         ]
       },
       "ai": {
@@ -158,8 +158,8 @@
         ]
       },
       "fleet": {
-        "title": "Vlootanalyse",
-        "description": "Zie het bos én de bomen: prestaties van je hele vloot, gebenchmarkt en getrend, met inzichten die service-, investerings- en productbeslissingen sturen.",
+        "title": "Portfolio-analyse",
+        "description": "Zie het bos én de bomen: prestaties van je hele portfolio geanalyseerd, met inzichten die service-, investerings- en productbeslissingen sturen.",
         "bullets": [
           "Prestatiebenchmarks over de hele portefeuille",
           "Trends per merk, model en gebouwtype",
@@ -172,7 +172,7 @@
       "items": {
         "connect": {
           "question": "Hoe verbinden jullie met mijn warmtepompen?",
-          "answer": "We verbinden apparaten via de cloud-API van de fabrikant, of rechtstreeks via onze eigen hardware-gateway. Onze gateway is compatibel met alle warmtepompen op basis van Modbus, en we werken aan bredere connectiviteit. De cloudroute vereist geen hardware en geen bezoek ter plaatse; de hardwareroute maakt volledige, fabrikant-onafhankelijke sturing mogelijk. Samen bepalen we welke route het beste past bij jouw situatie."
+          "answer": "We verbinden apparaten via de cloud-API van de fabrikant of rechtstreeks via onze eigen hardware-gateway. Onze gateway is compatibel met alle warmtepompen op basis van Modbus, en we werken aan bredere connectiviteit. De cloudroute vereist geen hardware en geen bezoek ter plaatse; de hardwareroute maakt volledige fabrikant-onafhankelijke sturing mogelijk. Samen bepalen we welke route het beste past bij jouw situatie."
         },
         "brands": {
           "question": "Welke merken kunnen jullie koppelen?",
