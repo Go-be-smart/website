@@ -192,7 +192,7 @@
         },
         "data": {
           "question": "Is my data safe?",
-          "answer": "Yes. All data is encrypted both in transit and at rest, and stored within the EU. We never share your data with unauthorized third parties. Our AI features run on open weight models with zero data retention. We are GDPR-compliant and sign a data-processing agreement with every customer."
+          "answer": "Yes. All data is encrypted both in transit and at rest, and is stored within the EU. We never share your data with unauthorized third parties. Our AI features run on open weight models with zero data retention. We are GDPR-compliant and sign a data-processing agreement with every customer."
         }
       },
       "more": "Still have questions?"
