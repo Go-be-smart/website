@@ -19,7 +19,17 @@ export default defineConfig({
     '/privacy': '/privacy-policy-en.pdf',
     '/nl/privacy': '/privacy-policy-nl.pdf'
   },
-  integrations: [sitemap()],
+  integrations: [
+    sitemap({
+      i18n: {
+        defaultLocale: 'en',
+        locales: {
+          en: 'en',
+          nl: 'nl'
+        }
+      }
+    })
+  ],
 
   vite: {
     plugins: [tailwindcss()],
