@@ -192,7 +192,7 @@
         },
         "data": {
           "question": "Is mijn data veilig?",
-          "answer": "Ja. Alle data is versleuteld, zowel onderweg als in opslag, en wordt opgeslagen in de EU. We delen je data nooit met derden. AI-features draaien op taalmodellen binnen onze eigen omgeving, dus je data gaat nooit naar externe AI-diensten. We werken volgens de AVG en sluiten met elke klant een verwerkersovereenkomst."
+          "answer": "Ja. Alle data wordt zowel tijdens verzending als in opslag versleuteld en binnen de EU opgeslagen. We delen je data nooit met onbevoegde derden. Onze AI-features maken gebruik van open-weight modellen waarbij geen data wordt opgeslagen (zero data retention). We voldoen aan de AVG en sluiten met elke klant een verwerkersovereenkomst."
         }
       },
       "more": "Nog vragen?"
