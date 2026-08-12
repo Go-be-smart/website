@@ -8,9 +8,11 @@ interface Props {
 	description: string;
 	linkedinUrl: string;
 	revealDelay?: number;
+	/** object-position for the circular crop, e.g. '50% 35%' — tune per photo so heads align */
+	imagePosition?: string;
 }
 
-const { name, image, description, linkedinUrl, revealDelay = 0 } = Astro.props;
+const { name, image, description, linkedinUrl, revealDelay = 0, imagePosition = '50% 50%' } = Astro.props;
 ---
 
 <div
@@ -25,6 +27,7 @@ const { name, image, description, linkedinUrl, revealDelay = 0 } = Astro.props;
 		densities={[1, 2]}
 		format="webp"
 		class="h-36 w-36 rounded-full object-cover shadow-md ring-2 ring-brand-coral/25 md:h-44 md:w-44"
+		style={`object-position: ${imagePosition};`}
 		loading="lazy"
 	/>
 	<h3 class="mt-6 text-xl font-bold text-foreground">{name}</h3>

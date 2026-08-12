@@ -4,11 +4,13 @@ import Footer from '../Footer.astro';
 import Section from '../ui/Section.astro';
 import TeamMember from '../TeamMember.astro';
 import ClosingCta from '../sections/shared/ClosingCta.astro';
+import { Image } from 'astro:assets';
 import { getTranslation, getListTranslation, type Locale } from '../../utils/i18n';
 import { TEAM_LINKEDIN } from '../../utils/site';
-import kejeImage from '../../assets/team/keje.png';
-import charlieImage from '../../assets/team/charlie.png';
-import ageImage from '../../assets/team/age.png';
+import kejeImage from '../../assets/team/keje.jpg';
+import charlieImage from '../../assets/team/charlie.jpg';
+import ageImage from '../../assets/team/age.jpg';
+import teamCouchImage from '../../assets/team/team-couch-edit.png';
 
 interface Props {
 	locale: Locale;
@@ -21,24 +23,39 @@ const tList = getListTranslation(locale);
 const missionParagraphs = tList('about.mission.paragraphs');
 
 const team = [
-	{ name: 'Keje Sinnige', image: kejeImage, key: 'keje', linkedin: TEAM_LINKEDIN.keje },
-	{ name: 'Charlie Zinken', image: charlieImage, key: 'charlie', linkedin: TEAM_LINKEDIN.charlie },
-	{ name: 'Age Tjalma', image: ageImage, key: 'age', linkedin: TEAM_LINKEDIN.age },
+	{ name: 'Keje Sinnige', image: kejeImage, key: 'keje', linkedin: TEAM_LINKEDIN.keje, imagePosition: '50% 29%' },
+	{ name: 'Charlie Zinken', image: charlieImage, key: 'charlie', linkedin: TEAM_LINKEDIN.charlie, imagePosition: '50% 50%' },
+	{ name: 'Age Tjalma', image: ageImage, key: 'age', linkedin: TEAM_LINKEDIN.age, imagePosition: '50% 50%' },
 ];
 ---
 
 <Header locale={locale} />
 <main>
 	<Section class="!py-16 md:!py-20">
-		<div class="max-w-3xl" data-reveal="up">
-			<h1 class="text-4xl font-semibold tracking-tight text-foreground md:text-5xl">
-				{t('about.mission.title')}
-			</h1>
-			<div class="mt-8 space-y-6">
-				{missionParagraphs.map((paragraph) => (
-					<p class="text-lg text-foreground md:text-xl">{paragraph}</p>
-				))}
-				<p class="text-lg text-foreground md:text-xl">{t('about.mission.statement')}</p>
+		<h1 class="text-4xl font-semibold tracking-tight text-foreground md:text-5xl" data-reveal="up">
+			{t('about.mission.title')}
+		</h1>
+		<div class="mt-12 grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
+			<div data-reveal="up">
+				<div class="space-y-6">
+					{missionParagraphs.map((paragraph) => (
+						<p class="text-lg text-foreground">{paragraph}</p>
+					))}
+					<p class="text-lg text-foreground">{t('about.mission.statement')}</p>
+				</div>
+			</div>
+			<div data-reveal="right" class="w-full lg:max-w-md lg:justify-self-center">
+				<div class="overflow-hidden rounded-xl border border-border bg-card shadow-md">
+					<Image
+						src={teamCouchImage}
+						alt={t('about.mission.photoAlt')}
+						widths={[640, 1280]}
+						sizes="(max-width: 1024px) 100vw, 448px"
+						format="webp"
+						class="w-full"
+						loading="eager"
+					/>
+				</div>
 			</div>
 		</div>
 	</Section>
@@ -55,6 +72,7 @@ const team = [
 					description={t(`about.team.descriptions.${member.key}`)}
 					linkedinUrl={member.linkedin}
 					revealDelay={i * 120}
+					imagePosition={member.imagePosition}
 				/>
 			))}
 		</div>

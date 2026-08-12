@@ -206,10 +206,11 @@
     "mission": {
       "title": "Makkelijker duurzaam verwarmen",
       "paragraphs": [
-        "We zijn Go be Smart begonnen vanuit een eenvoudige overtuiging: warmtepompen zijn essentieel voor de energietransitie, maar ze maken pas echt impact als ze goed presteren.",
-        "Wat we om ons heen zien echter, is een groeiende kloof tussen ambitie en werkelijkheid. Te vaak worden warmtepompen geïnstalleerd en daarna vergeten, zonder goede inbedrijfstelling of echt inzicht in hoe ze presteren. Daardoor wordt energie verspild, worden problemen te laat ontdekt, en wordt het oplossen ervan frustrerend en duur. Het uiteindelijke resultaat is dat het vertrouwen in warmtepompen onterecht afneemt. Go be Smart is ontstaan vanuit de wens om daar verandering in te brengen."
+        "We zijn Go be Smart begonnen vanuit de overtuiging dat warmtepompen essentieel zijn voor de energietransitie, maar ze pas echt impact kunnen maken als ze goed presteren.",
+        "Wat we om ons heen zien is helaas een hele andere werkelijkheid. Te vaak worden warmtepompen geïnstalleerd en daarna vergeten, zonder goede inbedrijfstelling of echt inzicht in hoe ze presteren. Daardoor wordt energie verspild, worden problemen te laat ontdekt, en wordt het oplossen ervan frustrerend en duur. Het uiteindelijke resultaat is dat het vertrouwen in warmtepompen onterecht afneemt."
       ],
-      "statement": "Onze missie? Warmtepompen laten werken voor iedereen."
+      "statement": "Onze missie? Warmtepompen laten werken voor iedereen.",
+      "photoAlt": "Het Go be Smart-team — Keje, Charlie en Age — op een bank op het dakterras"
     },
     "team": {
       "title": "Het team",

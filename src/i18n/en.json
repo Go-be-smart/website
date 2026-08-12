@@ -206,10 +206,11 @@
     "mission": {
       "title": "Sustainable heating simplified",
       "paragraphs": [
-        "We started Go be Smart from a simple belief: heat pumps are essential to the energy transition, but they only create real impact when they perform well.",
-        "What we see around us though, is a growing gap between ambition and reality. Too often, heat pumps are installed and then forgotten, without proper commissioning or any real insight into how they perform. As a result, energy is wasted, problems surface too late, and troubleshooting becomes slow and expensive. In the end, confidence in heat pumps unfairly suffers. Go be Smart grew out of a desire to change that."
+        "We started Go be Smart from the belief that heat pumps are essential to the energy transition, but that they can only create real impact when they perform well.",
+        "Unfortunately, what we see around us is a completely different reality. Too often, heat pumps are installed and then forgotten, without proper commissioning or any real insight into how they perform. As a result, energy is wasted, problems surface too late, and troubleshooting becomes frustrating and expensive. In the end, confidence in heat pumps unfairly suffers."
       ],
-      "statement": "Our mission? To make heat pumps work for everyone."
+      "statement": "Our mission? To make heat pumps work for everyone.",
+      "photoAlt": "The Go be Smart team — Keje, Charlie, and Age — on a rooftop couch"
     },
     "team": {
       "title": "The team",
