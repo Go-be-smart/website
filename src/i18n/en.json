@@ -96,17 +96,17 @@
     },
     "pricing": {
       "title": "Work with us the way that fits",
-      "description": "We understand that every company is different and has different needs. That is why every engagement is tailored. Let's discuss a setup that works for you.",
+      "description": "Maintenance provider, asset manager, housing corporation, or heat pump manufacturer: we understand that every company is different and has different needs. That is why every engagement is tailored. Let's discuss a setup that works for you.",
       "models": {
         "platform": {
           "name": "Platform",
           "tagline": "Ready to go",
-          "description": "All features in a single platform to make heat pump asset management painless. Keep control over your portfolio and ensure residents remain happy. Extend with the custom features your workflow needs."
+          "description": "All features in a single platform to make heat pump asset management painless. Keep control over your portfolio and ensure residents remain happy. White label applications and custom feature development possible upon request."
         },
         "custom": {
           "name": "Custom",
           "tagline": "On your terms",
-          "description": "Want all of this without looking at a platform yourself? Or interested in specific features only? We'll set up an arrangement that works for you and your company."
+          "description": "Want heat pump asset management without looking at a platform yourself? Or interested in specific features only? We'll set up an arrangement that works for you and your company."
         }
       }
     }
@@ -206,10 +206,11 @@
     "mission": {
       "title": "Sustainable heating simplified",
       "paragraphs": [
-        "We started Go be Smart from the belief that heat pumps are essential to the energy transition, but that they can only create real impact when they perform well.",
-        "Unfortunately, what we see around us is a completely different reality. Too often, heat pumps are installed and then forgotten, without proper commissioning or any real insight into how they perform. As a result, energy is wasted, problems surface too late, and troubleshooting becomes frustrating and expensive. In the end, confidence in heat pumps unfairly suffers."
+        "We founded Go Be Smart with a simple belief: heat pumps are essential to the energy transition and can only deliver real impact when performing at their best.",
+        "Today, that is too often not the case. Heat pumps are installed and then largely forgotten, with limited commissioning and little insight into actual performance. The result? Wasted energy, problems that go unnoticed, and troubleshooting that becomes unnecessarily complex and expensive. Ultimately, this undermines confidence in heat pumps, even when the technology itself isn’t the problem.",
+        "Our mission? To make every heat pump perform.",
+        "By making performance transparent, problems visible and optimisation easy, we help turn heat pumps into what heat pumps should be: efficient, reliable and scalable solutions for sustainable heating."
       ],
-      "statement": "Our mission? To make heat pumps work for everyone.",
       "photoAlt": "The Go be Smart team — Keje, Charlie, and Age — on a rooftop couch"
     },
     "team": {

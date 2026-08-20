@@ -96,17 +96,17 @@
     },
     "pricing": {
       "title": "Werk met ons zoals het jou past",
-      "description": "We begrijpen dat elk bedrijf anders is en andere behoeften heeft. Daarom is elke samenwerking maatwerk. Laten we bespreken wat voor jou werkt.",
+      "description": "Onderhoudsprovider, asset manager, woningcorporatie, of warmtepompfabrikant: we begrijpen dat elk bedrijf anders is en andere behoeften heeft. Daarom is elke samenwerking maatwerk. Laten we bespreken wat voor jou werkt.",
       "models": {
         "platform": {
           "name": "Platform",
           "tagline": "Direct aan de slag",
-          "description": "Alle features in een enkel platform voor zorgeloos warmtepomp-assetbeheer. Behoud controle over je portfolio en zorg dat bewoners tevreden blijven. Breid uit met de maatwerkfuncties die jouw werkwijze nodig heeft."
+          "description": "Alle features in een enkel platform voor zorgeloos warmtepompbeheer. Behoud controle over je portfolio en zorg dat bewoners tevreden blijven. White label toepassingen en custom feature ontwikkeling mogelijk in overleg."
         },
         "custom": {
           "name": "Maatwerk",
           "tagline": "Op jouw voorwaarden",
-          "description": "Wil je dit allemaal zonder zelf naar een platform om te kijken? Of ben je juist geïnteresseerd in specifieke features? We zetten een samenwerking op die past bij jou en je organisatie."
+          "description": "Warmtepompbeheer zonder zelf naar een platform te kijken? Of ben je juist geïnteresseerd in specifieke features? We zetten een samenwerking op die past bij jou en je organisatie."
         }
       }
     }
@@ -206,10 +206,11 @@
     "mission": {
       "title": "Makkelijker duurzaam verwarmen",
       "paragraphs": [
-        "We zijn Go be Smart begonnen vanuit de overtuiging dat warmtepompen essentieel zijn voor de energietransitie, maar ze pas echt impact kunnen maken als ze goed presteren.",
-        "Wat we om ons heen zien is helaas een hele andere werkelijkheid. Te vaak worden warmtepompen geïnstalleerd en daarna vergeten, zonder goede inbedrijfstelling of echt inzicht in hoe ze presteren. Daardoor wordt energie verspild, worden problemen te laat ontdekt, en wordt het oplossen ervan frustrerend en duur. Het uiteindelijke resultaat is dat het vertrouwen in warmtepompen onterecht afneemt."
+        "We hebben Go be Smart opgericht vanuit een simpele overtuiging: warmtepompen zijn onmisbaar voor de energietransitie en maken pas echt impact als ze optimaal presteren.",
+        "Vandaag de dag is dat te vaak niet het geval. Warmtepompen worden geïnstalleerd en daarna grotendeels vergeten, met een beperkte inbedrijfstelling en weinig inzicht in hoe ze werkelijk presteren. Daardoor wordt energie verspild, worden problemen te laat ontdekt, en wordt het oplossen ervan frustrerend en duur. Uiteindelijk ondermijnt dit het vertrouwen in warmtepompen, ook al is er met de techniek zelf niets mis.",
+        "Onze missie? Elke warmtepomp laten presteren.",
+        "Door prestaties transparant, problemen zichtbaar, en optimalisatie eenvoudig te maken, helpen we warmtepompen te worden wat ze zouden moeten zijn: efficiënte, betrouwbare en schaalbare oplossingen voor duurzaam verwarmen."
       ],
-      "statement": "Onze missie? Warmtepompen laten werken voor iedereen.",
       "photoAlt": "Het Go be Smart-team — Keje, Charlie en Age — op een bank op het dakterras"
     },
     "team": {

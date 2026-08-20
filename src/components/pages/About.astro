@@ -35,13 +35,12 @@ const team = [
 		<h1 class="text-4xl font-semibold tracking-tight text-foreground md:text-5xl" data-reveal="up">
 			{t('about.mission.title')}
 		</h1>
-		<div class="mt-12 grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
+		<div class="mt-12 grid grid-cols-1 items-center gap-12 lg:grid-cols-[1.25fr_1fr] lg:gap-14">
 			<div data-reveal="up">
-				<div class="space-y-6">
+				<div class="space-y-4">
 					{missionParagraphs.map((paragraph) => (
 						<p class="text-lg text-foreground">{paragraph}</p>
 					))}
-					<p class="text-lg text-foreground">{t('about.mission.statement')}</p>
 				</div>
 			</div>
 			<div data-reveal="right" class="w-full lg:max-w-md lg:justify-self-center">
